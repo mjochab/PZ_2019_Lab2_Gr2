@@ -72,4 +72,4 @@ Aplikacją jest objęta licencją MIT.
  - diagram sekwencji
 
 
-![Błąd](diagram_sekwencji.png "Opcjonalny tytul")
+![Błąd](Diagram_sekwencji.png "Opcjonalny tytul")
