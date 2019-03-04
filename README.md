@@ -38,7 +38,7 @@ Mają oni dostęp do panelów zarządzania ocenami, obecnościami, uwagami, po p
 Uczniowie w systemie mogą jedynie podgladać sysuacje swoich ocen, obecności, uwag oraz wyświetlać plan zajęć.*
 
 #### 6. Schematy UML systemu:
-- diagram przypadków uzycia
+- diagram przypadków użycia
 
 ![Błąd](diagram_przypadków_uzycia.png "Opcjonalny tytul")
 
