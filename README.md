@@ -67,7 +67,7 @@ Aplikacją jest objęta licencją MIT.
  
  - diagram aktywności
  
- ![Błąd](diagram_aktywnosci.png "Opcjonalny tytul")
+ ![Błąd](Diagram_aktywnosci.png "Opcjonalny tytul")
  
  - diagram sekwencji
 
