@@ -51,7 +51,9 @@ Uczniowie w systemie mogą jedynie podgladać sysuacje swoich ocen, obecności, 
  
  - diagram aktywności
  
- 
+ ![Błąd](diagram_aktywnosci.png "Opcjonalny tytul")
  
  - diagram sekwencji
 
+
+![Błąd](diagram_sekwencji.png "Opcjonalny tytul")
