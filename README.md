@@ -8,7 +8,10 @@
 3. Informacje gromadzone przez system,
 4. Informacje generowane przez system,
 5. Uprawnienia użytkowników,
-6. Schematy UML systemu.
+6. Autorzy aplikacji,
+7. Licencja,
+8.Schematy UML systemu.
+
 
 
 #### 1. Cel systemu: 
@@ -37,7 +40,20 @@ Administrator może także modyfikować błędy w danych popełnione przez naucz
 Mają oni dostęp do panelów zarządzania ocenami, obecnościami, uwagami, po przez które wprowadzają informacje do systemu.
 Uczniowie w systemie mogą jedynie podgladać sysuacje swoich ocen, obecności, uwag oraz wyświetlać plan zajęć.*
 
-#### 6. Schematy UML systemu:
+#### 6.Autorzy aplikacji:
+- Patrycja Nędza
+- Adam Marzec
+- Damian Wawrzkowicz
+- Andrzej Sabat
+
+#### 7.Licencja
+
+Aplikacją jest objęta licencją MIT.
+
+
+
+
+#### 8. Schematy UML systemu:
 - diagram przypadków użycia
 
 ![Błąd](diagram_przypadków_uzycia.png "Opcjonalny tytul")
