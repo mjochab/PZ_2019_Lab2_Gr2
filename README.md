@@ -26,7 +26,7 @@ opiekę nad uczniami oraz samych uczniów.*
 
 #### 3. Informacje gromadzone przez system:
 *System gromadzi informacje o uczniach a właściwie o winikach ich nauczania. Przechowuje oceny wystawione przez nauczycieli
-z danych przedmiotów. System pozwala na odnotowanie frekwencji uczniów na zajęciach. Kożystający z systemu użytkownicy mogą 
+z danych przedmiotów. System pozwala na odnotowanie frekwencji uczniów na zajęciach. Korzystający z systemu użytkownicy mogą 
 sprawdzać zaplanowane zajęcia.*
 
 #### 4. Informacje generowane przez system:
