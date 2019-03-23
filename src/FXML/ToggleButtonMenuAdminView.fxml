@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="Controllers.ToggleButtonMenuAdminController">
+   <children>
+      <ToggleButton mnemonicParsing="false" onAction="#adminUczniowie" prefHeight="80.0" prefWidth="150.0" text="Uczniowie">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <toggleGroup>
+            <ToggleGroup fx:id="adminMenu" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton mnemonicParsing="false" onAction="#adminNauczyciele" prefHeight="80.0" prefWidth="150.0" text="Nauczyciele" toggleGroup="$adminMenu">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </ToggleButton>
+      <ToggleButton mnemonicParsing="false" onAction="#adminPrzedmioty" prefHeight="80.0" prefWidth="150.0" text="Przedmioty" toggleGroup="$adminMenu">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </ToggleButton>
+      <ToggleButton mnemonicParsing="false" onAction="#adminKlasy" prefHeight="80.0" prefWidth="150.0" text="Klasy" toggleGroup="$adminMenu">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </ToggleButton>
+      <ToggleButton mnemonicParsing="false" onAction="#adminPlan" prefHeight="80.0" prefWidth="150.0" text="Plan zajęć" toggleGroup="$adminMenu">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </ToggleButton>
+   </children>
+</VBox>
