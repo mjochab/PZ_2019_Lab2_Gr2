@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminViewController">
+   <left>
+       <VBox prefHeight="600.0" prefWidth="196.0" BorderPane.alignment="CENTER">
+         <fx:include source="ToggleButtonMenuNauczycielView.fxml" />
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Button mnemonicParsing="false" onAction="#btnWyloguj" text="Wyloguj">
+                  <HBox.margin>
+                     <Insets left="10.0" right="10.0" />
+                  </HBox.margin>
+               </Button>
+               <VBox prefHeight="100.0" prefWidth="93.0">
+                  <children>
+                     <Label text="Aktualnie zalogowany:" wrapText="true">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets bottom="10.0" top="10.0" />
+                        </VBox.margin>
+                     </Label>
+                     <Label text="user">
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+       </VBox>
+   </left>
+   <center>
+      <Pane prefHeight="600.0" prefWidth="804.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="324.0">
+              <columns>
+                <TableColumn prefWidth="287.0" text="Klasa" />
+              </columns>
+            </TableView>
+            <TextField layoutX="14.0" layoutY="240.0" prefHeight="31.0" prefWidth="35.0" />
+            <TextField layoutX="14.0" layoutY="285.0" />
+            <Label layoutX="58.0" layoutY="245.0" text="Ocena" />
+            <Label layoutX="211.0" layoutY="290.0" text="Powód" />
+            <Button layoutX="14.0" layoutY="334.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" text="Dodaj " />
+            <Button layoutX="14.0" layoutY="403.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="175.0" text="Wydrukuj oceny klasy" />
+            <Button layoutX="14.0" layoutY="450.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="175.0" text="Wydrukuj oceny ucznia" />
+            <TableView layoutX="380.0" layoutY="14.0" prefHeight="282.0" prefWidth="399.0">
+              <columns>
+                <TableColumn prefWidth="398.0" text="Ucznień" />
+              </columns>
+            </TableView>
+            <TableView layoutX="380.0" layoutY="311.0" prefHeight="246.0" prefWidth="399.0">
+              <columns>
+                <TableColumn prefWidth="299.0" text="Powód" />
+                <TableColumn minWidth="0.0" prefWidth="99.0" text="Ocena" />
+              </columns>
+            </TableView>
+            <Button layoutX="181.0" layoutY="334.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="157.0" text="Edytuj" />
+            <Button layoutX="380.0" layoutY="563.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="400.0" text="Załaduj" />
+         </children></Pane>
+   </center>
+</BorderPane>
