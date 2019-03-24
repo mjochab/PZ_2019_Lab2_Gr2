@@ -10,24 +10,24 @@ public class ToggleButtonMenuNauczycielController {
 
 
 
-    public void nauczcielOceny(ActionEvent actionEvent) {
-        adminViewController.setCenter("/FXML/NauczycielOcenyView.fxml");
+    public void nauczycielOceny(ActionEvent actionEvent) {
+        nauczycielViewController.setCenter("/FXML/NauczycielOcenyView.fxml");
     }
 
     public void nauczycielUwagi(ActionEvent actionEvent) {
-        adminViewController.setCenter("/FXML/NauczycielUwagiView.fxml");
+        nauczycielViewController.setCenter("/FXML/NauczycielUwagiView.fxml");
     }
 
     public void nauczycielObecnosc(ActionEvent actionEvent) {
-        adminViewController.setCenter("/FXML/NauczycielObecnośćView.fxml");
+        nauczycielViewController.setCenter("/FXML/NauczycielObecnośćView.fxml");
     }
 
     public void nauczycielPlan(ActionEvent actionEvent) {
-        adminViewController.setCenter("/FXML/NayczycielPlanView.fxml");
+        nauczycielViewController.setCenter("/FXML/NayczycielPlanView.fxml");
     }
 
 
-    public void setAdminViewController(AdminViewController adminViewController) {
-        this.adminViewController = adminViewController;
+    public void setNauczycielViewController(NauczycielViewController nauczycielViewController) {
+        this.nauczycielViewController = nauczycielViewController;
     }
 }
