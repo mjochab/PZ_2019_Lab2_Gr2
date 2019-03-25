@@ -12,20 +12,20 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
          <toggleGroup>
-            <ToggleGroup fx:id="adminMenu" />
+            <ToggleGroup fx:id="nauczycielMenu" />
          </toggleGroup>
       </ToggleButton>
-      <ToggleButton mnemonicParsing="false" onAction="#nauczycielUwagi" prefHeight="80.0" prefWidth="150.0" text="Uwagi" toggleGroup="$adminMenu">
+      <ToggleButton mnemonicParsing="false" onAction="#nauczycielUwagi" prefHeight="80.0" prefWidth="150.0" text="Uwagi" toggleGroup="$nauczycielMenu">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
       </ToggleButton>
-      <ToggleButton mnemonicParsing="false" onAction="#nauczycielObecnosc" prefHeight="80.0" prefWidth="150.0" text="Obecność" toggleGroup="$adminMenu">
+      <ToggleButton mnemonicParsing="false" onAction="#nauczycielObecnosc" prefHeight="80.0" prefWidth="150.0" text="Obecność" toggleGroup="$nauczycielMenu">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
       </ToggleButton>
-      <ToggleButton mnemonicParsing="false" onAction="#nauczycielPlan" prefHeight="80.0" prefWidth="150.0" text="Plan zajęć" toggleGroup="$adminMenu">
+      <ToggleButton mnemonicParsing="false" onAction="#nauczycielPlan" prefHeight="80.0" prefWidth="150.0" text="Plan zajęć" toggleGroup="$nauczycielMenu">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
