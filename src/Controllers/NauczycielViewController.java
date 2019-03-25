@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class NauczycielViewController  {
     @FXML
-    private BorderPane borderPane;
+    private BorderPane borderPane1;
     @FXML
     private ToggleButtonMenuNauczycielController toggleButtonMenuNauczycielController;
     @FXML
@@ -37,7 +37,7 @@ public class NauczycielViewController  {
         }catch(IOException e){
             e.printStackTrace();
         }
-        borderPane.setCenter(parent);
+        borderPane1.setCenter(parent);
     }
 
     public void btnWyloguj(ActionEvent actionEvent) throws IOException {

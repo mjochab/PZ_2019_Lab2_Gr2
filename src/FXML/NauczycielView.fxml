@@ -10,10 +10,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminViewController">
+<BorderPane fx:id="borderPane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.NauczycielViewController">
    <left>
        <VBox prefHeight="600.0" prefWidth="196.0" BorderPane.alignment="CENTER">
-         <fx:include source="ToggleButtonMenuNauczycielView.fxml" />
+         <fx:include fx:id="toggleButtonMenuNauczyciel" source="ToggleButtonMenuNauczycielView.fxml" />
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
                <Button mnemonicParsing="false" onAction="#btnWyloguj" text="Wyloguj">
