@@ -72,11 +72,11 @@ public class LoginController implements Initializable {
             //rootPane.getChildren().setAll(pane);
         }
         else if(person.equals("Nauczyciel")) {
-            parent = FXMLLoader.load(getClass().getResource("Teacher.fxml"));
+            parent = FXMLLoader.load(getClass().getResource("/FXML/NauczycielView.fxml"));
             //rootPane.getChildren().setAll(pane);
         }
-        else if(person.equals("Uczeń")) {
-            parent = FXMLLoader.load(getClass().getResource("Student.fxml"));
+        else if(person.equals("Student")) {
+            parent = FXMLLoader.load(getClass().getResource("/FXML/StudentView.fxml"));
             //rootPane.getChildren().setAll(pane);
         }
         else {
