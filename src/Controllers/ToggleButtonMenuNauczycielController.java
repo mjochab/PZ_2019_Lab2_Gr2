@@ -23,7 +23,7 @@ public class ToggleButtonMenuNauczycielController {
     }
 
     public void nauczycielPlan(ActionEvent actionEvent) {
-        nauczycielViewController.setCenter("/FXML/NayczycielPlanView.fxml");
+        nauczycielViewController.setCenter("/FXML/NauczycielPlanView.fxml");
     }
 
 
