@@ -1,11 +1,13 @@
-package Main;
-
 import Controllers.LoginController;
+import Modele.User;
+import hibernate.HibernateUtil;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 public class Main extends Application {
 
@@ -15,6 +17,21 @@ public class Main extends Application {
         LoginController.createStartView(primaryStage,root);
       // primaryStage.show();
 
+        //Test zapisu usera do bazy
+        /*
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        User user = new User();
+        user.setLogin("test");
+        user.setHaslo("test");
+
+        session.save(user);
+        session.getTransaction().commit();
+
+        session.close();
+        */
     }
 
 

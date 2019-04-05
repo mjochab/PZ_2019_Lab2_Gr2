@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -14,17 +13,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-public class AdminViewController  {
+public class NauczycielViewController  {
     @FXML
-    private BorderPane borderPane;
+    private BorderPane borderPane1;
     @FXML
-    private ToggleButtonMenuAdminController toggleButtonMenuAdminController;
+    private ToggleButtonMenuNauczycielController toggleButtonMenuNauczycielController;
     @FXML
     private Label lbluser;
 
     @FXML
     private void initialize(){
-        toggleButtonMenuAdminController.setAdminViewController(this);
+        toggleButtonMenuNauczycielController.setNauczycielViewController(this);
 
     }
 
@@ -37,7 +36,7 @@ public class AdminViewController  {
         }catch(IOException e){
             e.printStackTrace();
         }
-        borderPane.setCenter(parent);
+        borderPane1.setCenter(parent);
     }
 
     public void btnWyloguj(ActionEvent actionEvent) throws IOException {

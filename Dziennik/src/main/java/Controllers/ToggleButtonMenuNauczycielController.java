@@ -1,8 +1,6 @@
 package Controllers;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.ToggleGroup;
 
 public class ToggleButtonMenuNauczycielController {
 
