@@ -15,8 +15,34 @@ public class User {
 
     private String passwrd;
 
+    private Teacher teacher;
+
+    private Admin admin;
+
+    private Student student;
+
     private Set<Backlog> backlogs;
 
+    public User(long userId, String username, String passwrd, Teacher teacher) {
+        this.userId = userId;
+        this.username = username;
+        this.passwrd = passwrd;
+        this.teacher = teacher;
+    }
+
+    public User(long userId, String username, String passwrd, Admin admin) {
+        this.userId = userId;
+        this.username = username;
+        this.passwrd = passwrd;
+        this.admin = admin;
+    }
+
+    public User(long userId, String username, String passwrd, Student student) {
+        this.userId = userId;
+        this.username = username;
+        this.passwrd = passwrd;
+        this.student = student;
+    }
 
     @Id
     @GeneratedValue
@@ -44,6 +70,33 @@ public class User {
         this.passwrd = password;
     }
 
+
+    @OneToOne(fetch = FetchType.LAZY,mappedBy = "user",cascade = CascadeType.ALL)
+    public Admin getAdmin(){
+        return this.admin;
+    }
+
+    public void setAdmin(Admin admin) {
+        this.admin = admin;
+    }
+
+    @OneToOne(fetch = FetchType.LAZY,mappedBy = "user",cascade = CascadeType.ALL)
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
+    @OneToOne(fetch = FetchType.LAZY,mappedBy = "user",cascade = CascadeType.ALL)
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     public Set<Backlog> getBacklogs() {

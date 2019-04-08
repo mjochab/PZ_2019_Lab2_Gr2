@@ -17,6 +17,7 @@ public class Student {
     private Set<Warns> warns;
     private Set<Grades> grades;
     private Set<Frequently> frequently;
+    private User user;
 
     @Id
     @GeneratedValue
@@ -94,6 +95,15 @@ public class Student {
         this.firstNameS = firstNameS;
         this.lastNameS = lastNameS;
         this.pesel = pesel;
+    }
+
+    @OneToOne(fetch = FetchType.LAZY)
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override

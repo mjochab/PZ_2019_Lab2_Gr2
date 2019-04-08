@@ -13,6 +13,7 @@ public class Teacher {
     private Set<Classes> classes;
     private Set<Warns> warns;
     private Set<Subject> subjects;
+    private User user;
 
     @Id
     @GeneratedValue
@@ -73,6 +74,17 @@ public class Teacher {
     public void setSubjects(Set<Subject> subjects) {
         this.subjects = subjects;
     }
+
+    @OneToOne(fetch = FetchType.LAZY)
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+
 
     @Override
     public String toString() {

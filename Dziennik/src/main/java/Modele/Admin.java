@@ -9,17 +9,17 @@ public class Admin {
     private long adminId;
     private String firstNameA;
     private String lastNameA;
-
+    private User user;
 
 
     @Id
     @GeneratedValue
     @Column(name = "admin_id")
-    public long getTeacherId() {
+    public long getAdminId() {
         return this.adminId;
     }
-    public void setTeacherId(long teacherId) {
-        this.adminId = teacherId;
+    public void setAdminId(long adminId) {
+        this.adminId = adminId;
     }
 
     @Column(name = "first_name", nullable = false, length = 50)
@@ -38,16 +38,19 @@ public class Admin {
         this.lastNameA = lastName;
     }
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @PrimaryKeyJoinColumn
+    public User getUser(){
+        return this.user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     public Admin() {
     }
 
-    public long getAdminId() {
-        return adminId;
-    }
-
-    public void setAdminId(long adminId) {
-        this.adminId = adminId;
-    }
 
     public String getFirstNameA() {
         return firstNameA;
