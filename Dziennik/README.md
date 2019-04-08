@@ -73,3 +73,8 @@ Aplikacją jest objęta licencją MIT.
 
 
 ![Błąd](Diagram_sekwencji.png "Opcjonalny tytul")
+
+ - diagram ERD bazy danych
+ 
+ ![Błąd](ERD_baza_danych.png "Opcjonalny tytul")
+ 

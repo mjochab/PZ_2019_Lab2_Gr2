@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="Controllers.ToggleButtonMenuStudentController">
+    <children>
+
+        <ToggleButton mnemonicParsing="false" onAction="#studentOceny" prefHeight="80.0" prefWidth="150.0" text="Oceny" toggleGroup="$studentMenu">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+            <toggleGroup>
+                <ToggleGroup fx:id="studentMenu" />
+            </toggleGroup>
+        </ToggleButton>
+        <ToggleButton mnemonicParsing="false" onAction="#studentNieobecnosci" prefHeight="80.0" prefWidth="150.0" text="Nieobecności" toggleGroup="$studentMenu">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+        </ToggleButton>
+        <ToggleButton mnemonicParsing="false" onAction="#studentDrukowanie" prefHeight="80.0" prefWidth="150.0" text="Plan zajęć" toggleGroup="$studentMenu">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+        </ToggleButton>
+
+    </children>
+</VBox>
