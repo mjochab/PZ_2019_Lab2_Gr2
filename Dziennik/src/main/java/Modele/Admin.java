@@ -39,7 +39,6 @@ public class Admin {
     }
 
     @OneToOne(fetch = FetchType.LAZY)
-    @PrimaryKeyJoinColumn
     public User getUser(){
         return this.user;
     }
