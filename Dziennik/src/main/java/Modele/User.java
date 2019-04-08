@@ -1,58 +1,66 @@
 package Modele;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table
 public class User {
 
+
+
+    private long userId;
+
+    private String username;
+
+    private String passwrd;
+
+    private Set<Backlog> backlogs;
+
+
     @Id
     @GeneratedValue
-    @Column(name = "idUser")
-    private Integer id;
-    @Column(name = "login")
-    private String login;
-    @Column(name = "haslo")
-    private String haslo;
-
-    public User(){};
-
-    public User(Integer id, String login, String haslo){
-        this.id = id;
-        this.login = login;
-        this.haslo = haslo;
+    @Column(name = "user_id")
+    public long getUserId() {
+        return userId;
+    }
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
-    public Integer getId() {
-        return id;
+    @Column(name = "user_name")
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String userName) {
+        this.username = userName;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    @Column(name = "passwrd", length = 20)
+    public String getPasswrd() {
+        return passwrd;
+    }
+    public void setPasswrd(String password) {
+        this.passwrd = password;
     }
 
-    public String getLogin() {
-        return login;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    public Set<Backlog> getBacklogs() {
+        return backlogs;
+    }
+    public void setBacklogs(Set<Backlog> backlogs) {
+        this.backlogs = backlogs;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getHaslo() {
-        return haslo;
-    }
-
-    public void setHaslo(String haslo) {
-        this.haslo = haslo;
-    }
+    public User() {}
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", login='" + login + '\'' +
-                ", haslo='" + haslo + '\'' +
+        return "UserAccount{" +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
+                ", passwrd='" + passwrd + '\'' +
                 '}';
     }
 }
