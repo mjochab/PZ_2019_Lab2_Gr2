@@ -44,11 +44,11 @@ public class Grades {
     }
 
     @Column(name = "other_details")
-    public String getOtherDetails() {
+    public String getDetails() {
         return details;
     }
-    public void setOtherDetails(String otherDetails) {
-        this.details = otherDetails;
+    public void setDetails(String details) {
+        this.details = details;
     }
 
     @ManyToOne

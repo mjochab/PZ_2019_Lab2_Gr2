@@ -1,6 +1,7 @@
 package Modele;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table
@@ -11,6 +12,7 @@ public class Teacher {
     private String lastNameT;
     private Set<Classes> classes;
     private Set<Warns> warns;
+    private Set<Subject> subjects;
 
     @Id
     @GeneratedValue
@@ -28,8 +30,8 @@ public class Teacher {
     public String getFirstName() {
         return this.firstNameT;
     }
-    public void setFirstName(String firstName) {
-        this.firstNameT = firstName;
+    public void setFirstName(String firstNameT) {
+        this.firstNameT = firstNameT;
     }
 
 
@@ -37,8 +39,8 @@ public class Teacher {
     public String getLastName() {
         return this.lastNameT;
     }
-    public void setLastName(String lastName) {
-        this.lastNameT = lastName;
+    public void setLastName(String lastNameT) {
+        this.lastNameT = lastNameT;
     }
 
 
@@ -60,7 +62,7 @@ public class Teacher {
     public void setClasses(Set<Classes> classes) {
         this.classes = classes;
     }
-/*
+
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinTable(name = "teacher_subject",
             joinColumns  = {@JoinColumn(name = "teacher_id")},
@@ -71,7 +73,7 @@ public class Teacher {
     public void setSubjects(Set<Subject> subjects) {
         this.subjects = subjects;
     }
-*/
+
     @Override
     public String toString() {
         return "Teacher{" +
@@ -79,6 +81,7 @@ public class Teacher {
                 ", firstName='" + firstNameT + '\'' +
                 ", lastName='" + lastNameT + '\'' +
                 ", classes=" + classes +
+                ", subjects=" + subjects +
                 ", warns=" + warns +
                 '}';
     }

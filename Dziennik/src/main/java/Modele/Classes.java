@@ -11,6 +11,7 @@ public class Classes {
     private String className;
     private Set<Subject> subjects;
     private Set<Student> students;
+    private Set<Schedule>schedules;
 
 
     @Id
@@ -50,6 +51,18 @@ public class Classes {
     public void setSubjects(Set<Subject> subjects) {
         this.subjects = subjects;
     }
+
+
+    @OneToMany(mappedBy = "clas",cascade = CascadeType.ALL)
+    public Set<Schedule> getSchedules() {
+        return schedules;
+    }
+
+    public void setSchedules(Set<Schedule> schedules) {
+        this.schedules = schedules;
+    }
+
+
 
     @Override
     public String toString() {

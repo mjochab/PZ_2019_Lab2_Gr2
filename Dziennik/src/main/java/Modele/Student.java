@@ -3,6 +3,7 @@ package Modele;
 
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table
@@ -89,7 +90,7 @@ public class Student {
 
 
     public Student(){}
-    public Student(String firstNameS,, String lastNameS, String pesel, ) {
+    public Student(String firstNameS,String lastNameS, String pesel ) {
         this.firstNameS = firstNameS;
         this.lastNameS = lastNameS;
         this.pesel = pesel;
