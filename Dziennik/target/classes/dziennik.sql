@@ -1,0 +1,60 @@
+SET GLOBAL time_zone = '+8:00';
+
+INSERT INTO admin VALUES (NULL,'Patrycja','Nedza',NULL);
+INSERT INTO admin VALUES (NULL,'Andrzej','Sabat',NULL);
+INSERT INTO admin VALUES (NULL,'Adam','Marzec',NULL);
+INSERT INTO admin VALUES (NULL,'Damian','Wawrzkowicz',NULL);
+
+INSERT INTO classes VALUES (NULL,'Informatyczna');
+INSERT INTO classes VALUES (NULL,'Policyjna');
+INSERT INTO classes VALUES (NULL,'Matematyczna');
+INSERT INTO classes VALUES (NULL,'Humanistyczna');
+INSERT INTO classes VALUES (NULL,'Wojskowa');
+
+INSERT INTO frequently VALUES (NULL,2,'2019-04-03 13:10:00',NULL);
+INSERT INTO frequently VALUES (NULL,4,'2019-04-11 15:10:00',NULL);
+INSERT INTO frequently VALUES (NULL,7,'2019-10-12 11:25:00',NULL);
+INSERT INTO frequently VALUES (NULL,3,'2019-09-07 09:30:00',NULL);
+INSERT INTO frequently VALUES (NULL,1,'2019-03-03 08:45:00',NULL);
+
+INSERT INTO grades VALUES (NULL,'2019-04-01 13:00:00','Zadanie domowe',5,NULL,NULL);
+INSERT INTO grades VALUES (NULL,'2019-03-22 13:00:00','Ocena za obecności',5,NULL,NULL);
+INSERT INTO grades VALUES (NULL,'2019-03-01 13:00:00','Sprawdzian',4,NULL,NULL);
+INSERT INTO grades VALUES (NULL,'2019-01-14 13:00:00','Projekt I',3,NULL,NULL);
+INSERT INTO grades VALUES (NULL,'2019-01-10 13:00:00','Odpowiedź ustna',2,NULL,NULL);
+INSERT INTO grades VALUES (NULL,'2019-02-14 13:00:00','Sprawozdanie III',1,NULL,NULL);
+
+INSERT INTO schedule VALUES (NULL,'2019-08-04 8:00:00',1,'8:00',NULL,NULL);
+INSERT INTO schedule VALUES (NULL,'2019-08-04 8:50:00',2,'8:50',NULL,NULL);
+INSERT INTO schedule VALUES (NULL,'2019-08-04 9:40:00',3,'9:40',NULL,NULL);
+INSERT INTO schedule VALUES (NULL,'2019-08-04 10:30:00',4,'10:30',NULL,NULL);
+INSERT INTO schedule VALUES (NULL,'2019-08-04 11:20:00',5,'11:20',NULL,NULL);
+
+INSERT INTO student VALUES (NULL,'Jan','Nowak','96122209878',NULL,NULL);
+INSERT INTO student VALUES (NULL,'Stefan','Kowalski','96092009118',NULL,NULL);
+INSERT INTO student VALUES (NULL,'Aleksander','Pelczar','96102202848',NULL,NULL);
+INSERT INTO student VALUES (NULL,'Kornelia','Kwiecień','96082209878',NULL,NULL);
+INSERT INTO student VALUES (NULL,'Katarzyna','Zima','96012209878',NULL,NULL);
+INSERT INTO student VALUES (NULL,'Jakub','Penarz','96032209878',NULL,NULL);
+
+INSERT INTO subject VALUES (NULL,'Język polski');
+INSERT INTO subject VALUES (NULL,'Biologia');
+INSERT INTO subject VALUES (NULL,'Fizyka');
+INSERT INTO subject VALUES (NULL,'Język angielski');
+INSERT INTO subject VALUES (NULL,'Matematyka');
+
+INSERT INTO teacher VALUES (NULL,'Jerzy','Bednarczyk',NULL)
+INSERT INTO teacher VALUES (NULL,'Halina','Stojak',NULL);
+INSERT INTO teacher VALUES (NULL,'Klaudia','Stolarz',NULL);
+INSERT INTO teacher VALUES (NULL,'Marcin','Tęcza',NULL);
+INSERT INTO teacher VALUES (NULL,'Antoni','Klesz',NULL);
+
+INSERT INTO user VALUES (NULL,'12345678','damianwawrzkowicz')
+INSERT INTO user VALUES (NULL,'12345678','andrzejsabat')
+INSERT INTO user VALUES (NULL,'12345678','patrycjanedza')
+INSERT INTO user VALUES (NULL,'12345678','adammarzec');
+
+INSERT INTO warns VALUES (NULL,'Rozmawianie na lekcji','2019-04-08 8:30:00',NULL,NULL);
+INSERT INTO warns VALUES (NULL,'Uzywanie telefonu podczas zajęć','2019-04-08 9:15:00',NULL,NULL);
+
+
