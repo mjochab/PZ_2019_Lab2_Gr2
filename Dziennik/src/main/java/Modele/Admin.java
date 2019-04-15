@@ -10,6 +10,7 @@ public class Admin {
     private String firstNameA;
     private String lastNameA;
     private User user;
+    private String linkedAcc;
 
 
     @Id
@@ -23,19 +24,27 @@ public class Admin {
     }
 
     @Column(name = "first_name", nullable = false, length = 50)
-    public String getFirstName() {
+    public String getFirstNameA() {
         return this.firstNameA;
     }
-    public void setFirstName(String firstName) {
-        this.firstNameA = firstName;
+    public void setFirstNameA(String firstNameA) {
+        this.firstNameA = firstNameA;
     }
 
     @Column(name = "last_name", nullable = false, length = 50)
-    public String getLastName() {
+    public String getLastNameA() {
         return this.lastNameA;
     }
-    public void setLastName(String lastName) {
-        this.lastNameA = lastName;
+    public void setLastNameA(String lastNameA) {
+        this.lastNameA = lastNameA;
+    }
+
+    @Column(name = "linked_acc")
+    public String getLinkedAcc() {
+        return linkedAcc;
+    }
+    public void setLinkedAcc(String linkedAcc) {
+        this.linkedAcc = linkedAcc;
     }
 
     @OneToOne(fetch = FetchType.LAZY)
@@ -51,19 +60,6 @@ public class Admin {
     }
 
 
-    public String getFirstNameA() {
-        return firstNameA;
+
     }
 
-    public void setFirstNameA(String firstNameA) {
-        this.firstNameA = firstNameA;
-    }
-
-    public String getLastNameA() {
-        return lastNameA;
-    }
-
-    public void setLastNameA(String lastNameA) {
-        this.lastNameA = lastNameA;
-    }
-}

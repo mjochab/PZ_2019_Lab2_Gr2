@@ -17,30 +17,35 @@ public class User {
 
     private Teacher teacher;
 
+    private String linkedAcc;
+
     private Admin admin;
 
     private Student student;
 
     private Set<Backlog> backlogs;
 
-    public User(long userId, String username, String passwrd, Teacher teacher) {
+    public User(long userId, String username, String passwrd,String linkedAcc, Teacher teacher) {
         this.userId = userId;
         this.username = username;
         this.passwrd = passwrd;
+        this.linkedAcc = linkedAcc;
         this.teacher = teacher;
     }
 
-    public User(long userId, String username, String passwrd, Admin admin) {
+    public User(long userId, String username, String passwrd,String linkedAcc, Admin admin) {
         this.userId = userId;
         this.username = username;
         this.passwrd = passwrd;
+        this.linkedAcc = linkedAcc;
         this.admin = admin;
     }
 
-    public User(long userId, String username, String passwrd, Student student) {
+    public User(long userId, String username, String passwrd,String linkedAcc, Student student) {
         this.userId = userId;
         this.username = username;
         this.passwrd = passwrd;
+        this.linkedAcc = linkedAcc;
         this.student = student;
     }
 
@@ -68,6 +73,14 @@ public class User {
     }
     public void setPasswrd(String password) {
         this.passwrd = password;
+    }
+
+    @Column(name = "linked_acc")
+    public String getLinkedAcc() {
+        return linkedAcc;
+    }
+    public void setLinkedAcc(String linkedAcc) {
+        this.linkedAcc = linkedAcc;
     }
 
 
@@ -110,10 +123,11 @@ public class User {
 
     @Override
     public String toString() {
-        return "UserAccount{" +
+        return "User{" +
                 "userId=" + userId +
                 ", username='" + username + '\'' +
                 ", passwrd='" + passwrd + '\'' +
+                ", linkedAcc='" + linkedAcc + '\'' +
                 '}';
     }
 }

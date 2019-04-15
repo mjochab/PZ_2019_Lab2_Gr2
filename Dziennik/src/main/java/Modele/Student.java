@@ -13,6 +13,7 @@ public class Student {
     private String firstNameS;
     private String lastNameS;
     private String pesel;
+    private String linkedAcc;
     private Classes classes;
     private Set<Warns> warns;
     private Set<Grades> grades;
@@ -55,6 +56,13 @@ public class Student {
         this.pesel = pesel;
     }
 
+    @Column(name = "linked_acc")
+    public String getLinkedAcc() {
+        return linkedAcc;
+    }
+    public void setLinkedAcc(String linkedAcc) {
+        this.linkedAcc = linkedAcc;
+    }
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
     public Set<Warns> getWarns(){
@@ -95,6 +103,7 @@ public class Student {
         this.firstNameS = firstNameS;
         this.lastNameS = lastNameS;
         this.pesel = pesel;
+
     }
 
     @OneToOne(fetch = FetchType.LAZY)
@@ -110,10 +119,10 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "studentId=" + studentId +
-                ", firstName='" + firstNameS + '\'' +
-                ", lastName='" + lastNameS + '\'' +
-                ", pesel=" + pesel +
+                ", firstNameS='" + firstNameS + '\'' +
+                ", lastNameS='" + lastNameS + '\'' +
+                ", pesel='" + pesel + '\'' +
+                ", linkedAcc='" + linkedAcc + '\'' +
                 '}';
     }
-
 }
