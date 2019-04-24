@@ -3,10 +3,6 @@ package Modele;
 
 import javax.persistence.*;
 
-
-import java.util.Date;
-import java.util.Set;
-
 @Entity
 @Table
 public class Schedule {
@@ -89,7 +85,7 @@ public class Schedule {
                 ", day=" + day +
                 ", time=" + time +
                 ", room=" + room +
-                ", clas=" + clas +
+                ", class=" + clas +
                 ", subjects=" + subject +
                 '}';
     }
