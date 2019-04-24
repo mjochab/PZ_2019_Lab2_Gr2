@@ -2,11 +2,12 @@ package Modele;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table
-public class Frequently {
+public class Frequently implements Serializable {
 
     private long frequentlyId;
     private int absence;

@@ -2,11 +2,12 @@ package Modele;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table
-public class Warns {
+public class Warns implements Serializable {
 
     private long warnId;
     private Date dateCreated;

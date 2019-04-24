@@ -2,11 +2,12 @@ package Modele;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table
-public class Grades {
+public class Grades implements Serializable {
 
     private long gradeId;
     private int grade;

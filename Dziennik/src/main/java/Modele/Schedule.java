@@ -2,10 +2,11 @@ package Modele;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table
-public class Schedule {
+public class Schedule implements Serializable {
 
 
     private long lessonId;

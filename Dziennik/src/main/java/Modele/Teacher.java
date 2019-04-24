@@ -1,11 +1,12 @@
 package Modele;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
 @Table
-public class Teacher {
+public class Teacher implements Serializable {
 
     private long teacherId;
     private String firstNameT;
