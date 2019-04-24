@@ -11,7 +11,7 @@ public class Schedule {
     private long lessonId;
     private String day;
     private String time;
-    private int room;
+    private String room;
     private Classes clas;
     private Subject subject;
 
@@ -43,10 +43,10 @@ public class Schedule {
     }
 
     @Column(name = "room")
-    public int getRoom() {
+    public String getRoom() {
         return room;
     }
-    public void setRoom(int room) {
+    public void setRoom(String room) {
         this.room = room;
     }
 
@@ -69,7 +69,7 @@ public class Schedule {
         this.subject = subject;
     }
 
-    public Schedule(long lessonId, String day, String time, int room, Classes clas, Subject subject) {
+    public Schedule(long lessonId, String day, String time, String room, Classes clas, Subject subject) {
         this.lessonId = lessonId;
         this.day = day;
         this.time = time;
