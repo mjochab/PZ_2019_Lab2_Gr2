@@ -23,7 +23,7 @@ public class User {
 
     private Student student;
 
-    private Set<Backlog> backlogs;
+
 
     public User(long userId, String username, String passwrd,String linkedAcc, Teacher teacher) {
         this.userId = userId;
@@ -111,13 +111,7 @@ public class User {
         this.student = student;
     }
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    public Set<Backlog> getBacklogs() {
-        return backlogs;
-    }
-    public void setBacklogs(Set<Backlog> backlogs) {
-        this.backlogs = backlogs;
-    }
+
 
     public User() {}
 

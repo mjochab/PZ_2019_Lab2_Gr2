@@ -19,7 +19,7 @@
         <mapping class="Modele.User"></mapping>
         <mapping class="Modele.Admin"></mapping>
         <mapping class="Modele.Teacher"></mapping>
-        <mapping class="Modele.Backlog"></mapping>
+
         <mapping class="Modele.Classes"></mapping>
         <mapping class="Modele.Frequently"></mapping>
         <mapping class="Modele.Grades"></mapping>
