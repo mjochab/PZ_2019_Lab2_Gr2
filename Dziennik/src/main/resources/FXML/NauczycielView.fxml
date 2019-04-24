@@ -31,7 +31,7 @@
                            <Insets bottom="10.0" top="10.0" />
                         </VBox.margin>
                      </Label>
-                     <Label text="user">
+                     <Label fx:id="sessionInfo" wrapText="true">
                         <font>
                            <Font name="System Bold" size="15.0" />
                         </font>

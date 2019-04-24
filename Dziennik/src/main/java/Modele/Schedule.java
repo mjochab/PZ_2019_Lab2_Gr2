@@ -30,8 +30,7 @@ public class Schedule {
         this.lessonId = lessonId;
     }
 
-    @Column(name = "day", columnDefinition="TIMESTAMP")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "day")
     public String getDay() {
         return day;
     }
@@ -39,8 +38,7 @@ public class Schedule {
         this.day = day;
     }
 
-    @Column(name = "time", columnDefinition="TIME")
-    @Temporal(TemporalType.TIME)
+    @Column(name = "time")
     public String getTime() {
         return time;
     }
