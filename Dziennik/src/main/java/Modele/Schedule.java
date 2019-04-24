@@ -13,8 +13,8 @@ public class Schedule {
 
 
     private long lessonId;
-    private Date date;
-    private Date time;
+    private String day;
+    private String time;
     private int room;
     private Classes clas;
     private Subject subject;
@@ -29,21 +29,22 @@ public class Schedule {
     public void setlessonId(long lessonId) {
         this.lessonId = lessonId;
     }
-    @Column(name = "date", columnDefinition="TIMESTAMP")
+
+    @Column(name = "day", columnDefinition="TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
-    public Date getDate() {
-        return date;
+    public String getDay() {
+        return day;
     }
-    public void setDate(Date date) {
-        this.date = date;
-    }
-    @Column(name = "time", columnDefinition="TIME")
-    @Temporal(TemporalType.TIME)
-    public Date getTime() {
-        return time;
+    public void setDay(String day) {
+        this.day = day;
     }
 
-    public void setTime(Date time) {
+    @Column(name = "time", columnDefinition="TIME")
+    @Temporal(TemporalType.TIME)
+    public String getTime() {
+        return time;
+    }
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -51,19 +52,19 @@ public class Schedule {
     public int getRoom() {
         return room;
     }
-
     public void setRoom(int room) {
         this.room = room;
     }
+
     @ManyToOne
     @JoinColumn(name = "class")
     public Classes getClas() {
         return clas;
     }
-
     public void setClas(Classes clas) {
         this.clas = clas;
     }
+
     @ManyToOne
     @JoinColumn(name = "subject_id")
     public Subject getSubjects() {
@@ -74,9 +75,9 @@ public class Schedule {
         this.subject = subject;
     }
 
-    public Schedule(long lessonId, Date date, Date time, int room, Classes clas, Subject subject) {
+    public Schedule(long lessonId, String day, String time, int room, Classes clas, Subject subject) {
         this.lessonId = lessonId;
-        this.date = date;
+        this.day = day;
         this.time = time;
         this.room = room;
         this.clas = clas;
@@ -87,7 +88,7 @@ public class Schedule {
     public String toString() {
         return "Schedule{" +
                 "lessonId=" + lessonId +
-                ", date=" + date +
+                ", day=" + day +
                 ", time=" + time +
                 ", room=" + room +
                 ", clas=" + clas +

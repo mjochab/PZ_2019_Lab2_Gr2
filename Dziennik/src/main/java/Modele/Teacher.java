@@ -10,7 +10,7 @@ public class Teacher {
     private long teacherId;
     private String firstNameT;
     private String lastNameT;
-    private String linkedAcc;
+
     private Set<Classes> classes;
     private Set<Warns> warns;
     private Set<Subject> subjects;
@@ -45,13 +45,7 @@ public class Teacher {
         this.lastNameT = lastNameT;
     }
 
-    @Column(name = "linked_acc")
-    public String getLinkedAcc() {
-        return linkedAcc;
-    }
-    public void setLinkedAcc(String linkedAcc) {
-        this.linkedAcc = linkedAcc;
-    }
+
 
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
     public Set<Warns> getWarns() {
@@ -99,7 +93,6 @@ public class Teacher {
                 "teacherId=" + teacherId +
                 ", firstNameT='" + firstNameT + '\'' +
                 ", lastNameT='" + lastNameT + '\'' +
-                ", linkedAcc='" + linkedAcc + '\'' +
                 ", classes=" + classes +
                 ", warns=" + warns +
                 ", subjects=" + subjects +
