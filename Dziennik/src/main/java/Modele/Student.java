@@ -3,11 +3,12 @@ package Modele;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
 @Table
-public class Student {
+public class Student implements Serializable {
 
     private long studentId;
     private String firstNameS;
