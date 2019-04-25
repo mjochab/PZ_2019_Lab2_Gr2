@@ -22,6 +22,12 @@ public class StudentDAO extends SessionManager implements DAO<Student>{
         return students;
     }
 
+    @SuppressWarnings("unchecked")
+    public List<Student> findAllStudentsInClass(long classId){
+        List<Student> students = (List<Student>) getCurrentSession().createQuery("from Student where class_id = "+classId).list();
+        return students;
+    }
+
     public void deleteById(long studentId){
         Student student = (Student) getCurrentSession().get(Student.class,studentId);
         getCurrentSession().delete(student);
