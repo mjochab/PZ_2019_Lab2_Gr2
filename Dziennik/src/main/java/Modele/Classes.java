@@ -15,6 +15,8 @@ public class Classes implements Serializable {
     private Set<Schedule>schedules;
 
 
+
+
     @Id
     @GeneratedValue
     @Column(name = "class_id")

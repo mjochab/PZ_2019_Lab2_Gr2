@@ -37,6 +37,13 @@ public class StudentService {
         return student;
     }
 
+    public void persist(Student entity){
+        studentDAO.openCurrentSessionWithTransaction();
+        studentDAO.persist(entity);
+        studentDAO.closeCurrentSessionWithTransaction();
+    }
+
+
     public StudentDAO studentDao(){
         return studentDAO;
     }

@@ -1,11 +1,11 @@
 package dao;
 
 import Modele.User;
-import sessions.SessionManager;
+import hibernate.HibernateUtil;
 
 import java.util.List;
 
-public class UserDAO extends SessionManager implements DAO<User>{
+public class UserDAO extends HibernateUtil implements DAO<User>{
     @Override
     public User findById(long userId) {
         User user = (User) getCurrentSession().get(User.class, userId);

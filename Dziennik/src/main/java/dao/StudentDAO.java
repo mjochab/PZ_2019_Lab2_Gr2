@@ -1,12 +1,12 @@
 package dao;
 
 import Modele.Student;
-import sessions.SessionManager;
+import hibernate.HibernateUtil;
 
 import java.util.List;
 
-public class StudentDAO extends SessionManager implements DAO<Student>{
-
+public class StudentDAO extends HibernateUtil implements DAO<Student>{
+    HibernateUtil hibernateUtil;
     public StudentDAO() {
     }
 
@@ -32,7 +32,15 @@ public class StudentDAO extends SessionManager implements DAO<Student>{
         Student student = (Student) getCurrentSession().get(Student.class,studentId);
         getCurrentSession().delete(student);
     }
-
+/*
+    public void deleteByColumnName(String columName, int id) {
+        CriteriaBuilder cb =
+                CriteriaDelete
+        DeleteBuilder<Student, Object> deleteBuilder = dao.deleteBuilder();
+        deleteBuilder.where().eq(columName, id);
+        dao.delete(deleteBuilder.prepare());
+    }
+*/
     @Override
     public void delete(Student student) {
         getCurrentSession().delete(student);

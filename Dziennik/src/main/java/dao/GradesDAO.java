@@ -1,11 +1,11 @@
 package dao;
 
 import Modele.Grades;
-import sessions.SessionManager;
+import hibernate.HibernateUtil;
 
 import java.util.List;
 
-public class GradesDAO extends SessionManager implements DAO<Grades>{
+public class GradesDAO extends HibernateUtil implements DAO<Grades>{
     @Override
     public Grades findById(long gradeId) {
         Grades grades = (Grades) getCurrentSession().get(Grades.class, gradeId);

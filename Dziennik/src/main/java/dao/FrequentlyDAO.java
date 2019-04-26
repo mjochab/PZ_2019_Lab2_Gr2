@@ -1,11 +1,11 @@
 package dao;
 
 import Modele.Frequently;
-import sessions.SessionManager;
+import hibernate.HibernateUtil;
 
 import java.util.List;
 
-public class FrequentlyDAO extends SessionManager implements DAO<Frequently> {
+public class FrequentlyDAO extends HibernateUtil implements DAO<Frequently> {
     @Override
     public Frequently findById(long frequentlyId) {
         Frequently frequently = (Frequently) getCurrentSession().get(Frequently.class, frequentlyId);

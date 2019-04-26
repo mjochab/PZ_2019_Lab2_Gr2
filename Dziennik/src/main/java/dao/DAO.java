@@ -8,6 +8,7 @@ public interface DAO<T extends Serializable> {
     void persist(T entity);
 
 
+
     void update(T entity);
 
     T findById(long id);

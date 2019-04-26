@@ -1,11 +1,11 @@
 package dao;
 
 import Modele.Warns;
-import sessions.SessionManager;
+import hibernate.HibernateUtil;
 
 import java.util.List;
 
-public class WarnsDAO extends SessionManager implements DAO<Warns>{
+public class WarnsDAO extends HibernateUtil implements DAO<Warns>{
     @Override
     public Warns findById(long warnId) {
         Warns warns = (Warns) getCurrentSession().get(Warns.class, warnId);

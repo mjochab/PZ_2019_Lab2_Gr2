@@ -1,11 +1,11 @@
 package dao;
 
 import Modele.Schedule;
-import sessions.SessionManager;
+import hibernate.HibernateUtil;
 
 import java.util.List;
 
-public class ScheduleDAO extends SessionManager implements DAO<Schedule> {
+public class ScheduleDAO extends HibernateUtil implements DAO<Schedule> {
 
     @Override
     public Schedule findById(long scheduleId) {

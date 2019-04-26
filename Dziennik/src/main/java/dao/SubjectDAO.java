@@ -1,11 +1,11 @@
 package dao;
 
 import Modele.Subject;
-import sessions.SessionManager;
+import hibernate.HibernateUtil;
 
 import java.util.List;
 
-public class SubjectDAO extends SessionManager implements DAO<Subject>{
+public class SubjectDAO extends HibernateUtil implements DAO<Subject>{
 
     @Override
     public void persist(Subject entity) {
@@ -19,7 +19,7 @@ public class SubjectDAO extends SessionManager implements DAO<Subject>{
 
     @Override
     public Subject findById(long id) {
-        return getCurrentSession().get(Subject.class, id);
+        return (Subject) getCurrentSession().get(Subject.class, id);
     }
 
     @Override

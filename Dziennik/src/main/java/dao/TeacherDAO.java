@@ -1,11 +1,11 @@
 package dao;
 
 import Modele.Teacher;
-import sessions.SessionManager;
+import hibernate.HibernateUtil;
 
 import java.util.List;
 
-public class TeacherDAO extends SessionManager implements DAO<Teacher>{
+public class TeacherDAO extends HibernateUtil implements DAO<Teacher>{
     @Override
     public Teacher findById(long teacherId) {
         Teacher teacher = (Teacher) getCurrentSession().get(Teacher.class, teacherId);

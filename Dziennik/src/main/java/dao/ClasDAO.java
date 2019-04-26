@@ -1,16 +1,21 @@
 package dao;
 
 import Modele.Classes;
-import sessions.SessionManager;
+import hibernate.HibernateUtil;
 
 import java.util.List;
 
-public class ClasDAO extends SessionManager implements DAO<Classes>{
+public class ClasDAO extends HibernateUtil implements DAO<Classes>{
+
+
+
     @Override
     public Classes findById(long classId) {
         Classes classes = (Classes) getCurrentSession().get(Classes.class, classId);
         return classes;
     }
+
+
     @SuppressWarnings("unchecked")
     @Override
     public List<Classes> findAll() {

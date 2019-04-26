@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-public class AdminZarzadzanieUczniemController {
+public class AdminStudentController {
     @FXML
     private TextField lbStudentName;
 
@@ -23,4 +23,6 @@ public class AdminZarzadzanieUczniemController {
 
     }
 
+    public void modifyStudent(ActionEvent actionEvent) {
+    }
 }
