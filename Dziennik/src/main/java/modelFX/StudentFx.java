@@ -7,6 +7,7 @@ public class StudentFx {
     private SimpleStringProperty firstName = new SimpleStringProperty();
     private SimpleStringProperty lastName = new SimpleStringProperty();
     private SimpleStringProperty pesel = new SimpleStringProperty();
+    private SimpleStringProperty linkedAcc = new SimpleStringProperty();
 
 
     public String getFirstName() {
@@ -43,5 +44,17 @@ public class StudentFx {
 
     public void setPesel(String pesel) {
         this.pesel.set(pesel);
+    }
+
+    public String getLinkedAcc() {
+        return linkedAcc.get();
+    }
+
+    public SimpleStringProperty linkedAccProperty() {
+        return linkedAcc;
+    }
+
+    public void setLinkedAcc(String linkedAcc) {
+        this.linkedAcc.set(linkedAcc);
     }
 }

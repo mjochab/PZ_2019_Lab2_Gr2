@@ -13,7 +13,7 @@ public class Teacher implements Serializable {
     private String lastNameT;
 
     private Set<Warns> warns;
-    private Set<Subject> subjects;
+    private Subject subject;
     private User user;
 
     @Id
@@ -55,17 +55,18 @@ public class Teacher implements Serializable {
         this.warns = warns;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "subject_id")
+    public Subject getSubject() {
+        return subject;
+    }
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    @JoinTable(name = "teacher_subject",
-            joinColumns  = {@JoinColumn(name = "teacher_id")},
-            inverseJoinColumns = {@JoinColumn(name = "subject_id")})
-    public Set<Subject> getSubjects() {
-        return subjects;
+    public void setSubject(Subject subject) {
+        this.subject = subject;
     }
-    public void setSubjects(Set<Subject> subjects) {
-        this.subjects = subjects;
-    }
+
+
+
 
     @OneToOne(fetch = FetchType.LAZY)
     public User getUser() {
@@ -84,7 +85,6 @@ public class Teacher implements Serializable {
                 ", firstNameT='" + firstNameT + '\'' +
                 ", lastNameT='" + lastNameT + '\'' +
                 ", warns=" + warns +
-                ", subjects=" + subjects +
                 ", user=" + user +
                 '}';
     }

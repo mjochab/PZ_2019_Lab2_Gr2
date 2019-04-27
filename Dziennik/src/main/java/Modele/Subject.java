@@ -14,6 +14,14 @@ public class Subject implements Serializable {
     private long subjectId;
     private String subjectName;
     private Set<Grades> grades;
+    private Set<Teacher> teachers;
+
+    public Subject(String name) {
+        this.subjectName = name;
+    }
+
+    public Subject() {
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,6 +49,14 @@ public class Subject implements Serializable {
         this.grades = grades;
     }
 
+    @OneToMany(mappedBy = "subject",fetch=FetchType.EAGER, cascade = CascadeType.ALL)
+    public Set<Teacher> getTeachers() {
+        return teachers;
+    }
+
+    public void setTeachers(Set<Teacher> teachers) {
+        this.teachers = teachers;
+    }
 
     @Override
     public String toString() {
