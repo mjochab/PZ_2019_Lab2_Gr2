@@ -34,7 +34,7 @@ public class SubjectDao  extends SessionCreator implements Dao<Subject>{
 
     @Override
     public void deleteAll() {
-        List<Subject> classesList = findAll();
-        classesList.forEach(this::delete);
+        List<Subject> subjects = findAll();
+        subjects.forEach(this::delete);
     }
 }

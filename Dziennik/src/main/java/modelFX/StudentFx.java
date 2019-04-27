@@ -1,9 +1,10 @@
 package modelFX;
 
+import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class StudentFx {
-
+    private SimpleLongProperty studentId = new SimpleLongProperty();
     private SimpleStringProperty firstName = new SimpleStringProperty();
     private SimpleStringProperty lastName = new SimpleStringProperty();
     private SimpleStringProperty pesel = new SimpleStringProperty();
@@ -56,5 +57,17 @@ public class StudentFx {
 
     public void setLinkedAcc(String linkedAcc) {
         this.linkedAcc.set(linkedAcc);
+    }
+
+    public long getStudentId() {
+        return studentId.get();
+    }
+
+    public SimpleLongProperty studentIdProperty() {
+        return studentId;
+    }
+
+    public void setStudentId(long studentId) {
+        this.studentId.set(studentId);
     }
 }

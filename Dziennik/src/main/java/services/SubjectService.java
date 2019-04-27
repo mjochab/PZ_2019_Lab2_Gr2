@@ -1,6 +1,6 @@
 package services;
 
-import Converters.SubjectConventor;
+import Converters.SubjectConverter;
 import Modele.Subject;
 import dao.SubjectDao;
 import javafx.beans.property.ObjectProperty;
@@ -47,7 +47,7 @@ public class SubjectService {
     private void initClassList(List<Subject> subjects){
         this.subjectFxObservableList.clear();
         subjects.forEach(c->{
-            SubjectFx subjectFx = SubjectConventor.convertToSubjectFx(c);
+            SubjectFx subjectFx = SubjectConverter.convertToSubjectFx(c);
             this.subjectFxObservableList.add(subjectFx);
         });
     }
