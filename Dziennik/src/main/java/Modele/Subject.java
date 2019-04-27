@@ -17,7 +17,7 @@ public class Subject implements Serializable {
     private Set<Grades> grades;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "subject_id")
     public long getSubjectId(){
         return this.subjectId;

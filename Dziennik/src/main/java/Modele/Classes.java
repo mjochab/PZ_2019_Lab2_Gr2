@@ -14,11 +14,15 @@ public class Classes implements Serializable {
     private Set<Student> students;
     private Set<Schedule>schedules;
 
+    public Classes(String name) {
+        this.className = name;
+    }
 
-
+    public Classes() {
+    }
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "class_id")
     public long getClassId() {
         return classId;

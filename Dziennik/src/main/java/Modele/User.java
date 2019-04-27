@@ -2,7 +2,6 @@ package Modele;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Set;
 
 @Entity
 @Table
@@ -51,7 +50,7 @@ public class User implements Serializable {
     }
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     public long getUserId() {
         return userId;

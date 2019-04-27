@@ -17,7 +17,7 @@ public class Warns implements Serializable {
 
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "warns_id")
     public long getWarnId(){
         return this.warnId;

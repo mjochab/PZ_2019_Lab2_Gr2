@@ -1,23 +1,18 @@
 package dao;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
-public interface DAO<T extends Serializable> {
-
+public interface Dao <T extends Serializable> {
     void persist(T entity);
-
-
 
     void update(T entity);
 
     T findById(long id);
 
-    void deleteById(long id);
-
     void delete(T entity);
 
-    List<T> findAll();
+    Set<T> findAll();
 
     void deleteAll();
 }

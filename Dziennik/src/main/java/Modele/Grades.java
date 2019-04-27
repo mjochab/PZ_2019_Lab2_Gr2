@@ -18,7 +18,7 @@ public class Grades implements Serializable {
 
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "grade_id")
     public long getGradeId() {
         return gradeId;

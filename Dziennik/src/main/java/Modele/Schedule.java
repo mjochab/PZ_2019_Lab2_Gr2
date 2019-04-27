@@ -18,7 +18,7 @@ public class Schedule implements Serializable {
 
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "lesson_id")
     public long getlessonId() {
         return lessonId;

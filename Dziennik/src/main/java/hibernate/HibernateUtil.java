@@ -51,10 +51,11 @@ public class HibernateUtil {
         currentSession.close();
     }
 
-    public void closeCurrentSessionWithTransaction(){
+    public boolean closeCurrentSessionWithTransaction(){
 
         currentTransaction.commit();
         currentSession.close();
+        return false;
     }
 
 

@@ -18,7 +18,7 @@ public class Teacher implements Serializable {
     private User user;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "teacher_id")
     public long getTeacherId() {
         return this.teacherId;

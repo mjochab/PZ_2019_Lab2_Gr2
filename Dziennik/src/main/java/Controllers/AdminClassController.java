@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TreeView;
-import modelFX.ClasFx;
+import modelFX.ClassesFx;
 import services.ClassesService;
 
 public class AdminClassController {
@@ -22,38 +22,42 @@ public class AdminClassController {
     private TextField lbClassName;
 
     @FXML
-    private ComboBox<ClasFx> cbClass;
+    private ComboBox<ClassesFx> cbClass;
 
     @FXML
     private TreeView<String> classTreeView;
 
     private ClassesService classesService;
     private Classes classes;
-    private ClasFx clasFx;
+    private ClassesFx clasFx;
 
     @FXML
     public void initialize(){
+
         this.classesService = new ClassesService();
         try{
-            this.classesService.init();
+           this.classesService.init();
         }catch (Exception e){
-
+            System.out.println("classService.init error");
         }
 
-        this.cbClass.setItems(this.classesService.getClasFxObservableList());
+
+        this.cbClass.setItems(this.classesService.getClassesFxObservableList());
         this.classTreeView.setRoot(this.classesService.getRoot());
 
 
         this.addClassButton.disableProperty().bind(lbClassName.textProperty().isEmpty());
-        this.deleteClassButton.disableProperty().bind(this.classesService.clasFxObjectPropertyProperty().isNull());
+        this.deleteClassButton.disableProperty().bind(this.classesService.classesFxObjectPropertyProperty().isNull());
     }
 
     public void addClass(ActionEvent actionEvent) {
         try{
-           // String name = lbClassName.getText();
-          //  this.classes = new Classes(name);
-          //  classesService.persist(this.classes);
-            classesService.saveClassInDataBase(lbClassName.getText());
+            String name = lbClassName.getText();
+
+            this.classes = new Classes(name);
+            classesService.persist(this.classes);
+            lbClassName.clear();
+            //classesService.saveClassInDataBase(lbClassName.getText());
         }catch (Exception e){
             System.out.println("Nie dodano do bazy");
         }
@@ -61,13 +65,13 @@ public class AdminClassController {
 
     public void deleteClass(ActionEvent actionEvent) {
         try{
-            this.classesService.delete();
+           // this.classesService.delete();
         }catch (Exception e){
             System.out.println("nie usunieto");
         }
     }
 
     public void comboBox(ActionEvent actionEvent) {
-        this.classesService.setClasFxObjectProperty(this.cbClass.getSelectionModel().getSelectedItem());
+       this.classesService.setClassesFxObjectProperty(this.cbClass.getSelectionModel().getSelectedItem());
     }
 }

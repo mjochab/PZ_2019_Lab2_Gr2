@@ -14,7 +14,7 @@ public class Admin {
 
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "admin_id")
     public long getAdminId() {
         return this.adminId;
