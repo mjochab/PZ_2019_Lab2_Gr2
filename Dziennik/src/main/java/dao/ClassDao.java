@@ -1,36 +1,15 @@
 package dao;
 
 import Modele.Classes;
-import hibernate.HibernateUtil;
+import hibernate.SessionCreator;
 
-import java.util.Set;
+import java.util.List;
 
-public class ClassDao extends HibernateUtil implements Dao<Classes> {
-
-    protected HibernateUtil hibernateUtil;
-
-
-
-    public ClassDao() {
-
-    }
-
-    @SuppressWarnings("unchecked")
-    @Override
-    public Set<Classes> findAll() {
-        Set<Classes>  classes = (Set<Classes>) getCurrentSession().createQuery("from Classes").list();
-        return classes;
-    }
-
-    @Override
-    public void delete(Classes classes) {
-        getCurrentSession().delete(classes);
-    }
+public class ClassDao extends SessionCreator implements Dao<Classes> {
 
     @Override
     public void persist(Classes entity) {
         getCurrentSession().save(entity);
-
     }
 
     @Override
@@ -40,15 +19,23 @@ public class ClassDao extends HibernateUtil implements Dao<Classes> {
 
     @Override
     public Classes findById(long id) {
-        Classes classes =(Classes) getCurrentSession().get(Classes.class, id);
-        return classes;
+        return (Classes) getCurrentSession().get(Classes.class, id);
+    }
+
+    @Override
+    public void delete(Classes entity) {
+        getCurrentSession().delete(entity);
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public List<Classes> findAll() {
+        return (List<Classes>) getCurrentSession().createQuery("from Classes").list();
     }
 
     @Override
     public void deleteAll() {
-        Set<Classes> entityList = findAll();
-        for (Classes entity : entityList) {
-            delete(entity);
-        }
+        List<Classes> classesList = findAll();
+        classesList.forEach(this::delete);
     }
 }

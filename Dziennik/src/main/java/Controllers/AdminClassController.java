@@ -33,13 +33,9 @@ public class AdminClassController {
 
     @FXML
     public void initialize(){
-
         this.classesService = new ClassesService();
-        try{
-           this.classesService.init();
-        }catch (Exception e){
-            System.out.println("classService.init error");
-        }
+        this.classesService.init();
+
 
 
         this.cbClass.setItems(this.classesService.getClassesFxObservableList());
@@ -65,7 +61,7 @@ public class AdminClassController {
 
     public void deleteClass(ActionEvent actionEvent) {
         try{
-           // this.classesService.delete();
+           this.classesService.delete(cbClass.getValue().getClassId());
         }catch (Exception e){
             System.out.println("nie usunieto");
         }

@@ -8,21 +8,9 @@ public class ClassesFx {
 
 
     private StringProperty name = new SimpleStringProperty();
+    private SimpleLongProperty classId = new SimpleLongProperty();
 
 
-    public ClassesFx(String name,Long classId) {
-        this.name.set(name);
-
-    }
-
-    public ClassesFx(StringProperty name, SimpleLongProperty classId) {
-        this.name = name;
-
-    }
-
-    public ClassesFx() {
-
-    }
 
     public String getName() {
         return name.get();
@@ -34,5 +22,22 @@ public class ClassesFx {
 
     public void setName(String name) {
         this.name.set(name);
+    }
+
+    public long getClassId() {
+        return classId.get();
+    }
+
+    public SimpleLongProperty classIdProperty() {
+        return classId;
+    }
+
+    public void setClassId(long classId) {
+        this.classId.set(classId);
+    }
+
+    @Override
+    public String toString() {
+        return name.getValue();
     }
 }

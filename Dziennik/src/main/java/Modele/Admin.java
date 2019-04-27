@@ -9,6 +9,7 @@ public class Admin {
     private long adminId;
     private String firstNameA;
     private String lastNameA;
+    private String linkedAcc;
     private User user;
 
 
@@ -39,7 +40,13 @@ public class Admin {
         this.lastNameA = lastNameA;
     }
 
-
+    @Column(name = "linked_acc", nullable = false, length = 1)
+    public String getLinkedAcc() {
+        return linkedAcc;
+    }
+    public void setLinkedAcc(String linkedAcc) {
+        this.linkedAcc = linkedAcc;
+    }
 
     @OneToOne(fetch = FetchType.LAZY)
     public User getUser(){

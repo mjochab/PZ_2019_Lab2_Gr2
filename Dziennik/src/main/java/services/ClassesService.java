@@ -10,7 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.TreeItem;
 import modelFX.ClassesFx;
 
-import java.util.Set;
+import java.util.List;
 
 public class ClassesService {
 
@@ -26,25 +26,25 @@ public class ClassesService {
     public void init(){
 
         ClassDao classDao = new ClassDao();
-        Set<Classes> classes = classDao.findAll();
+        List<Classes> classes = findAllClasses();
 
         initRoot(classes);
         initClassList(classes);
     }
 
-    private void initRoot(Set<Classes> classes){
-
+    private void initRoot(List<Classes> classes){
         this.root.getChildren().clear();
+
         classes.forEach(c->{
             TreeItem<String> classItem = new TreeItem<>(c.getClassName());
             c.getStudents().forEach(b->{
-                 classItem.getChildren().add(new TreeItem<>(b.getFirstName() + b.getLastName()));
+                 classItem.getChildren().add(new TreeItem<>(b.getFirstName() +" "+ b.getLastName()));
             });
             root.getChildren().add(classItem);
         });
     }
 
-    private void initClassList(Set<Classes> classes){
+    private void initClassList(List<Classes> classes){
         this.classesFxObservableList.clear();
         classes.forEach(c->{
             ClassesFx classesFx = ClassConverter.convertToClassFx(c);
@@ -53,9 +53,9 @@ public class ClassesService {
     }
 
 
-    public Set<Classes> findAll() {
+    public List<Classes> findAllClasses() {
         classDao.openCurrentSession();
-        Set<Classes> classes = classDao.findAll();
+        List<Classes> classes = classDao.findAll();
         classDao.closeCurrentSession();
 
         return classes;
@@ -84,12 +84,13 @@ public class ClassesService {
     }
 
 
-    public boolean delete(long id) {
+    public void delete(long id) {
         classDao.openCurrentSessionWithTransaction();
         Classes classes = classDao.findById(id);
         classDao.delete(classes);
-        return classDao.closeCurrentSessionWithTransaction();
+        classDao.closeCurrentSessionWithTransaction();
     }
+
 
 
     public void deleteAll() {

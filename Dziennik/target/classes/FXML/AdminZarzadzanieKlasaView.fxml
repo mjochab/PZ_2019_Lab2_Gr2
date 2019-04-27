@@ -45,6 +45,6 @@
             </Button>
          </children>
       </HBox>
-      <TreeView fx:id="classTreeView" prefHeight="302.0" prefWidth="600.0" />
+      <TreeView fx:id="classTreeView" prefHeight="302.0" prefWidth="600.0" showRoot="false"/>
    </children>
 </VBox>

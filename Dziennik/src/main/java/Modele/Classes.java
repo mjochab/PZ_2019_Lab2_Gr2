@@ -10,7 +10,6 @@ public class Classes implements Serializable {
 
     private long classId;
     private String className;
-    private Set<Subject> subjects;
     private Set<Student> students;
     private Set<Schedule>schedules;
 
@@ -39,24 +38,12 @@ public class Classes implements Serializable {
         this.className = className;
     }
 
-    @OneToMany(mappedBy = "classes", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "classes",fetch=FetchType.EAGER, cascade = CascadeType.ALL)
     public Set<Student> getStudents() {
         return students;
     }
     public void setStudents(Set<Student> students) {
         this.students = students;
-    }
-
-
-    @ManyToMany(cascade = {CascadeType.ALL})
-    @JoinTable(name = "classes_subject",
-            joinColumns = {@JoinColumn(name = "class_id")},
-            inverseJoinColumns = {@JoinColumn(name = "subject_id")})
-    public Set<Subject> getSubjects() {
-        return subjects;
-    }
-    public void setSubjects(Set<Subject> subjects) {
-        this.subjects = subjects;
     }
 
 
@@ -70,14 +57,10 @@ public class Classes implements Serializable {
     }
 
 
-
     @Override
     public String toString() {
         return "Classes{" +
-                "classId=" + classId +
-                ", className='" + className + '\'' +
-                ", subjects=" + subjects +
-                ", students=" + students +
+                "className='" + className + '\'' +
                 '}';
     }
 }

@@ -1,29 +1,21 @@
 package hibernate;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
 
 public class HibernateUtil {
-    private static final SessionFactory sessionFactory;
-    private static final ServiceRegistry serviceRegistry;
-    private  static  Session currentSession;
-    private Transaction currentTransaction;
+    private static final SessionFactory sessionFactory = buildSessionFactory();
 
 
 
-    static {
-        Configuration conf = new Configuration();
-        conf.configure();
-        serviceRegistry = new ServiceRegistryBuilder().applySettings(conf.getProperties()).buildServiceRegistry();
-        try {
-            sessionFactory = conf.buildSessionFactory(serviceRegistry);
-        } catch (Exception e) {
-            System.err.println("Initial SessionFactory creation failed." + e);
-            throw new ExceptionInInitializerError(e);
+
+
+    private static SessionFactory buildSessionFactory(){
+        try{
+            return new Configuration().configure().buildSessionFactory();
+        }catch(Throwable ex){
+            System.err.println("Initial SessionFactory creation failed." + ex);
+            throw new ExceptionInInitializerError(ex);
         }
     }
 
@@ -32,48 +24,4 @@ public class HibernateUtil {
     }
 
 
-
-
-
-
-    public static Session openCurrentSession() {
-        currentSession = getSessionFactory().openSession();
-        return currentSession;
-    }
-
-    public Session openCurrentSessionWithTransaction() {
-        currentSession = getSessionFactory().openSession();
-        currentTransaction = currentSession.beginTransaction();
-        return currentSession;
-    }
-
-    public void closeCurrentSession() {
-        currentSession.close();
-    }
-
-    public boolean closeCurrentSessionWithTransaction(){
-
-        currentTransaction.commit();
-        currentSession.close();
-        return false;
-    }
-
-
-
-
-    public  static Session getCurrentSession() {
-        return currentSession;
-    }
-
-    public void setCurrentSession(Session currentSession) {
-        this.currentSession = currentSession;
-    }
-
-    public Transaction getCurrentTransaction() {
-        return currentTransaction;
-    }
-
-    public void setCurrentTransaction(Transaction currentTransaction) {
-        this.currentTransaction = currentTransaction;
-    }
 }

@@ -13,7 +13,6 @@ public class Subject implements Serializable {
 
     private long subjectId;
     private String subjectName;
-    private Set<Classes> classes;
     private Set<Grades> grades;
 
     @Id
@@ -42,20 +41,12 @@ public class Subject implements Serializable {
         this.grades = grades;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "subjects")
-    public Set<Classes> getClasses() {
-        return classes;
-    }
-    public void setClasses(Set<Classes> classes) {
-        this.classes = classes;
-    }
 
     @Override
     public String toString() {
         return "Subject{" +
                 "subjectId=" + subjectId +
                 ", subjectName='" + subjectName + '\'' +
-                ", classes=" + classes +
                 ", grades=" + grades +
                 '}';
     }

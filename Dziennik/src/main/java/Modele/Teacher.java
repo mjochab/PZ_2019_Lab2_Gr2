@@ -12,7 +12,6 @@ public class Teacher implements Serializable {
     private String firstNameT;
     private String lastNameT;
 
-    private Set<Classes> classes;
     private Set<Warns> warns;
     private Set<Subject> subjects;
     private User user;
@@ -56,16 +55,6 @@ public class Teacher implements Serializable {
         this.warns = warns;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    @JoinTable(name = "teacher_classes",
-            joinColumns = {@JoinColumn(name = "teacher_id")},
-            inverseJoinColumns = {@JoinColumn(name = "class_id")})
-    public Set<Classes> getClasses() {
-        return classes;
-    }
-    public void setClasses(Set<Classes> classes) {
-        this.classes = classes;
-    }
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinTable(name = "teacher_subject",
@@ -94,7 +83,6 @@ public class Teacher implements Serializable {
                 "teacherId=" + teacherId +
                 ", firstNameT='" + firstNameT + '\'' +
                 ", lastNameT='" + lastNameT + '\'' +
-                ", classes=" + classes +
                 ", warns=" + warns +
                 ", subjects=" + subjects +
                 ", user=" + user +
