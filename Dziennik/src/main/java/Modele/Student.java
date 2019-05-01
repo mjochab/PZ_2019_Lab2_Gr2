@@ -21,6 +21,17 @@ public class Student implements Serializable {
     private Set<Frequently> frequently;
     private User user;
 
+
+
+    public Student(String name, String lname, String pesel, Classes classN, String linkedAcc) {
+        this.firstNameS = name;
+        this.lastNameS = lname;
+        this.pesel = pesel;
+        this.classes = classN;
+        this.linkedAcc = linkedAcc;
+    }
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "student_id")
@@ -103,7 +114,14 @@ public class Student implements Serializable {
 
     }
 
-    @OneToOne(fetch = FetchType.LAZY)
+    public Student(String firstNameS, String lastNameS, String pesel, Classes classes) {
+        this.firstNameS = firstNameS;
+        this.lastNameS = lastNameS;
+        this.pesel = pesel;
+        this.classes = classes;
+    }
+
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     public User getUser() {
         return user;
     }

@@ -13,4 +13,13 @@ public class UserConverter {
 
         return userFx;
     }
+
+    public static User convertToUser(UserFx userFx){
+        User user = new User();
+        user.setUserId(userFx.getUserId());
+        user.setUsername(userFx.getUsername());
+        user.setPasswrd(userFx.getUsername());
+        user.setLinkedAcc(userFx.getLinkedAcc());
+        return user;
+    }
 }

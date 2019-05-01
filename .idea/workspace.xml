@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="I19L2GR2-38 Klasy pomocnicze">
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/UserServices.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="I19L2GR2-38 Zapisywanie do tabeli student bez user">
+      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/icons/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/icons/edit.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/Dziennik.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/Dziennik.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/StudentConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/StudentConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/UserConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/UserConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Classes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClassesFx.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClassesFx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/StudentFx.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/StudentFx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/UserFx.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/UserFx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/services/ClassesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/ClassesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/services/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/UserServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieUczniemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieUczniemView.fxml" afterDir="false" />
     </list>
@@ -74,10 +85,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="377">
+              <caret line="163" column="19" lean-forward="true" selection-start-line="163" selection-start-column="19" selection-end-line="163" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5005#5006#0" expanded="true" />
+                <element signature="e#5043#5044#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,64 +98,33 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="130" column="47" selection-start-line="130" selection-start-column="47" selection-end-line="130" selection-end-column="47" />
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="144" column="52" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/ClassesService.java">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClassesFx.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+            <state relative-caret-position="119">
+              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2868#2869#0" expanded="true" />
-                <element signature="e#2899#2900#0" expanded="true" />
-                <element signature="e#2949#2950#0" expanded="true" />
-                <element signature="e#2989#2990#0" expanded="true" />
-                <element signature="e#3058#3059#0" expanded="true" />
-                <element signature="e#3104#3105#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#637#638#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentServices.java">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="107" column="3" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#231#232#0" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#924#925#0" expanded="true" />
-                <element signature="e#3134#3135#0" expanded="true" />
-                <element signature="e#3180#3181#0" expanded="true" />
-                <element signature="e#3400#3401#0" expanded="true" />
-                <element signature="e#3452#3453#0" expanded="true" />
-                <element signature="e#3526#3527#0" expanded="true" />
-                <element signature="e#3572#3573#0" expanded="true" />
-                <element signature="e#3795#3796#0" expanded="true" />
-                <element signature="e#3841#3842#0" expanded="true" />
-                <element signature="e#4057#4058#0" expanded="true" />
-                <element signature="e#4093#4094#0" expanded="true" />
-                <element signature="e#4160#4161#0" expanded="true" />
-                <element signature="e#4210#4211#0" expanded="true" />
-                <element signature="e#4251#4252#0" expanded="true" />
-                <element signature="e#4284#4285#0" expanded="true" />
-                <element signature="e#4340#4341#0" expanded="true" />
-                <element signature="e#4384#4385#0" expanded="true" />
-                <element signature="e#4769#4770#0" expanded="true" />
-                <element signature="e#4821#4822#0" expanded="true" />
-                <element signature="e#4895#4896#0" expanded="true" />
-                <element signature="e#4941#4942#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="442">
+              <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -150,11 +132,76 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="215">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#698#699#0" expanded="true" />
                 <element signature="e#791#792#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/UserFx.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#453#454#0" expanded="true" />
+                <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#538#539#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
+                <element signature="e#609#610#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+                <element signature="e#720#721#0" expanded="true" />
+                <element signature="e#774#775#0" expanded="true" />
+                <element signature="e#805#806#0" expanded="true" />
+                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#931#932#0" expanded="true" />
+                <element signature="e#968#969#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
+                <element signature="e#1101#1102#0" expanded="true" />
+                <element signature="e#1144#1145#0" expanded="true" />
+                <element signature="e#1180#1181#0" expanded="true" />
+                <element signature="e#1218#1219#0" expanded="true" />
+                <element signature="e#1273#1274#0" expanded="true" />
+                <element signature="e#1305#1306#0" expanded="true" />
+                <element signature="e#1355#1356#0" expanded="true" />
+                <element signature="e#1400#1401#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/ClassDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,44 +210,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/UserServices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            <state relative-caret-position="190">
+              <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#974#975#0" expanded="true" />
+                <element signature="e#1023#1024#0" expanded="true" />
+                <element signature="e#1091#1092#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="e#1817#1818#0" expanded="true" />
+                <element signature="e#1869#1870#0" expanded="true" />
+                <element signature="e#1943#1944#0" expanded="true" />
+                <element signature="e#1989#1990#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/SubjectConverter.java">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="5" selection-start-line="6" selection-start-column="3" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="367">
+              <caret line="123" column="63" lean-forward="true" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/StudentFx.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1517#1518#0" expanded="true" />
-                <element signature="e#1555#1556#0" expanded="true" />
-                <element signature="e#1608#1609#0" expanded="true" />
-                <element signature="e#1640#1641#0" expanded="true" />
-                <element signature="e#1688#1689#0" expanded="true" />
-                <element signature="e#1733#1734#0" expanded="true" />
-                <element signature="e#1976#1977#0" expanded="true" />
-                <element signature="e#2028#2029#0" expanded="true" />
-                <element signature="e#2102#2103#0" expanded="true" />
-                <element signature="e#2148#2149#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -238,7 +271,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/ScheduleDAO.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/TeacherDAO.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/WarnsDAO.java" />
@@ -256,7 +288,6 @@
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Frequently.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Grades.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Schedule.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/User.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Warns.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/hibernate/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/hibernate/SessionCreator.java" />
@@ -264,12 +295,8 @@
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/ClassDao.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieKlasaView.fxml" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Converters/ClassConverter.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClassesFx.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/ClassesService.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminClassController.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Classes.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Admin.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Converters/SubjectConventor.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/SubjectService.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Teacher.java" />
@@ -281,14 +308,20 @@
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/SubjectDao.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Converters/StudentConventer.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/UserFx.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Converters/UserConverter.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/UserServices.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Converters/StudentConverter.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/StudentFx.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentServices.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/ClassesService.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Classes.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClassesFx.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/UserServices.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/UserFx.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/User.java" />
       </list>
     </option>
   </component>
@@ -320,6 +353,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -387,6 +422,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PZ_2019_Lab2_Gr2" type="462c0819:PsiDirectoryNode" />
+              <item name="Dziennik" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="modelFX" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -423,8 +467,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -436,7 +478,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556386031875" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556730384291" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -449,11 +491,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andrz\Documents\GitHub\PZ_2019_Lab2_Gr2\Dziennik\src\main\java\icons" />
       <recent name="C:\Users\andrz\Documents\GitHub\PZ_2019_Lab2_Gr2\Dziennik\src\main\resources" />
       <recent name="C:\Users\andrz\Documents\GitHub\PZ_2019_Lab2_Gr2\Dziennik\src" />
       <recent name="C:\Users\andrz\Documents\GitHub\PZ_2019_Lab2_Gr2\Dziennik\src\main" />
       <recent name="C:\Users\andrz\Documents\GitHub\PZ_2019_Lab2_Gr2\Dziennik\src\main\java" />
-      <recent name="C:\Users\andrz\Documents\GitHub\PZ_2019_Lab2_Gr2\Dziennik\src\main\hibernate" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -763,7 +805,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556377471821</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="I19L2GR2-38 Zapisywanie do tabeli student bez user">
+      <created>1556386106209</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1556386106209</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -782,7 +831,7 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15511727" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15671642" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -817,7 +866,7 @@
       <window_info anchor="right" id="Theme Preview" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15511727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15671642" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -826,7 +875,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27410617" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27410617" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -905,7 +954,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Nauczyciel BugFix" />
     <MESSAGE value="Dodanie Hibernate, model User" />
     <MESSAGE value="Model Admin,Teacher" />
     <MESSAGE value="Model Student" />
@@ -930,19 +978,14 @@
     <MESSAGE value="I19L2GR2-41 Zarzadzanie klasami interfejs admina" />
     <MESSAGE value="I19L2GR2-40 Zarzadzanie przedmiotami interfejs administratora" />
     <MESSAGE value="I19L2GR2-38 Klasy pomocnicze" />
-    <option name="LAST_COMMIT_MESSAGE" value="I19L2GR2-38 Klasy pomocnicze" />
+    <MESSAGE value="I19L2GR2-38 Zapisywanie do tabeli student bez user" />
+    <option name="LAST_COMMIT_MESSAGE" value="I19L2GR2-38 Zapisywanie do tabeli student bez user" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/WarnsService.java" />
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/GradesService.java" />
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieNauczycielemView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/ConverterClass.java" />
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentService.java" />
     <entry file="file://$PROJECT_DIR$/Dziennik/pom.xml">
@@ -982,13 +1025,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/sessions/SessionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/sessions/SessionManager.java" />
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/hibernate/HibernateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1007,16 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/hibernate/SessionCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1047,13 +1074,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="126" column="77" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1065,25 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-68">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="77" column="4" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/ClassDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="68" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1191,33 +1192,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClassesFx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Classes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="49" column="59" lean-forward="true" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/SubjectDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1241,10 +1215,197 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/SubjectConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="5" selection-start-line="6" selection-start-column="3" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/UserConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/StudentConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="13" column="97" selection-start-line="13" selection-start-column="97" selection-end-line="13" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/control/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="668" column="19" selection-start-line="668" selection-start-column="19" selection-end-line="668" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/icons/delete.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/icons/edit.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="126" column="77" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/hibernate/SessionCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/ClassesService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Classes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="40" column="87" selection-start-line="40" selection-start-column="87" selection-end-line="40" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminClassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="50" column="48" lean-forward="true" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/StudentFx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+            <element signature="e#2028#2029#0" expanded="true" />
+            <element signature="e#2102#2103#0" expanded="true" />
+            <element signature="e#2148#2149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClassesFx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/ClassDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/UserServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#974#975#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="e#1817#1818#0" expanded="true" />
+            <element signature="e#1869#1870#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="144" column="52" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="163" column="19" lean-forward="true" selection-start-line="163" selection-start-column="19" selection-end-line="163" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5005#5006#0" expanded="true" />
+            <element signature="e#5043#5044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="123" column="63" lean-forward="true" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1253,10 +1414,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/UserFx.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="367">
+          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
             <element signature="e#488#489#0" expanded="true" />
             <element signature="e#538#539#0" expanded="true" />
             <element signature="e#567#568#0" expanded="true" />
@@ -1284,142 +1446,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/UserConverter.java">
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminClassController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/SubjectConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" selection-start-line="6" selection-start-column="3" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/UserServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="130" column="47" selection-start-line="130" selection-start-column="47" selection-end-line="130" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/StudentFx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1517#1518#0" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
-            <element signature="e#1608#1609#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-            <element signature="e#1688#1689#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
-            <element signature="e#1976#1977#0" expanded="true" />
-            <element signature="e#2028#2029#0" expanded="true" />
-            <element signature="e#2102#2103#0" expanded="true" />
-            <element signature="e#2148#2149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/ClassesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2868#2869#0" expanded="true" />
-            <element signature="e#2899#2900#0" expanded="true" />
-            <element signature="e#2949#2950#0" expanded="true" />
-            <element signature="e#2989#2990#0" expanded="true" />
-            <element signature="e#3058#3059#0" expanded="true" />
-            <element signature="e#3104#3105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="107" column="3" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3180#3181#0" expanded="true" />
-            <element signature="e#3400#3401#0" expanded="true" />
-            <element signature="e#3452#3453#0" expanded="true" />
-            <element signature="e#3526#3527#0" expanded="true" />
-            <element signature="e#3572#3573#0" expanded="true" />
-            <element signature="e#3795#3796#0" expanded="true" />
-            <element signature="e#3841#3842#0" expanded="true" />
-            <element signature="e#4057#4058#0" expanded="true" />
-            <element signature="e#4093#4094#0" expanded="true" />
-            <element signature="e#4160#4161#0" expanded="true" />
-            <element signature="e#4210#4211#0" expanded="true" />
-            <element signature="e#4251#4252#0" expanded="true" />
-            <element signature="e#4284#4285#0" expanded="true" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4384#4385#0" expanded="true" />
-            <element signature="e#4769#4770#0" expanded="true" />
-            <element signature="e#4821#4822#0" expanded="true" />
-            <element signature="e#4895#4896#0" expanded="true" />
-            <element signature="e#4941#4942#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="442">
+          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
         </state>
       </provider>
     </entry>

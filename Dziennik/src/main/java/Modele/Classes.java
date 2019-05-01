@@ -38,7 +38,7 @@ public class Classes implements Serializable {
         this.className = className;
     }
 
-    @OneToMany(mappedBy = "classes",fetch=FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "classes",fetch=FetchType.EAGER, cascade = CascadeType.DETACH)
     public Set<Student> getStudents() {
         return students;
     }

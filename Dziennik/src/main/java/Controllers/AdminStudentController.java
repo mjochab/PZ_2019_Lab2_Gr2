@@ -1,8 +1,10 @@
 package Controllers;
 
+import Modele.Student;
+import Modele.User;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -12,6 +14,8 @@ import services.StudentServices;
 import services.UserServices;
 
 public class AdminStudentController {
+
+
     @FXML
     private TextField lbStudentName;
 
@@ -26,6 +30,9 @@ public class AdminStudentController {
 
     @FXML
     private TextField lbPassword;
+
+    @FXML
+    private TextField lbAccount;
 
     @FXML
     private Button addButton;
@@ -52,10 +59,15 @@ public class AdminStudentController {
 
     private StudentServices studentServices;
     private UserServices userServices;
+    private Student student;
+    private User user;
+
 
 
     @FXML
     void initialize(){
+
+
     studentServices = new StudentServices();
     userServices = new UserServices();
     studentServices.init();
@@ -70,10 +82,13 @@ public class AdminStudentController {
     this.studentTableDelete.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue()));
 
     this.studentTableDelete.setCellFactory(param -> new TableCell<StudentFx,StudentFx>(){
-        Button button = createButton("/icons/delete.png");
+        Button button = createDeleteButton();
+
         @Override
-        protected void updateItem(StudentFx item,boolean empty){
+        protected void updateItem(StudentFx item, boolean empty){
             super.updateItem(item,empty);
+            setGraphic(button);
+
 
             if(empty){
                 setGraphic(null);
@@ -87,6 +102,7 @@ public class AdminStudentController {
             }
 
         }
+
     });
 
 
@@ -96,10 +112,20 @@ public class AdminStudentController {
     .or(this.lbLogin.textProperty().isEmpty())
     .or(this.lbPassword.textProperty().isEmpty())
     .or(this.cbClass.valueProperty().isNull())
+                    .or(this.lbAccount.textProperty().isEmpty())
     );
 
     this.cbClass.setItems(this.studentServices.getClassesFxObservableList());
+    /*
     this.cbClass.valueProperty().bindBidirectional(this.studentServices.getStudentFxObjectProperty().classesFxObjectPropertyProperty());
+    this.lbStudentName.textProperty().bindBidirectional((this.studentServices.getStudentFxObjectProperty().firstNameProperty()));
+    this.lbLastName.textProperty().bindBidirectional(this.studentServices.getStudentFxObjectProperty().lastNameProperty());
+    this.lbPesel.textProperty().bindBidirectional(this.studentServices.getStudentFxObjectProperty().peselProperty());
+    this.lbAccount.textProperty().bindBidirectional(this.studentServices.getStudentFxObjectProperty().linkedAccProperty());
+    this.lbLogin.textProperty().bindBidirectional(this.userServices.getUserFxObjectProperty().usernameProperty());
+    this.lbPassword.textProperty().bindBidirectional(this.userServices.getUserFxObjectProperty().passwordProperty());
+    this.lbAccount.textProperty().bindBidirectional(this.userServices.getUserFxObjectProperty().linkedAccProperty());
+*/
 
     }
 
@@ -111,11 +137,48 @@ public class AdminStudentController {
         return button;
     }
 
+    private Button createDeleteButton(){
+        Button button1 = new Button("Usun");
+        //Image image = new Image(this.getClass().getResource("/icons/delete.png").toString());
+       // ImageView imageView = new ImageView(image);
+       // button1.setGraphic(imageView);
+        return button1;
+    }
+
+
     @FXML
     void addStudent(ActionEvent event) {
+            //userServices.saveUser();
+            //studentServices.saveStudent();
+
+
+            String name = lbStudentName.getText();
+            String lname = lbLastName.getText();
+            String pesel = lbPesel.getText();
+            String password = lbPassword.getText();
+            String login = lbLogin.getText();
+            //classN = cbClass.valueProperty().bindBidirectional(this.studentServices.getStudentFxObjectProperty().classesFxObjectPropertyProperty());
+            ClassesFx clas = cbClass.getSelectionModel().getSelectedItem();
+            String linkedAcc ="S";
+            this.student = new Student(name,lname,pesel,clas,linkedAcc);
+            this.user = new User(login,password,linkedAcc);
+            user.setStudent(student);
+            student.setUser(user);
+            userServices.persist(user);
+            //studentServices.persist(student);
+
+
+
 
     }
 
     public void modifyStudent(ActionEvent actionEvent) {
+    }
+
+    public void comboBox(ActionEvent actionEvent) {
+        this.studentServices.setClassesFxObjectProperty(this.cbClass.getSelectionModel().getSelectedItem());
+    }
+    public StudentServices getStudentServices(){
+        return studentServices;
     }
 }

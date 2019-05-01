@@ -50,6 +50,16 @@ public class StudentServices {
             classesFxObservableList.add(classesFx);
         });
     }
+    public void saveStudent(){
+        studentDao.openCurrentSessionWithTransaction();
+        Student student = StudentConverter.convertToStudent(this.getStudentFxObjectProperty());
+        classDao.openCurrentSessionWithTransaction();
+        Classes classes = classDao.findById(this.getStudentFxObjectProperty().getClassesFxObjectProperty().getClassId());
+        classDao.closeCurrentSessionWithTransaction();
+        student.setClasses(classes);
+        studentDao.persist(student);
+        studentDao.closeCurrentSessionWithTransaction();
+    }
 
     public void persist(Student entity) {
         studentDao.openCurrentSessionWithTransaction();

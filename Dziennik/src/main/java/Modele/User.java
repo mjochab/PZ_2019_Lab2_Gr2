@@ -49,6 +49,12 @@ public class User implements Serializable {
         this.student = student;
     }
 
+    public User(String login, String password, String linkedAcc) {
+        this.username = login;
+        this.passwrd = password;
+        this.linkedAcc = linkedAcc;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")

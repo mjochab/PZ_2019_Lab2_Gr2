@@ -30,10 +30,12 @@ public class ClassesService {
 
         initRoot(classes);
         initClassList(classes);
+
     }
 
     private void initRoot(List<Classes> classes){
         this.root.getChildren().clear();
+
 
         classes.forEach(c->{
             TreeItem<String> classItem = new TreeItem<>(c.getClassName());
@@ -42,6 +44,7 @@ public class ClassesService {
             });
             root.getChildren().add(classItem);
         });
+
     }
 
     private void initClassList(List<Classes> classes){
@@ -51,6 +54,7 @@ public class ClassesService {
             this.classesFxObservableList.add(classesFx);
         });
     }
+
 
 
     public List<Classes> findAllClasses() {

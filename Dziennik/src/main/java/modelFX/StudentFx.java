@@ -85,4 +85,16 @@ public class StudentFx {
     public void setClassesFxObjectProperty(ClassesFx classesFxObjectProperty) {
         this.classesFxObjectProperty.set(classesFxObjectProperty);
     }
+
+    @Override
+    public String toString() {
+        return "StudentFx{" +
+                "studentId=" + studentId +
+                ", firstName=" + firstName +
+                ", lastName=" + lastName +
+                ", pesel=" + pesel +
+                ", linkedAcc=" + linkedAcc +
+                ", classesFxObjectProperty=" + classesFxObjectProperty +
+                '}';
+    }
 }

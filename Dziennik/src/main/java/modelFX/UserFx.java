@@ -56,4 +56,14 @@ public class UserFx {
     public void setLinkedAcc(String linkedAcc) {
         this.linkedAcc.set(linkedAcc);
     }
+
+    @Override
+    public String toString() {
+        return "UserFx{" +
+                "userId=" + userId +
+                ", username=" + username +
+                ", password=" + password +
+                ", linkedAcc=" + linkedAcc +
+                '}';
+    }
 }
