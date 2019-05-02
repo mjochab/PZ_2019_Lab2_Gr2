@@ -16,6 +16,10 @@ public class Schedule implements Serializable {
     private Classes clas;
     private Subject subject;
 
+    public Schedule() {
+
+    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Dodawanie nauczyciela z widoku admina">
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminScheduleController.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Dodawanie planu zajęć z widoku admina">
+      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/ScheduleConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/ScheduleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ScheduleFx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzaniePlanemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzaniePlanemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieUczniemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieUczniemView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Schedule.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminScheduleController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="537">
@@ -104,18 +105,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Schedule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="120">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+            <state relative-caret-position="401">
+              <caret line="44" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="44" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#698#699#0" expanded="true" />
+                <element signature="e#791#792#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/ScheduleDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#536#537#0" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#641#642#0" expanded="true" />
+                <element signature="e#658#688#0" expanded="true" />
+                <element signature="e#728#729#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
+                <element signature="e#959#989#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/ScheduleConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/StudentConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="55" lean-forward="true" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,14 +219,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Dziennik/pom.xml" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDAO.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/DAO.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/ClasDAO.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClasFx.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Frequently.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Grades.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Schedule.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Warns.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/hibernate/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/hibernate/SessionCreator.java" />
@@ -219,6 +267,9 @@
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/SheduleFx.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzaniePlanemView.fxml" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminScheduleController.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/ScheduleDao.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Schedule.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Converters/ScheduleConverter.java" />
       </list>
     </option>
   </component>
@@ -292,7 +343,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Converters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
@@ -331,15 +382,6 @@
             </path>
             <path>
               <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PZ_2019_Lab2_Gr2" type="462c0819:PsiDirectoryNode" />
-              <item name="Dziennik" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="FXML" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -357,7 +399,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556823426733" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556825792129" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -719,7 +761,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556805163321</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Dodawanie planu zajęć z widoku admina">
+      <created>1556825139360</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1556825139360</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -738,7 +787,7 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15671642" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15671642" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -746,7 +795,7 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.27410617" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -861,7 +910,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Model Student" />
     <MESSAGE value="Model Classes" />
     <MESSAGE value="Model Subject" />
     <MESSAGE value="Model Grades" />
@@ -886,21 +934,14 @@
     <MESSAGE value="I19L2GR2-38 Zapisywanie do tabeli student bez user" />
     <MESSAGE value="I19L2GR2-38 Zapisywanie do tabeli student" />
     <MESSAGE value="Dodawanie nauczyciela z widoku admina" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodawanie nauczyciela z widoku admina" />
+    <MESSAGE value="Dodawanie planu zajęć z widoku admina" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodawanie planu zajęć z widoku admina" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/sessions/SessionManager.java" />
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/hibernate/HibernateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/sessions/UserSession.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1176,30 +1217,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/StudentConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="44" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/TeacherDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
@@ -1362,21 +1379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/StudentFx.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408">
@@ -1455,6 +1457,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
           <caret line="47" column="60" lean-forward="true" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="44" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/ScheduleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#658#688#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#959#989#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/StudentConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="55" lean-forward="true" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/ScheduleConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
