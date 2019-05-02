@@ -16,6 +16,17 @@ public class Teacher implements Serializable {
     private Subject subject;
     private User user;
 
+    public Teacher(String name, String lname, Subject subject, String linkedAcc) {
+        this.firstNameT = name;
+        this.lastNameT = lname;
+        this.subject = subject;
+        this.linkedAcc = linkedAcc;
+    }
+
+    public Teacher() {
+
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "teacher_id")
@@ -75,7 +86,7 @@ public class Teacher implements Serializable {
 
 
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     public User getUser() {
         return user;
     }
@@ -91,7 +102,9 @@ public class Teacher implements Serializable {
                 "teacherId=" + teacherId +
                 ", firstNameT='" + firstNameT + '\'' +
                 ", lastNameT='" + lastNameT + '\'' +
+                ", linkedAcc='" + linkedAcc + '\'' +
                 ", warns=" + warns +
+                ", subject=" + subject +
                 ", user=" + user +
                 '}';
     }

@@ -79,9 +79,9 @@ public class TeacherServices {
         return teachers;
     }
     public List<Subject> findAllSubject() {
-        teacherDao.openCurrentSession();
+        subjectDao.openCurrentSession();
         List<Subject> subjects = subjectDao.findAll();
-        teacherDao.closeCurrentSession();
+        subjectDao.closeCurrentSession();
 
         return subjects;
     }

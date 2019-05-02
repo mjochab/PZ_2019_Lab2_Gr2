@@ -31,8 +31,7 @@ public class AdminStudentController {
     @FXML
     private TextField lbPassword;
 
-    @FXML
-    private TextField lbAccount;
+
 
     @FXML
     private Button addButton;
@@ -112,7 +111,7 @@ public class AdminStudentController {
     .or(this.lbLogin.textProperty().isEmpty())
     .or(this.lbPassword.textProperty().isEmpty())
     .or(this.cbClass.valueProperty().isNull())
-                    .or(this.lbAccount.textProperty().isEmpty())
+
     );
 
     this.cbClass.setItems(this.studentServices.getClassesFxObservableList());

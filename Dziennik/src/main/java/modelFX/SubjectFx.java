@@ -1,10 +1,11 @@
 package modelFX;
 
+import Modele.Subject;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class SubjectFx {
+public class SubjectFx extends Subject {
 
     private StringProperty subjectName = new SimpleStringProperty();
     private SimpleLongProperty subjectId = new SimpleLongProperty();

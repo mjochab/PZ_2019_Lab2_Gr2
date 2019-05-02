@@ -49,7 +49,7 @@ public class Subject implements Serializable {
         this.grades = grades;
     }
 
-    @OneToMany(mappedBy = "subject",fetch=FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "subject",fetch=FetchType.EAGER, cascade = CascadeType.DETACH)
     public Set<Teacher> getTeachers() {
         return teachers;
     }
