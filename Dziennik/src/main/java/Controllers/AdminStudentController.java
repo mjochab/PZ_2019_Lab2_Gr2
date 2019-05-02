@@ -96,7 +96,11 @@ public class AdminStudentController {
             if(!empty){
                 setGraphic(button);
                 button.setOnAction(event -> {
-                    studentServices.deleteStudent(item);
+                    try {
+                        studentServices.deleteStudent(item);
+                    }catch(Exception e){
+
+                    }
                 });
             }
 
@@ -156,7 +160,7 @@ public class AdminStudentController {
             String pesel = lbPesel.getText();
             String password = lbPassword.getText();
             String login = lbLogin.getText();
-            //classN = cbClass.valueProperty().bindBidirectional(this.studentServices.getStudentFxObjectProperty().classesFxObjectPropertyProperty());
+
             ClassesFx clas = cbClass.getSelectionModel().getSelectedItem();
             String linkedAcc ="S";
             this.student = new Student(name,lname,pesel,clas,linkedAcc);
@@ -164,11 +168,21 @@ public class AdminStudentController {
             user.setStudent(student);
             student.setUser(user);
             userServices.persist(user);
-            //studentServices.persist(student);
+
+            clearFields();
+            studentServices.init();
 
 
 
 
+    }
+    public void clearFields(){
+        cbClass.getItems().clear();
+        lbLastName.clear();
+        lbStudentName.clear();
+        lbPesel.clear();
+        lbPassword.clear();
+        lbLogin.clear();
     }
 
     public void modifyStudent(ActionEvent actionEvent) {

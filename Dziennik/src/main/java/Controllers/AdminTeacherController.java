@@ -83,7 +83,11 @@ public class AdminTeacherController {
                 if(!empty){
                     setGraphic(button);
                     button.setOnAction(event -> {
-                        teacherServices.deleteTeacher(item);
+                        try {
+                            teacherServices.deleteTeacher(item);
+                        }catch (Exception e){
+
+                        }
                     });
                 }
 
@@ -124,7 +128,18 @@ public class AdminTeacherController {
         user.setTeacher(teacher);
         teacher.setUser(user);
         userServices.persist(user);
-        //studentServices.persist(student);
+
+        clearFields();
+        teacherServices.init();
+
+    }
+
+    public void clearFields(){
+        lbNameT.clear();
+        cbSubject.getItems().clear();
+        lbLastNameT.clear();
+        lbLoginT.clear();
+        lbPasswordT.clear();
     }
 
     public void modifyTeacher(ActionEvent actionEvent) {

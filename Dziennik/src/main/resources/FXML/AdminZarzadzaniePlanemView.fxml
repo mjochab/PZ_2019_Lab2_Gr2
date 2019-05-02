@@ -79,7 +79,7 @@
                               <Insets left="10.0" top="15.0" />
                            </HBox.margin>
                         </Label>
-                        <ComboBox fx:id="cbClass" prefWidth="150.0">
+                        <ComboBox fx:id="cbClass" onAction="#comboBoxClass" prefWidth="150.0">
                            <HBox.margin>
                               <Insets left="45.0" top="10.0" />
                            </HBox.margin>
@@ -93,7 +93,7 @@
                               <Insets left="10.0" top="15.0" />
                            </HBox.margin>
                         </Label>
-                        <ComboBox fx:id="cbSubject" prefWidth="150.0">
+                        <ComboBox fx:id="cbSubject" onAction="#comboBoxSubject" prefWidth="150.0">
                            <HBox.margin>
                               <Insets left="10.0" top="10.0" />
                            </HBox.margin>
@@ -108,7 +108,7 @@
                </children></VBox>
          </children>
       </HBox>
-      <TableView fx:id="TableViewSchedule" prefHeight="232.0" prefWidth="608.0">
+      <TableView fx:id="tableViewSchedule" prefHeight="232.0" prefWidth="608.0">
         <columns>
           <TableColumn fx:id="columnDay" prefWidth="123.0" text="Dzień" />
           <TableColumn fx:id="columnTime" prefWidth="101.0" text="Godzina" />

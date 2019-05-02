@@ -20,6 +20,14 @@ public class Schedule implements Serializable {
 
     }
 
+    public Schedule(String day, String time, String room, Classes clas, Subject subject) {
+        this.day = day;
+        this.time = time;
+        this.room = room;
+        this.clas = clas;
+        this.subject = subject;
+    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

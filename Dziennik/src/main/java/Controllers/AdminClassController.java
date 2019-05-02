@@ -53,6 +53,7 @@ public class AdminClassController {
             this.classes = new Classes(name);
             classesService.persist(this.classes);
             lbClassName.clear();
+            classesService.init();
             //classesService.saveClassInDataBase(lbClassName.getText());
         }catch (Exception e){
             System.out.println("Nie dodano do bazy");

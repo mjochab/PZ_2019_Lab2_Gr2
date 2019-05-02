@@ -54,11 +54,13 @@ public class AdminSubjectController {
             this.subject = new Subject(name);
             subjectService.persist(this.subject);
             lbSubjectName.clear();
+            subjectService.init();
             //classesService.saveClassInDataBase(lbClassName.getText());
         }catch (Exception e){
             System.out.println("Nie dodano do bazy");
         }
     }
+
 
     public void deleteSubject(ActionEvent actionEvent) {
         try{
