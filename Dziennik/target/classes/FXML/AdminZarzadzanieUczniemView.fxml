@@ -108,20 +108,6 @@
                         </TextField>
                      </children>
                   </HBox>
-                  <HBox prefHeight="61.0" prefWidth="293.0">
-                     <children>
-                        <Label text="Uprawnienia">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Label>
-                        <TextField fx:id="lbAccount" prefHeight="31.0" prefWidth="74.0">
-                           <HBox.margin>
-                              <Insets bottom="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </TextField>
-                     </children>
-                  </HBox>
                   <Button fx:id="addButton" mnemonicParsing="false" onAction="#addStudent" prefHeight="31.0" prefWidth="143.0" text="Dodaj">
                      <VBox.margin>
                         <Insets left="90.0" top="5.0" />
@@ -142,7 +128,7 @@
             <TableColumn fx:id="studentTableLastName" prefWidth="141.0" text="Nazwisko" />
             <TableColumn fx:id="studentTablePesel" prefWidth="130.0" text="Pesel" />
             <TableColumn fx:id="studentTableClass" prefWidth="93.0" text="Klasa" />
-            <TableColumn fx:id="studentTableDelete"  prefWidth="92.0" text="Usuń" />
+            <TableColumn fx:id="studentTableDelete" prefWidth="92.0" text="Usuń" />
             
          </columns>
 
