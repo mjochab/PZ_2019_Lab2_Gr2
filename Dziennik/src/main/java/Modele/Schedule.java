@@ -2,26 +2,35 @@ package Modele;
 
 
 import javax.persistence.*;
-
-
-import java.util.Date;
-import java.util.Set;
+import java.io.Serializable;
 
 @Entity
 @Table
-public class Schedule {
+public class Schedule implements Serializable {
 
 
     private long lessonId;
     private String day;
     private String time;
-    private int room;
+    private String room;
     private Classes clas;
     private Subject subject;
 
+    public Schedule() {
+
+    }
+
+    public Schedule(String day, String time, String room, Classes clas, Subject subject) {
+        this.day = day;
+        this.time = time;
+        this.room = room;
+        this.clas = clas;
+        this.subject = subject;
+    }
+
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "lesson_id")
     public long getlessonId() {
         return lessonId;
@@ -30,8 +39,7 @@ public class Schedule {
         this.lessonId = lessonId;
     }
 
-    @Column(name = "day", columnDefinition="TIMESTAMP")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "day")
     public String getDay() {
         return day;
     }
@@ -39,8 +47,7 @@ public class Schedule {
         this.day = day;
     }
 
-    @Column(name = "time", columnDefinition="TIME")
-    @Temporal(TemporalType.TIME)
+    @Column(name = "time")
     public String getTime() {
         return time;
     }
@@ -49,10 +56,10 @@ public class Schedule {
     }
 
     @Column(name = "room")
-    public int getRoom() {
+    public String getRoom() {
         return room;
     }
-    public void setRoom(int room) {
+    public void setRoom(String room) {
         this.room = room;
     }
 
@@ -75,7 +82,7 @@ public class Schedule {
         this.subject = subject;
     }
 
-    public Schedule(long lessonId, String day, String time, int room, Classes clas, Subject subject) {
+    public Schedule(long lessonId, String day, String time, String room, Classes clas, Subject subject) {
         this.lessonId = lessonId;
         this.day = day;
         this.time = time;
@@ -91,7 +98,7 @@ public class Schedule {
                 ", day=" + day +
                 ", time=" + time +
                 ", room=" + room +
-                ", clas=" + clas +
+                ", class=" + clas +
                 ", subjects=" + subject +
                 '}';
     }

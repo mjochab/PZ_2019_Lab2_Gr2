@@ -4,19 +4,27 @@ package Modele;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
 @Table
-public class Subject {
+public class Subject implements Serializable {
 
     private long subjectId;
     private String subjectName;
-    private Set<Classes> classes;
     private Set<Grades> grades;
+    private Set<Teacher> teachers;
+
+    public Subject(String name) {
+        this.subjectName = name;
+    }
+
+    public Subject() {
+    }
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "subject_id")
     public long getSubjectId(){
         return this.subjectId;
@@ -41,12 +49,13 @@ public class Subject {
         this.grades = grades;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "subjects")
-    public Set<Classes> getClasses() {
-        return classes;
+    @OneToMany(mappedBy = "subject",fetch=FetchType.EAGER, cascade = CascadeType.DETACH)
+    public Set<Teacher> getTeachers() {
+        return teachers;
     }
-    public void setClasses(Set<Classes> classes) {
-        this.classes = classes;
+
+    public void setTeachers(Set<Teacher> teachers) {
+        this.teachers = teachers;
     }
 
     @Override
@@ -54,7 +63,6 @@ public class Subject {
         return "Subject{" +
                 "subjectId=" + subjectId +
                 ", subjectName='" + subjectName + '\'' +
-                ", classes=" + classes +
                 ", grades=" + grades +
                 '}';
     }

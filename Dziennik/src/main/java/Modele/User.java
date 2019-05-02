@@ -1,11 +1,11 @@
 package Modele;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.io.Serializable;
 
 @Entity
 @Table
-public class User {
+public class User implements Serializable {
 
 
 
@@ -49,8 +49,14 @@ public class User {
         this.student = student;
     }
 
+    public User(String login, String password, String linkedAcc) {
+        this.username = login;
+        this.passwrd = password;
+        this.linkedAcc = linkedAcc;
+    }
+
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     public long getUserId() {
         return userId;
