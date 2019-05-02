@@ -11,7 +11,7 @@ public class Teacher implements Serializable {
     private long teacherId;
     private String firstNameT;
     private String lastNameT;
-
+    private String linkedAcc;
     private Set<Warns> warns;
     private Subject subject;
     private User user;
@@ -45,7 +45,14 @@ public class Teacher implements Serializable {
         this.lastNameT = lastNameT;
     }
 
+    @Column(name = "linked_acc", nullable = false, length = 50)
+    public String getLinkedAcc() {
+        return linkedAcc;
+    }
 
+    public void setLinkedAcc(String linkedAcc) {
+        this.linkedAcc = linkedAcc;
+    }
 
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
     public Set<Warns> getWarns() {
