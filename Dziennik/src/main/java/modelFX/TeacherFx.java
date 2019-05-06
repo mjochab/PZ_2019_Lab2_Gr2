@@ -1,11 +1,12 @@
 package modelFX;
 
+import Modele.Teacher;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class TeacherFx {
+public class TeacherFx extends Teacher {
     private SimpleLongProperty teacherId = new SimpleLongProperty();
     private SimpleStringProperty firstNameT = new SimpleStringProperty();
     private SimpleStringProperty lastNameT = new SimpleStringProperty();
