@@ -2,98 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Skonczone dodawanie planu">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminClassController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminScheduleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminSubjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminTeacherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/ClassConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/ScheduleConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/StudentConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/SubjectConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/TeacherConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/UserConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/ClassDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/ScheduleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/StudentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/SubjectDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/TeacherDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/hibernate/SessionCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/icons/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/icons/edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClassesFx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ScheduleFx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/StudentFx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/SubjectFx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/TeacherFx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/UserFx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/ClassesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/ScheduleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/SubjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/TeacherServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/UserServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/DodajUcznia.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/Dziennik.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/Dziennik.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/NauczycielViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/NauczycielViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Classes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Frequently.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Frequently.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Grades.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Grades.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Warns.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Warns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/hibernate/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/hibernate/HibernateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieKlasaView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieKlasaView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieNauczycielemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieNauczycielemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzaniePlanemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzaniePlanemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzaniePrzedmiotemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzaniePrzedmiotemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/NauczycielView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/NauczycielView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Controllers/AdminViewController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Controllers/AlertHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Controllers/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Controllers/NauczycielViewController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Controllers/StudentViewController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Controllers/ToggleButtonMenuAdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Controllers/ToggleButtonMenuNauczycielController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Controllers/ToggleButtonMenuStudentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieKlasaView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieKlasaView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieNauczycielemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieNauczycielemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzaniePlanemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzaniePlanemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzaniePrzedmiotemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzaniePrzedmiotemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieUczniemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieUczniemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/NauczycielView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/NauczycielView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/StudentView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/StudentView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/Backlog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/Classes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/Frequently.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/Grades.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/Schedule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/Subject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/Modele/Warns.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/hibernate/HibernateUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/ToggleButtonMenuNauczycielController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/ToggleButtonMenuNauczycielController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/NauczycielPlanView.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/ToggleButtonMenuNauczycielView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/ToggleButtonMenuNauczycielView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/NauczycielPlanView.fxml" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,44 +68,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/hibernate.cfg.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/ToggleButtonMenuNauczycielController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/NauczycielView.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="58" lean-forward="true" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+              <caret line="15" column="103" lean-forward="true" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/ToggleButtonMenuNauczycielView.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/NauczycielViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1717">
-              <caret line="101" selection-start-line="101" selection-end-line="101" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Teacher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1489">
-              <caret line="123" column="62" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-187">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -200,7 +118,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Subject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
+            <state relative-caret-position="595">
               <caret line="51" column="84" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -232,7 +150,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminScheduleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2516">
+            <state relative-caret-position="2380">
               <caret line="148" column="5" selection-start-line="142" selection-start-column="4" selection-end-line="148" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -244,7 +162,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminClassController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
+            <state relative-caret-position="799">
               <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -278,15 +196,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="do_sprawdzenia" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/ClasDAO.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClasFx.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Frequently.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Grades.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Warns.java" />
@@ -336,6 +252,8 @@
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Admin.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/ToggleButtonMenuNauczycielController.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/ToggleButtonMenuNauczycielView.fxml" />
       </list>
     </option>
   </component>
@@ -416,8 +334,7 @@
               <item name="Dziennik" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Modele" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
@@ -426,6 +343,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="FXML" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
@@ -447,7 +365,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556829677547" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557164507965" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -1011,34 +929,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/ToggleButtonMenuAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="70" column="27" lean-forward="true" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/NauczycielViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/SubjectService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
@@ -1116,13 +1006,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/icons/edit.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="126" column="77" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/ClassesService.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1550,6 +1433,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1717">
@@ -1560,20 +1450,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminScheduleController.java">
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="5" selection-start-line="142" selection-start-column="4" selection-end-line="148" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="765">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminClassController.java">
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+        <state relative-caret-position="1513">
+          <caret line="123" column="62" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1582,7 +1469,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Subject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
+        <state relative-caret-position="595">
           <caret line="51" column="84" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1606,29 +1493,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Student.java">
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminScheduleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1489">
-          <caret line="123" column="62" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="62" />
+        <state relative-caret-position="2380">
+          <caret line="148" column="5" selection-start-line="142" selection-start-column="4" selection-end-line="148" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Modele/Teacher.java">
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminClassController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+        <state relative-caret-position="799">
+          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/NauczycielViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="58" lean-forward="true" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        <state relative-caret-position="-187">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/ToggleButtonMenuNauczycielController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/NauczycielView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="103" lean-forward="true" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/ToggleButtonMenuNauczycielView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">
