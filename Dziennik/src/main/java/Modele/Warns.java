@@ -15,6 +15,24 @@ public class Warns implements Serializable {
     private Student student;
     private Teacher teacher;
 
+    public Warns(){}
+
+    public Warns(Date dateCreated, String content, Student student, Teacher teacher) {
+        this.dateCreated = dateCreated;
+        this.content = content;
+        this.student = student;
+        this.teacher = teacher;
+    }
+
+    public Warns(long warnId, Date dateCreated, String content, Student student, Teacher teacher) {
+        this.warnId = warnId;
+        this.dateCreated = dateCreated;
+        this.content = content;
+        this.student = student;
+        this.teacher = teacher;
+    }
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
