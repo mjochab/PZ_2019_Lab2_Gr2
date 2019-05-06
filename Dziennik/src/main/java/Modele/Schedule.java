@@ -39,6 +39,7 @@ public class Schedule implements Serializable {
         this.lessonId = lessonId;
     }
 
+
     @Column(name = "day")
     public String getDay() {
         return day;
@@ -46,6 +47,7 @@ public class Schedule implements Serializable {
     public void setDay(String day) {
         this.day = day;
     }
+
 
     @Column(name = "time")
     public String getTime() {
