@@ -31,7 +31,6 @@ public class Schedule {
     }
 
     @Column(name = "day", columnDefinition="TIMESTAMP")
-    @Temporal(TemporalType.TIMESTAMP)
     public String getDay() {
         return day;
     }
@@ -40,7 +39,6 @@ public class Schedule {
     }
 
     @Column(name = "time", columnDefinition="TIME")
-    @Temporal(TemporalType.TIME)
     public String getTime() {
         return time;
     }
