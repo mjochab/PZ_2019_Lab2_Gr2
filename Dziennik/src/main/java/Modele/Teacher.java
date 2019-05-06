@@ -1,23 +1,34 @@
 package Modele;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
 @Table
-public class Teacher {
+public class Teacher implements Serializable {
 
     private long teacherId;
     private String firstNameT;
     private String lastNameT;
-
-    private Set<Classes> classes;
+    private String linkedAcc;
     private Set<Warns> warns;
-    private Set<Subject> subjects;
+    private Subject subject;
     private User user;
 
+    public Teacher(String name, String lname, Subject subject, String linkedAcc) {
+        this.firstNameT = name;
+        this.lastNameT = lname;
+        this.subject = subject;
+        this.linkedAcc = linkedAcc;
+    }
+
+    public Teacher() {
+
+    }
+
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "teacher_id")
     public long getTeacherId() {
         return this.teacherId;
@@ -45,7 +56,14 @@ public class Teacher {
         this.lastNameT = lastNameT;
     }
 
+    @Column(name = "linked_acc", nullable = false, length = 50)
+    public String getLinkedAcc() {
+        return linkedAcc;
+    }
 
+    public void setLinkedAcc(String linkedAcc) {
+        this.linkedAcc = linkedAcc;
+    }
 
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
     public Set<Warns> getWarns() {
@@ -55,29 +73,20 @@ public class Teacher {
         this.warns = warns;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    @JoinTable(name = "teacher_classes",
-            joinColumns = {@JoinColumn(name = "teacher_id")},
-            inverseJoinColumns = {@JoinColumn(name = "class_id")})
-    public Set<Classes> getClasses() {
-        return classes;
-    }
-    public void setClasses(Set<Classes> classes) {
-        this.classes = classes;
+    @ManyToOne
+    @JoinColumn(name = "subject_id")
+    public Subject getSubject() {
+        return subject;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    @JoinTable(name = "teacher_subject",
-            joinColumns  = {@JoinColumn(name = "teacher_id")},
-            inverseJoinColumns = {@JoinColumn(name = "subject_id")})
-    public Set<Subject> getSubjects() {
-        return subjects;
-    }
-    public void setSubjects(Set<Subject> subjects) {
-        this.subjects = subjects;
+    public void setSubject(Subject subject) {
+        this.subject = subject;
     }
 
-    @OneToOne(fetch = FetchType.LAZY)
+
+
+
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     public User getUser() {
         return user;
     }
@@ -93,9 +102,9 @@ public class Teacher {
                 "teacherId=" + teacherId +
                 ", firstNameT='" + firstNameT + '\'' +
                 ", lastNameT='" + lastNameT + '\'' +
-                ", classes=" + classes +
+                ", linkedAcc='" + linkedAcc + '\'' +
                 ", warns=" + warns +
-                ", subjects=" + subjects +
+                ", subject=" + subject +
                 ", user=" + user +
                 '}';
     }

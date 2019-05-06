@@ -2,15 +2,17 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminTeacherController">
     <children>
-        <HBox prefHeight="100.0" prefWidth="200.0">
+        <HBox prefHeight="388.0" prefWidth="600.0">
             <children>
                 <VBox prefHeight="100.0" prefWidth="293.0">
                     <children>
@@ -21,7 +23,7 @@
                                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                     </HBox.margin>
                                 </Label>
-                                <TextField prefHeight="31.0" prefWidth="151.0">
+                                <TextField fx:id="lbNameT" prefHeight="31.0" prefWidth="151.0">
                                     <HBox.margin>
                                         <Insets bottom="10.0" left="40.0" right="10.0" top="10.0" />
                                     </HBox.margin>
@@ -35,31 +37,86 @@
                                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                     </HBox.margin>
                                 </Label>
-                                <TextField prefHeight="31.0" prefWidth="154.0">
+                                <TextField fx:id="lbLastNameT" prefHeight="31.0" prefWidth="154.0">
                                     <HBox.margin>
                                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                     </HBox.margin>
                                 </TextField>
                             </children>
                         </HBox>
+                  <HBox prefHeight="77.0" prefWidth="293.0">
+                     <children>
+                        <Label text="Przedmiot">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cbSubject" onAction="#comboBox" prefWidth="150.0" />
+                     </children>
+                  </HBox>
                     </children>
                 </VBox>
                 <VBox prefHeight="100.0" prefWidth="308.0">
                     <children>
-                        <HBox prefHeight="55.0" prefWidth="308.0" />
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox prefHeight="134.0" prefWidth="308.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="293.0">
+                           <children>
+                              <HBox prefHeight="61.0" prefWidth="293.0">
+                                 <children>
+                                    <Label text="Login">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="lbLoginT" prefHeight="31.0" prefWidth="151.0">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="77.0" prefWidth="293.0">
+                                 <children>
+                                    <Label text="Hasło">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="lbPasswordT" prefHeight="31.0" prefWidth="154.0">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children></HBox>
+                        <HBox prefHeight="91.0" prefWidth="308.0">
                             <children>
-                                <Button mnemonicParsing="false" text="Dodaj">
+                                <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#addTeacher" prefHeight="31.0" prefWidth="100.0" text="Dodaj">
                                     <HBox.margin>
-                                        <Insets bottom="10.0" left="100.0" right="10.0" top="10.0" />
+                                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
                                     </HBox.margin>
                                 </Button>
+                        <Button fx:id="buttonModify" mnemonicParsing="false" onAction="#modifyTeacher" text="Modyfikuj">
+                           <HBox.margin>
+                              <Insets left="50.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
                             </children>
                         </HBox>
                     </children>
                 </VBox>
             </children>
         </HBox>
-        <TableView prefHeight="389.0" prefWidth="600.0" />
+        <TableView fx:id="tableViewTeacher" prefHeight="498.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="tableTeacherName" prefWidth="141.0" text="Imię" />
+            <TableColumn fx:id="tableTeacherLastName" prefWidth="142.0" text="Nazwisko" />
+            <TableColumn fx:id="tableTeacherSubject" prefWidth="191.0" text="Przedmiot" />
+            <TableColumn fx:id="tableTeacherDelete" prefWidth="125.0" text="Usuń" />
+         </columns></TableView>
     </children>
 </VBox>

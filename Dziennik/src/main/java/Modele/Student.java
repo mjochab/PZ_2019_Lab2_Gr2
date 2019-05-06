@@ -3,25 +3,37 @@ package Modele;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
 @Table
-public class Student {
+public class Student implements Serializable {
 
     private long studentId;
     private String firstNameS;
     private String lastNameS;
     private String pesel;
-
+    private String linkedAcc;
     private Classes classes;
     private Set<Warns> warns;
     private Set<Grades> grades;
     private Set<Frequently> frequently;
     private User user;
 
+
+
+    public Student(String name, String lname, String pesel, Classes classN, String linkedAcc) {
+        this.firstNameS = name;
+        this.lastNameS = lname;
+        this.pesel = pesel;
+        this.classes = classN;
+        this.linkedAcc = linkedAcc;
+    }
+
+
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "student_id")
     public long getStudentId(){
         return this.studentId;
@@ -56,7 +68,9 @@ public class Student {
         this.pesel = pesel;
     }
 
-
+    @Column(name = "linked_acc", nullable = false, length = 1)
+    public String getLinkedAcc() { return linkedAcc; }
+    public void setLinkedAcc(String linkedAcc) { this.linkedAcc = linkedAcc; }
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
     public Set<Warns> getWarns(){
@@ -100,7 +114,14 @@ public class Student {
 
     }
 
-    @OneToOne(fetch = FetchType.LAZY)
+    public Student(String firstNameS, String lastNameS, String pesel, Classes classes) {
+        this.firstNameS = firstNameS;
+        this.lastNameS = lastNameS;
+        this.pesel = pesel;
+        this.classes = classes;
+    }
+
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     public User getUser() {
         return user;
     }
