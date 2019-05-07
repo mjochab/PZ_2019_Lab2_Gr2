@@ -17,6 +17,11 @@ public class Grades implements Serializable {
     private Subject subject;
 
 
+
+    public Grades() {
+    }
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "grade_id")
