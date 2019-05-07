@@ -43,6 +43,8 @@ public class GradeDao  extends SessionCreator implements Dao<Grades>{
         List<Grades> grades = (List<Grades>) getCurrentSession().createQuery("from Grades where student_id = "+studnetId).list();
         return grades;
     }
+
+
 /*
     @SuppressWarnings("unchecked")
     public void deleteById(Student entity, Integer id){

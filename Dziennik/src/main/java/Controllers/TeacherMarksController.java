@@ -3,6 +3,7 @@ package Controllers;
 import Converters.StudentConverter;
 import Modele.Grades;
 import Modele.Student;
+import Modele.Teacher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,7 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Slider;
 import javafx.util.Callback;
 import modelFX.ClassesFx;
 import modelFX.StudentFx;
@@ -19,7 +20,10 @@ import services.ClassesService;
 import services.GradesServices;
 import services.StudentServices;
 import services.SubjectService;
+import sessions.UserSession;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -30,22 +34,29 @@ public class TeacherMarksController {
     private ComboBox<ClassesFx> teacherChooseClass;
 
     @FXML
-    private TextField gradeField;
+    private Slider gradeSlider;
+
+    @FXML
+    private ComboBox<String> teacherChooseReason;
+
+    @FXML
+    private ComboBox<SubjectFx> cbSubject;
+
+
+    @FXML
+    private ComboBox<StudentFx> teacherChooseStudent;
+
+    private ObservableList<StudentFx> studentFxObservableList = FXCollections.observableArrayList();
+
     private StudentServices studentServices;
     private ClassesService classesService;
     private ClassesFx clasFx;
     private SubjectService subjectService;
     private Grades grades;
     private GradesServices gradesServices;
-    @FXML
-    private ComboBox<String> teacherChooseReason = new ComboBox<>();
-    @FXML
-    private ComboBox<SubjectFx> teacherChooseSubject = new ComboBox<SubjectFx>();
-    private ClassesService subjectTreeView;
-    private ComboBox<StudentFx> teacherChooseStudent = new ComboBox<>();
-    private ObservableList<StudentFx> studentFxObservableList = FXCollections.observableArrayList();
-    public void initialize(){
 
+    public void initialize(){
+        Teacher teacherFx =  UserSession.getInstance().currentUser().getTeacher();
         this.gradesServices = new GradesServices();
         this.gradesServices.init();
         this.teacherChooseReason.getItems().setAll(
@@ -54,23 +65,9 @@ public class TeacherMarksController {
                 "Zadanie"
         );
 
-        this.classesService = new ClassesService();
-        this.classesService.init();
-        this.teacherChooseClass.setItems(this.classesService.getClassesFxObservableList());
 
-        this.subjectService = new SubjectService();
-        this.subjectService.init();
-        this.teacherChooseSubject.setItems(this.subjectService.getSubjectFxObservableList());
-
-
-
-
-        teacherChooseClass.getSelectionModel().selectFirst();
-        teacherChooseReason.getSelectionModel().selectFirst();
-        teacherChooseSubject.getSelectionModel().selectFirst();
-
-
-        //this.cbStudent.disable    Property().bind(cbClass.valueProperty().isNull());
+        this.cbSubject.setItems(this.gradesServices.getSubjectFxObservableList());
+        this.teacherChooseClass.setItems(this.gradesServices.getClassesFxObservableList());
         teacherChooseClass.valueProperty().addListener(((observable, oldValue, newValue) -> {
             if(newValue == null){
                 teacherChooseStudent.getItems().clear();
@@ -120,43 +117,40 @@ public class TeacherMarksController {
         }));
 
 
-
-
     }
 
-    public void getStudents(ActionEvent actionEvent) {
-        this.classesService.setClassesFxObjectProperty(this.teacherChooseClass.getSelectionModel().getSelectedItem());
-
-        // Pobranie ID aktualnie wybranej klasy
-        int output = (int) teacherChooseClass.getSelectionModel().getSelectedItem().getClassId();
-        System.out.println(output);
-
-
+    public void comboBoxClass(ActionEvent actionEvent) {
+        this.gradesServices.setClassesFxObjectProperty(this.teacherChooseClass.getSelectionModel().getSelectedItem());
     }
 
-    public void AddGrade(ActionEvent actionEvent) {
-        String reason = teacherChooseReason.getSelectionModel().getSelectedItem();
-        String grade = gradeField.getText();
+    public void comboBoxStudent(ActionEvent actionEvent) {
+        this.gradesServices.setStudentFxObjectProperty(this.teacherChooseStudent.getSelectionModel().getSelectedItem());
+    }
+
+    public void comboBoxSubject(ActionEvent actionEvent) {
+        this.gradesServices.setSubjectFxObjectProperty(this.cbSubject.getSelectionModel().getSelectedItem());
+    }
+
+
+
+
+
+
+    public void addGrade(ActionEvent actionEvent) {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
 
-        String student = "Uczeń";
-        SubjectFx subject = teacherChooseSubject.getSelectionModel().getSelectedItem();
-        ClassesFx class_ = teacherChooseClass.getSelectionModel().getSelectedItem();
+        String reason = teacherChooseReason.getValue();
+        SubjectFx subject = cbSubject.getSelectionModel().getSelectedItem();
+        StudentFx student = teacherChooseStudent.getSelectionModel().getSelectedItem();
+        Date dateCreated = date;
+        double grade = gradeSlider.getValue();
 
-        System.out.println(reason+grade+date+student+subject+class_);
-        this.grades = new Grades();
-
-
-        subjectService.init();
-
+        this.grades = new Grades(dateCreated,reason,student,subject,grade);
+        gradesServices.persist(grades);
     }
-
 
     public ObservableList<StudentFx> getStudentFxObservableList() {
         return studentFxObservableList;
-    }
-
-    public void setStudentFxObservableList(ObservableList<StudentFx> studentFxObservableList) {
-        this.studentFxObservableList = studentFxObservableList;
     }
 }

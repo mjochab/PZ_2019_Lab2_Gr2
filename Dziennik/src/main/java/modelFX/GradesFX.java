@@ -1,75 +1,109 @@
 package modelFX;
 
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleLongProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
+import Modele.Grades;
+import Modele.Student;
+import Modele.Subject;
+import javafx.beans.property.*;
 
-public class GradesFx {
-    private SimpleLongProperty gradeID = new SimpleLongProperty();
-    private SimpleStringProperty dateCreated = new SimpleStringProperty();
-    private SimpleStringProperty otherDetails = new SimpleStringProperty();
-    private SimpleStringProperty grade = new SimpleStringProperty();
-    private SimpleStringProperty linkedAcc = new SimpleStringProperty();
+import java.util.Date;
 
+public class GradesFx extends Grades {
 
-    public String getData() {
-        return dateCreated.get();
+    private SimpleLongProperty gradeId = new SimpleLongProperty();
+    private SimpleDoubleProperty grade = new SimpleDoubleProperty();
+    private Date date = new Date();
+    private SimpleStringProperty details = new SimpleStringProperty();
+    private ObjectProperty<Student> StudentObjectProperty = new SimpleObjectProperty<>();
+    private ObjectProperty<Subject> SubjectObjectProperty = new SimpleObjectProperty<>();
+
+    public GradesFx() {
+        super();
     }
 
-    public SimpleStringProperty firstNameProperty() {
-        return dateCreated;
+
+    @Override
+    public long getGradeId() {
+        return gradeId.get();
     }
 
-    public void setData(String firstName) {
-        this.dateCreated.set(firstName);
+    public SimpleLongProperty gradeIdProperty() {
+        return gradeId;
     }
 
-    public String getDetails() {
-        return otherDetails.get();
+    public void setGradeId(long gradeId) {
+        this.gradeId.set(gradeId);
     }
 
-    public SimpleStringProperty otherDetailsProperty() {
-        return otherDetails;
-    }
-
-    public void setDetails(String otherDetails) {
-        this.otherDetails.set(otherDetails);
-    }
-
-    public String getGrade() {
+    @Override
+    public double getGrade() {
         return grade.get();
     }
 
-    public SimpleStringProperty gradeProperty() {
+    public SimpleDoubleProperty gradeProperty() {
         return grade;
     }
 
-    public void setGrade(String grade) {
+    public void setGrade(double grade) {
         this.grade.set(grade);
     }
 
-    public String getLinkedAcc() {
-        return linkedAcc.get();
+    public Date getDate() {
+        return date;
     }
 
-    public SimpleStringProperty linkedAccProperty() {
-        return linkedAcc;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public void setLinkedAcc(String linkedAcc) {
-        this.linkedAcc.set(linkedAcc);
+    @Override
+    public String getDetails() {
+        return details.get();
     }
 
-    public long getGradeID() {
-        return gradeID.get();
+    public SimpleStringProperty detailsProperty() {
+        return details;
     }
 
-    public SimpleLongProperty gradeIDProperty() {
-        return gradeID;
+    public void setDetails(String details) {
+        this.details.set(details);
     }
 
-    public void setGradeID(long gradeID) {
-        this.gradeID.set(gradeID);
+    public Student getStudentObjectProperty() {
+        return StudentObjectProperty.get();
+    }
+
+    public ObjectProperty<Student> studentObjectPropertyProperty() {
+        return StudentObjectProperty;
+    }
+
+    public void setStudentObjectProperty(Student studentObjectProperty) {
+        this.StudentObjectProperty.set(studentObjectProperty);
+    }
+
+    public Subject getSubjectObjectProperty() {
+        return SubjectObjectProperty.get();
+    }
+
+    public ObjectProperty<Subject> subjectObjectPropertyProperty() {
+        return SubjectObjectProperty;
+    }
+
+    public void setSubjectObjectProperty(Subject subjectObjectProperty) {
+        this.SubjectObjectProperty.set(subjectObjectProperty);
+    }
+
+
+    @Override
+    public String toString() {
+        return "GradesFx{" +
+                "gradeId=" + gradeId +
+                ", grade=" + grade +
+                ", date=" + date +
+                ", details=" + details +
+                ", StudentObjectProperty=" + StudentObjectProperty +
+                ", SubjectObjectProperty=" + SubjectObjectProperty +
+                '}';
     }
 }
+
+

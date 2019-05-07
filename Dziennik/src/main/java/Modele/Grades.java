@@ -1,6 +1,9 @@
 package Modele;
 
 
+import modelFX.StudentFx;
+import modelFX.SubjectFx;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -10,7 +13,7 @@ import java.util.Date;
 public class Grades implements Serializable {
 
     private long gradeId;
-    private int grade;
+    private double grade;
     private Date dateCreated;
     private String details;
     private Student student;
@@ -19,6 +22,14 @@ public class Grades implements Serializable {
 
 
     public Grades() {
+    }
+
+    public Grades(Date dateCreated, String reason, StudentFx student, SubjectFx subject,Double grade) {
+        this.dateCreated = dateCreated;
+        this.details = reason;
+        this.student = student;
+        this.subject = subject;
+        this.grade = grade;
     }
 
 
@@ -33,10 +44,10 @@ public class Grades implements Serializable {
     }
 
     @Column(name = "grade")
-    public int getGrade() {
+    public double getGrade() {
         return grade;
     }
-    public void setGrade(int grade) {
+    public void setGrade(double grade) {
         this.grade = grade;
     }
 

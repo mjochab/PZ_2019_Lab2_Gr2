@@ -37,4 +37,6 @@ public class SubjectDao  extends SessionCreator implements Dao<Subject>{
         List<Subject> subjects = findAll();
         subjects.forEach(this::delete);
     }
+
+
 }

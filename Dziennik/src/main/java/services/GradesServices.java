@@ -1,75 +1,70 @@
 package services;
 
 import Converters.ClassConverter;
-import Converters.StudentConverter;
+import Converters.SubjectConverter;
 import Modele.Classes;
 import Modele.Grades;
 import Modele.Student;
+import Modele.Subject;
 import dao.ClassDao;
-import dao.GradesDao;
+import dao.GradeDao;
 import dao.StudentDao;
 import dao.SubjectDao;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.TreeItem;
 import modelFX.ClassesFx;
 import modelFX.GradesFx;
 import modelFX.StudentFx;
 import modelFX.SubjectFx;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GradesServices {
 
     private ClassDao classDao;
-    private GradesDao gradesDao;
+    private GradeDao gradeDao;
     private SubjectDao subjectDao;
     private StudentDao studentDao = new StudentDao();
     private ObservableList<ClassesFx> classesFxObservableList = FXCollections.observableArrayList();
     private ObjectProperty<ClassesFx> classesFxObjectProperty = new SimpleObjectProperty<>();
     private ObjectProperty<SubjectFx> subjectFxObjectProperty = new SimpleObjectProperty<>();
     private ObservableList<SubjectFx> subjectFxObservableList = FXCollections.observableArrayList();
-    private ObservableList<GradesFx> gradesFxObservableList = FXCollections.observableArrayList();
-    private ObjectProperty<GradesFx> gradesFxObjectProperty = new SimpleObjectProperty<>();
     private ObservableList<StudentFx> studentFxObservableList = FXCollections.observableArrayList();
     private ObjectProperty<StudentFx> studentFxObjectProperty = new SimpleObjectProperty<>();
-
-    private TreeItem<String> root = new TreeItem<>();
-    private List<StudentFx> studentFxList = new ArrayList<>();
-    private TreeItem<String> listOfGrades = new TreeItem<>();
-    private GradesFx gradesFxList;
+    private ObjectProperty<GradesFx> gradesFxObjectProperty = new SimpleObjectProperty<>();
+    private ObservableList<GradesFx> gradesFxObservableList = FXCollections.observableArrayList();
 
 
     public GradesServices() {
-        gradesDao = new GradesDao();
+        gradeDao = new GradeDao();
     }
 
     public void init(){
-        gradesDao = new GradesDao();
+        gradeDao = new GradeDao();
         initCbClass();
+        initSubjectList();
 
     }
 
-    private void initCbStudent(){
-        studentDao= new StudentDao();
-        List<Student> studentList= findAllStudents();
-        studentFxObservableList.clear();
-        studentList.forEach(student -> {
-            StudentFx studentFx = StudentConverter.convertToStudentFx(student);
-            this.studentFxObservableList.add(studentFx);
+    private void initSubjectList(){
+        subjectDao = new SubjectDao();
+        List<Subject> subjectList = findAllSubject();
+        subjectFxObservableList.clear();
+        subjectList.forEach(c->{
+            SubjectFx subjectFx = SubjectConverter.convertToSubjectFx(c);
+            subjectFxObservableList.add(subjectFx);
         });
     }
+    public List<Subject> findAllSubject() {
+        subjectDao.openCurrentSession();
+        List<Subject> subjects = subjectDao.findAll();
+        subjectDao.closeCurrentSession();
 
-    public List<Student> findAllStudents() {
-        studentDao.openCurrentSession();
-        List<Student> students= studentDao.findAll();
-        studentDao.closeCurrentSession();
-
-        return students;
+        return subjects;
     }
+
 
     private void initCbClass(){
         classDao = new ClassDao();
@@ -97,17 +92,9 @@ public class GradesServices {
         return students;
     }
 
-    public GradesFx getGradesFxObjectProperty() {
-        return gradesFxObjectProperty.get();
-    }
 
-    public ObjectProperty<GradesFx> gradesFxObjectPropertyProperty() {
-        return gradesFxObjectProperty;
-    }
 
-    public void setGradesFxObjectProperty(GradesFx gradesFxObjectProperty) {
-        this.gradesFxObjectProperty.set(gradesFxObjectProperty);
-    }
+
 
     public ObservableList<StudentFx> getStudentFxObservableList() {
         return studentFxObservableList;
@@ -130,9 +117,9 @@ public class GradesServices {
     }
 
     public List<Grades> findAllGrades() {
-        gradesDao.openCurrentSession();
-        List<Grades> grades = gradesDao.findAll();
-        gradesDao.closeCurrentSession();
+        gradeDao.openCurrentSession();
+        List<Grades> grades = gradeDao.findAll();
+        gradeDao.closeCurrentSession();
 
         return grades;
     }
@@ -142,39 +129,39 @@ public class GradesServices {
 
 
     public void persist(Grades entity) {
-        gradesDao.openCurrentSessionWithTransaction();
-        gradesDao.persist(entity);
-        gradesDao.closeCurrentSessionWithTransaction();
+        gradeDao.openCurrentSessionWithTransaction();
+        gradeDao.persist(entity);
+        gradeDao.closeCurrentSessionWithTransaction();
     }
 
 
     public void update(Grades entity) {
-        gradesDao.openCurrentSessionWithTransaction();
-        gradesDao.update(entity);
-        gradesDao.closeCurrentSessionWithTransaction();
+        gradeDao.openCurrentSessionWithTransaction();
+        gradeDao.update(entity);
+        gradeDao.closeCurrentSessionWithTransaction();
     }
 
 
     public Grades findById(long id) {
-        gradesDao.openCurrentSession();
-        Grades grades = gradesDao.findById(id);
-        gradesDao.closeCurrentSession();
+        gradeDao.openCurrentSession();
+        Grades grades = gradeDao.findById(id);
+        gradeDao.closeCurrentSession();
         return grades;
     }
 
 
     public void delete(long id) {
-        gradesDao.openCurrentSessionWithTransaction();
-        Grades grades = gradesDao.findById(id);
-        gradesDao.delete(grades);
-        gradesDao.closeCurrentSessionWithTransaction();
+        gradeDao.openCurrentSessionWithTransaction();
+        Grades grades = gradeDao.findById(id);
+        gradeDao.delete(grades);
+        gradeDao.closeCurrentSessionWithTransaction();
     }
 
 
     public void deleteAll() {
-        gradesDao.openCurrentSessionWithTransaction();
-        gradesDao.deleteAll();
-        gradesDao.closeCurrentSessionWithTransaction();
+        gradeDao.openCurrentSessionWithTransaction();
+        gradeDao.deleteAll();
+        gradeDao.closeCurrentSessionWithTransaction();
     }
 
     public ClassDao getClassDao() {
@@ -225,30 +212,6 @@ public class GradesServices {
         this.subjectFxObservableList = subjectFxObservableList;
     }
 
-    public ObservableList<GradesFx> getGradesFxObservableList() {
-        return gradesFxObservableList;
-    }
-
-    public void setGradesFxObservableList(ObservableList<GradesFx> gradesFxObservableList) {
-        this.gradesFxObservableList = gradesFxObservableList;
-    }
-
-    public TreeItem<String> getRoot() {
-        return root;
-    }
-
-    public void setRoot(TreeItem<String> root) {
-        this.root = root;
-    }
-
-    public List<StudentFx> getStudentFxList() {
-        return studentFxList;
-    }
-
-    public void setStudentFxList(List<StudentFx> studentFxList) {
-        this.studentFxList = studentFxList;
-    }
-
     public StudentDao getStudentDao() {
         return studentDao;
     }
@@ -257,12 +220,12 @@ public class GradesServices {
         this.studentDao = studentDao;
     }
 
-    public GradesDao getGradesDao() {
-        return gradesDao;
+    public GradeDao getGradesDao() {
+        return gradeDao;
     }
 
-    public void setGradesDao(GradesDao gradesDao) {
-        this.gradesDao = gradesDao;
+    public void setGradesDao(GradeDao gradesDao) {
+        this.gradeDao = gradesDao;
     }
 
     public SubjectDao getSubjectDao() {
@@ -273,19 +236,23 @@ public class GradesServices {
         this.subjectDao = subjectDao;
     }
 
-    public TreeItem<String> getListOfGrades() {
-        return listOfGrades;
+    public GradesFx getGradesFxObjectProperty() {
+        return gradesFxObjectProperty.get();
     }
 
-    public void setListOfGrades(TreeItem<String> listOfGrades) {
-        this.listOfGrades = listOfGrades;
+    public ObjectProperty<GradesFx> gradesFxObjectPropertyProperty() {
+        return gradesFxObjectProperty;
     }
 
-    public GradesFx getGradesFxList() {
-        return gradesFxList;
+    public void setGradesFxObjectProperty(GradesFx gradesFxObjectProperty) {
+        this.gradesFxObjectProperty.set(gradesFxObjectProperty);
     }
 
-    public void setGradesFxList(GradesFx gradesFxList) {
-        this.gradesFxList = gradesFxList;
+    public ObservableList<GradesFx> getGradesFxObservableList() {
+        return gradesFxObservableList;
+    }
+
+    public void setGradesFxObservableList(ObservableList<GradesFx> gradesFxObservableList) {
+        this.gradesFxObservableList = gradesFxObservableList;
     }
 }

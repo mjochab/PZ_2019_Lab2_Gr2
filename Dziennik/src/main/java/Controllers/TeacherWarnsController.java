@@ -15,6 +15,7 @@ import modelFX.ClassesFx;
 import modelFX.StudentFx;
 import modelFX.TeacherFx;
 import services.WarnService;
+import sessions.UserSession;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -39,6 +40,7 @@ public class TeacherWarnsController {
     private WarnService warnService;
     private StudentDao studentDao;
     private ObservableList<StudentFx> studentFxObservableList = FXCollections.observableArrayList();
+    private NauczycielViewController nauczycielViewController;
 
     @FXML
     void initialize() {
@@ -112,7 +114,8 @@ public class TeacherWarnsController {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
 
-/*
+
+/*      na
         Warns warns = new Warns();
         WarnService warnService= new WarnService();
 
@@ -125,7 +128,7 @@ public class TeacherWarnsController {
         String name = lbContent.getText();
         Date dateCreated = date;
         StudentFx studentFx = cbStudent.getSelectionModel().getSelectedItem();
-        
+        Teacher teacherFx =  UserSession.getInstance().currentUser().getTeacher();
         this.warns = new Warns(dateCreated,name,studentFx,teacherFx);
         warnService.persist(warns);
 

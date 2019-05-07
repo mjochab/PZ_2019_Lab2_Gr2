@@ -55,7 +55,7 @@ public class NauczycielViewController  {
 
         return userType;
     }
-    private void initUser(){
+    public void initUser(){
         String userType = parseUserType(user.getLinkedAcc());
 
         if(!"".equals(userType)){
