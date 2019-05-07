@@ -50,6 +50,7 @@ public class FrequentlyFX extends Frequently {
     public StudentFx getStudentFxObjectProperty() {
         return StudentFxObjectProperty.get();
     }
+    
 
     public ObjectProperty<StudentFx> studentFxObjectPropertyProperty() {
         return StudentFxObjectProperty;

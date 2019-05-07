@@ -16,6 +16,11 @@ public class GradesFx extends Grades {
     private ObjectProperty<Student> StudentObjectProperty = new SimpleObjectProperty<>();
     private ObjectProperty<Subject> SubjectObjectProperty = new SimpleObjectProperty<>();
 
+    public GradesFx() {
+        super();
+    }
+
+
     @Override
     public long getGradeId() {
         return gradeId.get();
