@@ -43,10 +43,5 @@ public class StudentDao  extends SessionCreator implements Dao<Student>{
         List<Student> students = (List<Student>) getCurrentSession().createQuery("from Student where class_id = "+classId).list();
         return students;
     }
-/*
-    @SuppressWarnings("unchecked")
-    public void deleteById(Student entity, Integer id){
-        getCurrentSession().delete(entity,id);
-    }
-*/
+
 }

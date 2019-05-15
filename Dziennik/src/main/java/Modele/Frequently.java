@@ -1,6 +1,8 @@
 package Modele;
 
 
+import modelFX.StudentFx;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -13,6 +15,19 @@ public class Frequently implements Serializable {
     private int absence;
     private Date absenceDate;
     private Student student;
+
+    public Frequently(Date date, StudentFx student, int absence) {
+        this.absenceDate = date;
+        this.student = student;
+        this.absence = absence;
+    }
+
+
+
+
+     public Frequently(){
+
+     }
 
 
     @Id

@@ -10,7 +10,7 @@ import java.util.Date;
 public class GradesFx extends Grades {
 
     private SimpleLongProperty gradeId = new SimpleLongProperty();
-    private SimpleIntegerProperty grade= new SimpleIntegerProperty();
+    private SimpleDoubleProperty grade = new SimpleDoubleProperty();
     private Date date = new Date();
     private SimpleStringProperty details = new SimpleStringProperty();
     private ObjectProperty<Student> StudentObjectProperty = new SimpleObjectProperty<>();
@@ -35,15 +35,15 @@ public class GradesFx extends Grades {
     }
 
     @Override
-    public int getGrade() {
+    public double getGrade() {
         return grade.get();
     }
 
-    public SimpleIntegerProperty gradeProperty() {
+    public SimpleDoubleProperty gradeProperty() {
         return grade;
     }
 
-    public void setGrade(int grade) {
+    public void setGrade(double grade) {
         this.grade.set(grade);
     }
 
@@ -91,6 +91,7 @@ public class GradesFx extends Grades {
     public void setSubjectObjectProperty(Subject subjectObjectProperty) {
         this.SubjectObjectProperty.set(subjectObjectProperty);
     }
+
 
     @Override
     public String toString() {

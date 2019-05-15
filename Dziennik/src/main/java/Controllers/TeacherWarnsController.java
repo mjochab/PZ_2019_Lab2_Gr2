@@ -34,6 +34,7 @@ public class TeacherWarnsController {
 
     @FXML
     private Button btnAdd;
+
     private Warns warns;
     private Teacher teacher;
     private TeacherFx teacherFx;
@@ -48,6 +49,7 @@ public class TeacherWarnsController {
 
         warnService = new WarnService();
         warnService.init();
+
         this.cbClass.setItems(this.warnService.getClassesFxObservableList());
         //this.cbStudent.disableProperty().bind(cbClass.valueProperty().isNull());
         cbClass.valueProperty().addListener(((observable, oldValue, newValue) -> {

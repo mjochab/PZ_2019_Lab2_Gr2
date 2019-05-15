@@ -1,24 +1,24 @@
 package Converters;
 
 import Modele.Frequently;
-import modelFX.FrequentlyFX;
+import modelFX.FrequentlyFx;
 
 public class FrequentlyConventer {
 
-        public static FrequentlyFX convertToFrequentlyFX(Frequently frequently){
-            FrequentlyFX frequentlyFx = new FrequentlyFX();
-            frequentlyFx.setFrequentlyID(frequently.getFrequentlyId());
+        public static FrequentlyFx convertToFrequentlyFX(Frequently frequently){
+            FrequentlyFx frequentlyFx = new FrequentlyFx();
+            frequentlyFx.setFrequentlyId(frequently.getFrequentlyId());
             frequentlyFx.setAbsense(frequently.getAbsence());
-            frequentlyFx.setAbsenceDate(frequently.getAbsenceDate());
+            frequentlyFx.setDate(frequently.getAbsenceDate());
             frequentlyFx.setStudentFxObjectProperty(StudentConverter.convertToStudentFx(frequently.getStudent()));
             return frequentlyFx;
         }
 
-        public static Frequently convertToFrequently(FrequentlyFX frequentlyFx){
+        public static Frequently convertToFrequently(FrequentlyFx frequentlyFx){
             Frequently frequently = new Frequently();
             frequently.setFrequentlyId(frequentlyFx.getFrequentlyId());
             frequently.setAbsence(frequentlyFx.getAbsense());
-            frequently.setAbsenceDate(frequentlyFx.getAbsenceDate());
+            frequently.setAbsenceDate(frequentlyFx.getDate());
 
             return frequently;
 

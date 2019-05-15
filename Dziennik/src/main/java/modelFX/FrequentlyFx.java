@@ -1,6 +1,5 @@
 package modelFX;
 
-import Modele.Frequently;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
@@ -8,23 +7,25 @@ import javafx.beans.property.SimpleObjectProperty;
 
 import java.util.Date;
 
-public class FrequentlyFX extends Frequently {
+public class FrequentlyFx   {
 
-        private SimpleLongProperty frequentlyID = new SimpleLongProperty();
+        private SimpleLongProperty frequentlyId = new SimpleLongProperty();
         private SimpleIntegerProperty absense= new SimpleIntegerProperty();
-        private Date date = new Date();
-        private ObjectProperty<StudentFx> StudentFxObjectProperty = new SimpleObjectProperty<>();
+        private SimpleObjectProperty<Date> date = new SimpleObjectProperty<>();
+        private ObjectProperty<StudentFx> studentFxObjectProperty = new SimpleObjectProperty<>();
 
-    public long getFrequentlyID() {
-        return frequentlyID.get();
+
+
+    public long getFrequentlyId() {
+        return frequentlyId.get();
     }
 
-    public SimpleLongProperty frequentlyIDProperty() {
-        return frequentlyID;
+    public SimpleLongProperty frequentlyIdProperty() {
+        return frequentlyId;
     }
 
-    public void setFrequentlyID(long frequentlyID) {
-        this.frequentlyID.set(frequentlyID);
+    public void setFrequentlyId(long frequentlyId) {
+        this.frequentlyId.set(frequentlyId);
     }
 
     public int getAbsense() {
@@ -40,33 +41,35 @@ public class FrequentlyFX extends Frequently {
     }
 
     public Date getDate() {
+        return date.get();
+    }
+
+    public SimpleObjectProperty<Date> dateProperty() {
         return date;
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this.date.set(date);
     }
 
     public StudentFx getStudentFxObjectProperty() {
-        return StudentFxObjectProperty.get();
+        return studentFxObjectProperty.get();
     }
-    
 
     public ObjectProperty<StudentFx> studentFxObjectPropertyProperty() {
-        return StudentFxObjectProperty;
+        return studentFxObjectProperty;
     }
 
     public void setStudentFxObjectProperty(StudentFx studentFxObjectProperty) {
-        this.StudentFxObjectProperty.set(studentFxObjectProperty);
+        this.studentFxObjectProperty.set(studentFxObjectProperty);
     }
 
     @Override
     public String toString() {
-        return "FrequentlyFX{" +
-                "frequentlyID=" + frequentlyID +
+        return "FrequentlyFx{" +
+                "frequentlyID=" + frequentlyId +
                 ", absense=" + absense +
                 ", date=" + date +
-                ", StudentFxObjectProperty=" + StudentFxObjectProperty +
                 '}';
     }
 }

@@ -31,6 +31,22 @@ public class Student implements Serializable {
         this.linkedAcc = linkedAcc;
     }
 
+    public Student(){}
+
+    public Student(String firstNameS,String lastNameS, String pesel ) {
+        this.firstNameS = firstNameS;
+        this.lastNameS = lastNameS;
+        this.pesel = pesel;
+
+    }
+
+    public Student(String firstNameS, String lastNameS, String pesel, Classes classes) {
+        this.firstNameS = firstNameS;
+        this.lastNameS = lastNameS;
+        this.pesel = pesel;
+        this.classes = classes;
+    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -106,20 +122,7 @@ public class Student implements Serializable {
     }
 
 
-    public Student(){}
-    public Student(String firstNameS,String lastNameS, String pesel ) {
-        this.firstNameS = firstNameS;
-        this.lastNameS = lastNameS;
-        this.pesel = pesel;
 
-    }
-
-    public Student(String firstNameS, String lastNameS, String pesel, Classes classes) {
-        this.firstNameS = firstNameS;
-        this.lastNameS = lastNameS;
-        this.pesel = pesel;
-        this.classes = classes;
-    }
 
     @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     public User getUser() {
