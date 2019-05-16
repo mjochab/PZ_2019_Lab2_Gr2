@@ -11,7 +11,7 @@ public class GradesConventer {
         gradesFx.setDate(grades.getDateCreated());
         gradesFx.setDetails(grades.getDetails());
         gradesFx.setStudentObjectProperty(grades.getStudent());
-        gradesFx.setSubjectObjectProperty(grades.getSubject());
+        gradesFx.setSubjectFxObjectProperty(SubjectConverter.convertToSubjectFx(grades.getSubject()));
 
         return gradesFx;
     }
@@ -23,7 +23,7 @@ public class GradesConventer {
         grades.setDateCreated(gradesFx.getDate());
         grades.setDetails(gradesFx.getDetails());
         grades.setStudent(gradesFx.getStudentObjectProperty());
-        grades.setSubject(gradesFx.getSubjectObjectProperty());
+        grades.setSubject(gradesFx.getSubjectFxObjectProperty());
         return grades;
     }
 }
