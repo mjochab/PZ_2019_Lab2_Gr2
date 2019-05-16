@@ -2,7 +2,6 @@ package modelFX;
 
 import Modele.Grades;
 import Modele.Student;
-import Modele.Subject;
 import javafx.beans.property.*;
 
 import java.util.Date;
@@ -11,10 +10,10 @@ public class GradesFx extends Grades {
 
     private SimpleLongProperty gradeId = new SimpleLongProperty();
     private SimpleDoubleProperty grade = new SimpleDoubleProperty();
-    private Date date = new Date();
+    private SimpleObjectProperty<Date> date = new SimpleObjectProperty<>();
     private SimpleStringProperty details = new SimpleStringProperty();
     private ObjectProperty<Student> StudentObjectProperty = new SimpleObjectProperty<>();
-    private ObjectProperty<Subject> SubjectObjectProperty = new SimpleObjectProperty<>();
+    private ObjectProperty<SubjectFx> subjectFxObjectProperty = new SimpleObjectProperty<>();
 
     public GradesFx() {
         super();
@@ -48,11 +47,15 @@ public class GradesFx extends Grades {
     }
 
     public Date getDate() {
+        return date.get();
+    }
+
+    public SimpleObjectProperty<Date> dateProperty() {
         return date;
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this.date.set(date);
     }
 
     @Override
@@ -80,18 +83,17 @@ public class GradesFx extends Grades {
         this.StudentObjectProperty.set(studentObjectProperty);
     }
 
-    public Subject getSubjectObjectProperty() {
-        return SubjectObjectProperty.get();
+    public SubjectFx getSubjectFxObjectProperty() {
+        return subjectFxObjectProperty.get();
     }
 
-    public ObjectProperty<Subject> subjectObjectPropertyProperty() {
-        return SubjectObjectProperty;
+    public ObjectProperty<SubjectFx> subjectFxObjectPropertyProperty() {
+        return subjectFxObjectProperty;
     }
 
-    public void setSubjectObjectProperty(Subject subjectObjectProperty) {
-        this.SubjectObjectProperty.set(subjectObjectProperty);
+    public void setSubjectFxObjectProperty(SubjectFx subjectFxObjectProperty) {
+        this.subjectFxObjectProperty.set(subjectFxObjectProperty);
     }
-
 
     @Override
     public String toString() {
@@ -101,7 +103,7 @@ public class GradesFx extends Grades {
                 ", date=" + date +
                 ", details=" + details +
                 ", StudentObjectProperty=" + StudentObjectProperty +
-                ", SubjectObjectProperty=" + SubjectObjectProperty +
+                ", SubjectObjectProperty=" + subjectFxObjectProperty +
                 '}';
     }
 }

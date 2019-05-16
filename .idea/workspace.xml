@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="nieobecnosci filtrowanie">
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentGradesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentGradeService.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="oceny uczen">
+      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentFrequentlyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/GradesConventer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Converters/GradesConventer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/GradesFx.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/GradesFx.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentOcenyView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentOcenyView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/dao/FrequentlyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/FrequentlyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/GradesFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/GradesFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentNieobecnosciView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentNieobecnosciView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/StudentNieobecnosciView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/StudentNieobecnosciView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/StudentOcenyView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/StudentOcenyView.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,7 +70,94 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/FrequentlyDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+              <folding>
+                <element signature="e#972#1002#0" expanded="true" />
+                <element signature="e#1260#1290#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="35" column="67" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentFrequentlyService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1153#1154#0" expanded="true" />
+                <element signature="e#1202#1203#0" expanded="true" />
+                <element signature="e#1443#1444#0" expanded="true" />
+                <element signature="e#1498#1499#0" expanded="true" />
+                <element signature="e#1578#1579#0" expanded="true" />
+                <element signature="e#1627#1628#0" expanded="true" />
+                <element signature="e#1851#1852#0" expanded="true" />
+                <element signature="e#1890#1891#0" expanded="true" />
+                <element signature="e#1966#1967#0" expanded="true" />
+                <element signature="e#2022#2023#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/hibernate/SessionCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="35" />
+              <folding>
+                <element signature="e#618#619#0" expanded="true" />
+                <element signature="e#656#657#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentNieobecnosciView.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-68">
+              <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherFrequentlyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="180" column="107" lean-forward="true" selection-start-line="177" selection-start-column="7" selection-end-line="180" selection-end-column="107" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#8843#8844#0" expanded="true" />
+                <element signature="e#8889#8890#0" expanded="true" />
+                <element signature="e#9110#9111#0" expanded="true" />
+                <element signature="e#9150#9151#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -100,10 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/ClassesFx.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/UserServices.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/UserFx.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/User.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Converters/TeacherConverter.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/TeacherDao.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieNauczycielemView.fxml" />
@@ -151,6 +236,10 @@
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Converters/GradesConventer.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentGradesController.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentGradeService.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentNieobecnosciView.fxml" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/FrequentlyDao.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentFrequentlyService.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java" />
       </list>
     </option>
   </component>
@@ -233,15 +322,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Converters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PZ_2019_Lab2_Gr2" type="462c0819:PsiDirectoryNode" />
-              <item name="Dziennik" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -251,25 +331,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Modele" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PZ_2019_Lab2_Gr2" type="462c0819:PsiDirectoryNode" />
-              <item name="Dziennik" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="modelFX" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PZ_2019_Lab2_Gr2" type="462c0819:PsiDirectoryNode" />
-              <item name="Dziennik" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
@@ -278,15 +340,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PZ_2019_Lab2_Gr2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PZ_2019_Lab2_Gr2" type="462c0819:PsiDirectoryNode" />
-              <item name="Dziennik" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="FXML" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -304,7 +357,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558038001810" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558043682171" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -715,7 +768,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558001808762</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="oceny uczen">
+      <created>1558038220543</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1558038220546</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -732,6 +792,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18017058" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -856,7 +917,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Logowanie" />
     <MESSAGE value="Zmiana atrybutów w bazie danych" />
     <MESSAGE value="backlog usuniecie" />
     <MESSAGE value="I19L2GR2-38 inicjalizacja labela zalogowanego uzytkownika" />
@@ -881,31 +941,14 @@
     <MESSAGE value="Dodawanie ocen" />
     <MESSAGE value="Dodawanie nieobecnosci" />
     <MESSAGE value="nieobecnosci filtrowanie" />
-    <option name="LAST_COMMIT_MESSAGE" value="nieobecnosci filtrowanie" />
+    <MESSAGE value="oceny uczen" />
+    <option name="LAST_COMMIT_MESSAGE" value="oceny uczen" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminClassController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/GradesDao.java" />
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/WarnsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -1076,28 +1119,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/hibernate/SessionCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/TeacherDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/FrequentlyDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1231,32 +1256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentGradeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1723#1724#0" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
-            <element signature="e#1849#1850#0" expanded="true" />
-            <element signature="e#1895#1896#0" expanded="true" />
-            <element signature="e#2116#2117#0" expanded="true" />
-            <element signature="e#2161#2162#0" expanded="true" />
-            <element signature="e#2374#2375#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
-            <element signature="e#2497#2498#0" expanded="true" />
-            <element signature="e#2542#2543#0" expanded="true" />
-            <element signature="e#2738#2739#0" expanded="true" />
-            <element signature="e#2773#2774#0" expanded="true" />
-            <element signature="e#2837#2838#0" expanded="true" />
-            <element signature="e#2885#2886#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/GradeDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
@@ -1274,32 +1273,6 @@
             <element signature="e#611#612#0" expanded="true" />
             <element signature="e#698#699#0" expanded="true" />
             <element signature="e#791#792#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/FrequentlyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="85" column="104" selection-start-line="85" selection-start-column="104" selection-end-line="85" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5643#5644#0" expanded="true" />
-            <element signature="e#5695#5696#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherFrequentlyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3325">
-          <caret line="259" column="23" lean-forward="true" selection-start-line="259" selection-start-column="23" selection-end-line="259" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8843#8844#0" expanded="true" />
-            <element signature="e#8889#8890#0" expanded="true" />
-            <element signature="e#9110#9111#0" expanded="true" />
-            <element signature="e#9150#9151#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1325,7 +1298,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/FrequentlyFx.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
+        <state relative-caret-position="532">
           <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1333,6 +1306,102 @@
             <element signature="e#770#771#0" expanded="true" />
             <element signature="e#1381#1382#0" expanded="true" />
             <element signature="e#1433#1434#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentGradeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="58" column="129" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="129" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/FrequentlyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="51" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5643#5644#0" expanded="true" />
+            <element signature="e#5695#5696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherFrequentlyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="180" column="107" lean-forward="true" selection-start-line="177" selection-start-column="7" selection-end-line="180" selection-end-column="107" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8843#8844#0" expanded="true" />
+            <element signature="e#8889#8890#0" expanded="true" />
+            <element signature="e#9110#9111#0" expanded="true" />
+            <element signature="e#9150#9151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentNieobecnosciView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/hibernate/SessionCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="35" />
+          <folding>
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/FrequentlyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+          <folding>
+            <element signature="e#972#1002#0" expanded="true" />
+            <element signature="e#1260#1290#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentFrequentlyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1578#1579#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="e#1890#1891#0" expanded="true" />
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#2022#2023#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="35" column="67" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.TableColumn?>
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StudentFrequentlyController">
     <children>
         <HBox prefHeight="100.0" prefWidth="200.0">
             <children>
@@ -17,16 +16,16 @@
                     <children>
                         <HBox prefHeight="55.0" prefWidth="400.0">
                             <children>
-                                <Label text="Przedmiot">
+                                <Label text="Liczba opuszczonych godzin: ">
                                     <HBox.margin>
                                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                     </HBox.margin>
                                 </Label>
-                                <ComboBox prefWidth="150.0">
-                                    <HBox.margin>
-                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                    </HBox.margin>
-                                </ComboBox>
+                        <Label fx:id="lbNumber" text="liczba">
+                           <padding>
+                              <Insets left="10.0" top="20.0" />
+                           </padding>
+                        </Label>
                             </children>
                         </HBox>
 
@@ -34,11 +33,14 @@
                 </VBox>
             </children>
         </HBox>
-        <TableView prefHeight="389.0" prefWidth="400.0" maxWidth="400.0" >
+        <TableView fx:id="frequentlyTableView" maxWidth="400.0" prefHeight="389.0" prefWidth="400.0">
             <columns>
-                <TableColumn prefWidth="200.0" text="Dzień" />
-                <TableColumn prefWidth="200.0" text="Lekcja" />
+                <TableColumn fx:id="columnDate" prefWidth="200.0" text="Data" />
+                <TableColumn fx:id="columnHours" prefWidth="200.0" text="Liczba godzin" />
             </columns>
+         <VBox.margin>
+            <Insets left="20.0" />
+         </VBox.margin>
         </TableView>
     </children>
 </VBox>

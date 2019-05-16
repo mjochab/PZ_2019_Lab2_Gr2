@@ -40,8 +40,14 @@ public class FrequentlyDao extends SessionCreator implements Dao<Frequently>{
     }
 
     @SuppressWarnings("unchecked")
-    public List<Frequently> findAllFrequentlyForClass(long classId){
-        List<Frequently> frequently = (List<Frequently>) getCurrentSession().createQuery("from Frequently where class_id = "+classId).list();
+    public List<Frequently> findAllFrequentlyForStudent(long studentId){
+        List<Frequently> frequently = (List<Frequently>) getCurrentSession().createQuery("from Frequently where student_id = "+studentId).list();
         return frequently;
+    }
+
+    @SuppressWarnings("unchecked")
+    public long countAbsence(long studentId){
+       Long result = (Long) getCurrentSession().createQuery( "SELECT SUM(absence) FROM Frequently where student_id ="+studentId).uniqueResult();
+       return result;
     }
 }
