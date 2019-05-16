@@ -171,6 +171,8 @@ public class TeacherFrequentlyController {
 
         }));
 
+        this.frequentlyService.studentFxObjectPropertyProperty().bind(this.cbStudent2.valueProperty());
+
         // tableView
 
         this.tableFrequently.setItems(this.frequentlyService.getFrequentlyFxObservableList());
@@ -196,11 +198,11 @@ public class TeacherFrequentlyController {
                 if(!empty){
                     setGraphic(button);
                     button.setOnAction(event -> {
-                        //try {
+                        try {
                             frequentlyService.deleteFrequently(item);
-                       // }catch(Exception e){
-                       //     System.out.println("nie usunieto");
-                      //  }
+                        }catch(Exception e){
+
+                        }
                     });
                 }
 
@@ -256,7 +258,7 @@ public class TeacherFrequentlyController {
         this.frequentlyService.setClassesFxObjectProperty(this.cbClass2.getSelectionModel().getSelectedItem());
     }
     public void comboBoxStudent2(ActionEvent actionEvent) {
-       // this.frequentlyService.filterFrequentlyList();
+        this.frequentlyService.filterFrequentlyList();
     }
 
 

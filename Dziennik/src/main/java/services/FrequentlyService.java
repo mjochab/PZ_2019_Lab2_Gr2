@@ -18,6 +18,8 @@ import modelFX.StudentFx;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class FrequentlyService {
 
@@ -67,7 +69,7 @@ public class FrequentlyService {
         });
     }
 
-    /*
+
     public void filterFrequentlyList(){
         if(getStudentFxObjectProperty() != null){
             filterPredicate(predicateStudent());
@@ -83,7 +85,7 @@ public class FrequentlyService {
     private Predicate<FrequentlyFx> predicateStudent() {
         return frequentlyFx -> frequentlyFx.getStudentFxObjectProperty().getStudentId() == getStudentFxObjectProperty().getStudentId();
     }
-*/
+
 
 
     public void persist(Frequently entity) {
