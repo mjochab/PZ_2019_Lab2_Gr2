@@ -57,7 +57,8 @@ public class Warns implements Serializable {
     public String getContent(){
         return this.content;
     }
-    public void setContent(String warnContent){
+
+    public void setContent(String content){
         this.content = content;
     }
 

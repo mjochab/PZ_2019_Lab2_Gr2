@@ -6,7 +6,7 @@ import java.util.Set;
 
 @Entity
 @Table
-public class Teacher implements Serializable {
+public  class Teacher implements Serializable {
 
     private long teacherId;
     private String firstNameT;
@@ -108,4 +108,20 @@ public class Teacher implements Serializable {
                 ", user=" + user +
                 '}';
     }
+
+
+    public String toString1() {
+        return "Teacher{" +
+                "firstNameT='" + firstNameT + '\'' +
+                '}';
+    }
+
+
+    public String toString2() {
+        return "Teacher{" +
+                "lastNameT='" + lastNameT + '\'' +
+                '}';
+    }
 }
+
+

@@ -10,7 +10,7 @@ import java.util.Date;
 public class WarnsFx {
     private SimpleLongProperty warns_id = new SimpleLongProperty();
     private SimpleStringProperty content = new SimpleStringProperty();
-    private Date date_created = new Date();
+    private SimpleObjectProperty<Date> date_created = new SimpleObjectProperty<>();
     private SimpleLongProperty student_id = new SimpleLongProperty();
     private SimpleLongProperty teacher_id = new SimpleLongProperty();
     private ObjectProperty<StudentFx> studentFxObjectProperty = new SimpleObjectProperty<>();
@@ -41,11 +41,19 @@ public class WarnsFx {
     }
 
     public Date getDate_created() {
+        return date_created.get();
+    }
+
+    public SimpleObjectProperty<Date> date_createdProperty() {
         return date_created;
     }
 
     public void setDate_created(Date date_created) {
-        this.date_created = date_created;
+        this.date_created.set(date_created);
+    }
+
+    public long getStudent_id() {
+        return student_id.get();
     }
 
     public long getStudentId() {

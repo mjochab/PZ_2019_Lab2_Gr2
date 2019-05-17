@@ -8,7 +8,6 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import modelFX.FrequentlyFx;
-import org.hibernate.Session;
 import sessions.UserSession;
 
 import java.util.ArrayList;
@@ -20,7 +19,7 @@ public class StudentFrequentlyService {
     private List<FrequentlyFx> frequentlyFxList = new ArrayList<>();
 
     FrequentlyDao frequentlyDao;
-    private Session currentSession;
+
     public void init(){
         frequentlyDao = new FrequentlyDao();
         List<Frequently> frequentlies = findAllFrequently();

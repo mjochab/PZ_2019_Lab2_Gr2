@@ -40,14 +40,11 @@ public class WarnsDao  extends SessionCreator implements Dao<Warns>{
     }
 
     @SuppressWarnings("unchecked")
-    public List<Warns> findAllWarnssInClass(long classId){
-        List<Warns> Warnss = (List<Warns>) getCurrentSession().createQuery("from Warns where class_id = "+classId).list();
+    public List<Warns> findAllWarnssForStudent(long studentId){
+        List<Warns> Warnss = (List<Warns>) getCurrentSession().createQuery("from Warns where student_id = "+studentId).list();
         return Warnss;
     }
-/*
-    @SuppressWarnings("unchecked")
-    public void deleteById(Warns entity, Integer id){
-        getCurrentSession().delete(entity,id);
-    }
-*/
+
+
+
 }

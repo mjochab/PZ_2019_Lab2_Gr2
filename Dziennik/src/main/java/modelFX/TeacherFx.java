@@ -85,4 +85,18 @@ public class TeacherFx extends Teacher {
                 ", subjectFxObjectProperty=" + subjectFxObjectProperty +
                 '}';
     }
+
+
+    @Override
+    public String toString1() {
+        return firstNameT.getValue();
+    }
+
+    @Override
+    public String toString2() {
+        return lastNameT.getValue();
+    }
+
+
+
 }
