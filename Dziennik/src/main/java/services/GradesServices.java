@@ -91,6 +91,12 @@ public class GradesServices {
 
         return students;
     }
+    public List<Grades> findAllStudentGrades(long studentId){
+        gradeDao.openCurrentSession();
+        List<Grades> gradesList = gradeDao.findAllGradesOfStudent(studentId);
+        gradeDao.closeCurrentSession();
+        return gradesList;
+    }
 
 
 

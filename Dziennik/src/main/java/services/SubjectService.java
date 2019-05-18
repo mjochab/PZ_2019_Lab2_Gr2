@@ -61,6 +61,14 @@ public class SubjectService {
         return subjects;
     }
 
+    public Subject findById(long id){
+        subjectDao.openCurrentSession();
+        Subject subject = subjectDao.findById(id);
+        subjectDao.closeCurrentSession();
+
+        return subject;
+    }
+
 
     public void persist(Subject entity) {
         subjectDao.openCurrentSessionWithTransaction();

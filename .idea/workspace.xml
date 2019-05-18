@@ -2,24 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="uwagi uczen">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentScheduleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentScheduleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dziennik/src/main/java/pdf/PdfGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/Dziennik.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/Dziennik.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminTeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminTeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentGradesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentGradesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherFrequentlyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherFrequentlyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherMarksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherMarksController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherWarnsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherWarnsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieNauczycielemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieNauczycielemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/AdminZarzadzanieUczniemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentPlanView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentPlanView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieUczniemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieUczniemView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/StudentPlanView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/StudentPlanView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/ToggleButtonMenuStudentView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/ToggleButtonMenuStudentView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/dao/GradeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/dao/GradeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/services/FrequentlyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/FrequentlyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/services/GradesServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/GradesServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/src/main/java/services/SubjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/src/main/java/services/SubjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieNauczycielemView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Dziennik/target/classes/FXML/AdminZarzadzanieNauczycielemView.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,11 +75,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentScheduleController.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentGradesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="390">
+              <caret line="90" column="104" lean-forward="true" selection-start-line="90" selection-start-column="104" selection-end-line="90" selection-end-column="104" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/SubjectService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentGradeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
+            <state relative-caret-position="407">
               <caret line="58" column="129" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="129" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -106,10 +121,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentGradesController.java">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/pdf/PdfGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
+            <state relative-caret-position="147">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,61 +133,63 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/FrequentlyDao.java">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/GradesServices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="418">
+              <caret line="95" column="77" lean-forward="true" selection-start-line="95" selection-start-column="77" selection-end-line="95" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/GradeDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="458">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentFrequentlyService.java">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherMarksController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-68">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminTeacherController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherFrequentlyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="238" column="39" lean-forward="true" selection-start-line="238" selection-start-column="39" selection-end-line="238" selection-end-column="39" />
+            <state relative-caret-position="628">
+              <caret line="258" column="10" selection-start-line="258" selection-start-column="10" selection-end-line="258" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8843#8844#0" expanded="true" />
-                <element signature="e#8889#8890#0" expanded="true" />
-                <element signature="e#9110#9111#0" expanded="true" />
-                <element signature="e#9150#9151#0" expanded="true" />
+                <element signature="e#4798#5275#0" expanded="true" />
+                <element signature="e#5274#5275#0" expanded="true" />
+                <element signature="e#5365#5802#0" expanded="true" />
+                <element signature="e#5801#5802#0" expanded="true" />
+                <element signature="e#8900#8901#0" expanded="true" />
+                <element signature="e#8961#8962#0" expanded="true" />
+                <element signature="e#9031#9032#0" expanded="true" />
+                <element signature="e#9077#9078#0" expanded="true" />
+                <element signature="e#9298#9299#0" expanded="true" />
+                <element signature="e#9338#9339#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/FrequentlyService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="179" selection-start-line="179" selection-end-line="179" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5643#5644#0" expanded="true" />
+                <element signature="e#5695#5696#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,15 +227,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminSubjectController.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminClassController.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Admin.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/ToggleButtonMenuNauczycielController.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/ToggleButtonMenuNauczycielView.fxml" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/NauczycielViewController.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/GradeDao.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/SubjectDao.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/GradesServices.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/NauczycielOcenyView.fxml" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Modele/Grades.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/NauczycielView.fxml" />
@@ -232,13 +243,11 @@
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentServices.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/TeacherServices.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentOcenyView.fxml" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/FrequentlyService.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/modelFX/GradesFx.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Converters/GradesConventer.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentGradeService.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/StudentNieobecnosciView.fxml" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/FrequentlyDao.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/FXML/ToggleButtonMenuStudentView.fxml" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/ToggleButtonMenuStudentController.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/StudentFrequentlyService.java" />
@@ -257,10 +266,18 @@
         <option value="$PROJECT_DIR$/Dziennik/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminTeacherController.java" />
         <option value="$PROJECT_DIR$/Dziennik/pom.xml" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentGradesController.java" />
-        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherMarksController.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherWarnsController.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherMarksController.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/FrequentlyService.java" />
         <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherFrequentlyController.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Pdf.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/PdfGenerator.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/dao/GradeDao.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/GradesServices.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/services/SubjectService.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/pdf/PdfGenerator.java" />
+        <option value="$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentGradesController.java" />
       </list>
     </option>
   </component>
@@ -387,7 +404,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558129305015" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558183332030" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -819,7 +836,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558117821374</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="poprawki">
+      <created>1558173369415</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1558173369415</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -838,7 +862,7 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18336888" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18336888" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -847,7 +871,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35969663" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35969663" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -960,7 +984,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="I19L2GR2-38 inicjalizacja labela zalogowanego uzytkownika" />
     <MESSAGE value="I19L2GR2-38 ModeleFX" />
     <MESSAGE value="I19L2GR2-38 StudentFx" />
     <MESSAGE value="I19L2GR2-38 ClassFx" />
@@ -985,63 +1008,14 @@
     <MESSAGE value="oceny uczen" />
     <MESSAGE value="obecnosci uczen" />
     <MESSAGE value="uwagi uczen" />
-    <option name="LAST_COMMIT_MESSAGE" value="uwagi uczen" />
+    <MESSAGE value="poprawki" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawki" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/TeacherServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="108" column="55" lean-forward="true" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Converters/GradesConventer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/function/Predicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/GradeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/modelFX/GradesFx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="86" column="45" lean-forward="true" selection-start-line="86" selection-start-column="45" selection-end-line="86" selection-end-column="45" />
-          <folding>
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1241#1242#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1324#1325#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#2065#2066#0" expanded="true" />
-            <element signature="e#2117#2118#0" expanded="true" />
-            <element signature="e#2191#2192#0" expanded="true" />
-            <element signature="e#2237#2238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/hibernate/SessionCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1225,16 +1199,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentWarnsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentWarnsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -1244,13 +1208,6 @@
             <element signature="e#1557#1558#0" expanded="true" />
             <element signature="e#1601#1602#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/GradesServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="48" column="5" selection-start-line="43" selection-start-column="3" selection-end-line="48" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1292,18 +1249,6 @@
             <element signature="e#611#612#0" expanded="true" />
             <element signature="e#698#699#0" expanded="true" />
             <element signature="e#791#792#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/FrequentlyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5643#5644#0" expanded="true" />
-            <element signature="e#5695#5696#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1353,16 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminTeacherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -1374,20 +1309,20 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentGradeService.java">
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentScheduleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="58" column="129" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="129" />
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java">
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentWarnsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="-35">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1404,17 +1339,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/FrequentlyDao.java">
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherWarnsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="322">
+          <caret line="126" column="27" selection-start-line="126" selection-start-column="27" selection-end-line="126" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminTeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1514">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/AdminStudentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="177" column="35" lean-forward="true" selection-start-line="177" selection-start-column="35" selection-end-line="177" selection-end-column="35" />
+        <state relative-caret-position="-715">
+          <caret line="128" column="65" selection-start-line="128" selection-start-column="65" selection-end-line="128" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/FrequentlyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/FrequentlyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5643#5644#0" expanded="true" />
+            <element signature="e#5695#5696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/PdfGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Pdf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherFrequentlyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="258" column="10" selection-start-line="258" selection-start-column="10" selection-end-line="258" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4798#5275#0" expanded="true" />
+            <element signature="e#5274#5275#0" expanded="true" />
+            <element signature="e#5365#5802#0" expanded="true" />
+            <element signature="e#5801#5802#0" expanded="true" />
+            <element signature="e#8900#8901#0" expanded="true" />
+            <element signature="e#8961#8962#0" expanded="true" />
+            <element signature="e#9031#9032#0" expanded="true" />
+            <element signature="e#9077#9078#0" expanded="true" />
+            <element signature="e#9298#9299#0" expanded="true" />
+            <element signature="e#9338#9339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherMarksController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/dao/GradeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/GradesServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="95" column="77" lean-forward="true" selection-start-line="95" selection-start-column="77" selection-end-line="95" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/SubjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/services/StudentGradeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="58" column="129" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="129" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/pdf/PdfGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentFrequentlyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1423,51 +1482,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentGradesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
+        <state relative-caret-position="390">
+          <caret line="90" column="104" lean-forward="true" selection-start-line="90" selection-start-column="104" selection-end-line="90" selection-end-column="104" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherMarksController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="152" column="4" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherWarnsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/StudentScheduleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dziennik/src/main/java/Controllers/TeacherFrequentlyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="238" column="39" lean-forward="true" selection-start-line="238" selection-start-column="39" selection-end-line="238" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8843#8844#0" expanded="true" />
-            <element signature="e#8889#8890#0" expanded="true" />
-            <element signature="e#9110#9111#0" expanded="true" />
-            <element signature="e#9150#9151#0" expanded="true" />
           </folding>
         </state>
       </provider>

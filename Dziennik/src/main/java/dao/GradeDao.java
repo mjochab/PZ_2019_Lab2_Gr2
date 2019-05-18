@@ -45,6 +45,8 @@ public class GradeDao  extends SessionCreator implements Dao<Grades>{
     }
 
 
+
+
 /*
     @SuppressWarnings("unchecked")
     public void deleteById(Student entity, Integer id){

@@ -33,7 +33,7 @@ public class StudentFrequentlyController {
         this.columnDate.setCellValueFactory(cellData ->  cellData.getValue().dateProperty());
         this.columnHours.setCellValueFactory(cellData -> cellData.getValue().absenseProperty().asObject());
 
-        this.lbNumber.setText(this.studentFrequentlyService.Count());
+        //this.lbNumber.setText(this.studentFrequentlyService.Count());
     }
 
 }

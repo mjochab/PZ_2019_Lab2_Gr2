@@ -124,6 +124,7 @@ public class TeacherWarnsController {
         this.warns = new Warns(dateCreated,name,studentFx,teacherFx);
         warnService.persist(warns);
         clearFields();
+        warnService.init();
 
     }
 

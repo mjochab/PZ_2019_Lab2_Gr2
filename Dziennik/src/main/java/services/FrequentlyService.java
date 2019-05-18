@@ -175,6 +175,7 @@ public class FrequentlyService {
         return studentFxObjectProperty;
     }
 
+
     public void setStudentFxObjectProperty(StudentFx studentFxObjectProperty) {
         this.studentFxObjectProperty.set(studentFxObjectProperty);
     }

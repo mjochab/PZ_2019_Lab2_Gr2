@@ -149,6 +149,7 @@ public class TeacherMarksController {
         this.grades = new Grades(dateCreated,reason,student,subject,grade);
         gradesServices.persist(grades);
         clearFields();
+        initialize();
     }
 
     public void clearFields(){

@@ -120,6 +120,7 @@ public class TeacherFrequentlyController {
         }));
 
 
+
         //sekcja druga
 
         this.cbClass2.setItems(this.frequentlyService.getClassesFxObservableList());
@@ -231,13 +232,12 @@ public class TeacherFrequentlyController {
         this.frequently = new Frequently(date,student,absence);
         frequentlyService.persist(frequently);
         frequentlyService.init();
-        clearFields();
+        //clearFields();
+        initialize();
 
     }
 
     public void clearFields(){
-        cbClass1.getItems().clear();
-        cbStudent1.getItems().clear();
         datePicker.getEditor().clear();
         cbNumberOfHours.getItems().clear();
 
@@ -256,7 +256,7 @@ public class TeacherFrequentlyController {
     }
 
     public void comboBoxStudent1(ActionEvent actionEvent) {
-        this.frequentlyService.setStudentFxObjectProperty(this.cbStudent1.getSelectionModel().getSelectedItem());
+        //this.frequentlyService.setStudentFxObjectProperty(this.cbStudent1.getSelectionModel().getSelectedItem());
     }
 
     public void comboBoxHours(ActionEvent actionEvent) {
