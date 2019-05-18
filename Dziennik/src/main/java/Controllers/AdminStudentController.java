@@ -3,6 +3,8 @@ package Controllers;
 import Modele.Student;
 import Modele.User;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -12,6 +14,8 @@ import modelFX.ClassesFx;
 import modelFX.StudentFx;
 import services.StudentServices;
 import services.UserServices;
+
+
 
 public class AdminStudentController {
 
@@ -36,8 +40,7 @@ public class AdminStudentController {
     @FXML
     private Button addButton;
 
-    @FXML
-    private Button modifyButton;
+
 
     @FXML
     private ComboBox<ClassesFx> cbClass;
@@ -70,6 +73,10 @@ public class AdminStudentController {
     studentServices = new StudentServices();
     userServices = new UserServices();
     studentServices.init();
+
+
+
+
 
     this.studentTableView.setItems(this.studentServices.getStudentFxObservableList());
     this.studentTableName.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
@@ -119,16 +126,14 @@ public class AdminStudentController {
     );
 
     this.cbClass.setItems(this.studentServices.getClassesFxObservableList());
-    /*
-    this.cbClass.valueProperty().bindBidirectional(this.studentServices.getStudentFxObjectProperty().classesFxObjectPropertyProperty());
-    this.lbStudentName.textProperty().bindBidirectional((this.studentServices.getStudentFxObjectProperty().firstNameProperty()));
-    this.lbLastName.textProperty().bindBidirectional(this.studentServices.getStudentFxObjectProperty().lastNameProperty());
-    this.lbPesel.textProperty().bindBidirectional(this.studentServices.getStudentFxObjectProperty().peselProperty());
-    this.lbAccount.textProperty().bindBidirectional(this.studentServices.getStudentFxObjectProperty().linkedAccProperty());
-    this.lbLogin.textProperty().bindBidirectional(this.userServices.getUserFxObjectProperty().usernameProperty());
-    this.lbPassword.textProperty().bindBidirectional(this.userServices.getUserFxObjectProperty().passwordProperty());
-    this.lbAccount.textProperty().bindBidirectional(this.userServices.getUserFxObjectProperty().linkedAccProperty());
-*/
+    this.lbPesel.textProperty().addListener(new ChangeListener<String>() {
+        @Override
+        public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+            if (!newValue.matches("\\d{0,11}?")){
+                lbPesel.setText(oldValue);
+            }
+        }
+    });
 
     }
 
@@ -172,9 +177,6 @@ public class AdminStudentController {
             clearFields();
             studentServices.init();
 
-
-
-
     }
     public void clearFields(){
         cbClass.getItems().clear();
@@ -185,8 +187,7 @@ public class AdminStudentController {
         lbLogin.clear();
     }
 
-    public void modifyStudent(ActionEvent actionEvent) {
-    }
+
 
     public void comboBox(ActionEvent actionEvent) {
         this.studentServices.setClassesFxObjectProperty(this.cbClass.getSelectionModel().getSelectedItem());

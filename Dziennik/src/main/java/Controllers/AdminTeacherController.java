@@ -32,8 +32,7 @@ public class AdminTeacherController {
     @FXML
     private Button buttonAdd;
     
-    @FXML
-    private Button buttonModify;
+
 
     @FXML
     private TableView<TeacherFx> tableViewTeacher;
@@ -142,8 +141,6 @@ public class AdminTeacherController {
         lbPasswordT.clear();
     }
 
-    public void modifyTeacher(ActionEvent actionEvent) {
-    }
 
     public void comboBox(ActionEvent actionEvent) {
         this.teacherServices.setSubjectFxObjectProperty(this.cbSubject.getSelectionModel().getSelectedItem());

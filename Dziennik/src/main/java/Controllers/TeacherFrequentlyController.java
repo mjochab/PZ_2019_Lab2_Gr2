@@ -231,6 +231,16 @@ public class TeacherFrequentlyController {
         this.frequently = new Frequently(date,student,absence);
         frequentlyService.persist(frequently);
         frequentlyService.init();
+        clearFields();
+
+    }
+
+    public void clearFields(){
+        cbClass1.getItems().clear();
+        cbStudent1.getItems().clear();
+        datePicker.getEditor().clear();
+        cbNumberOfHours.getItems().clear();
+
     }
 
     private Button createDeleteButton(){

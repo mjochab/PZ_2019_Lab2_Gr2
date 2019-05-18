@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminTeacherController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminTeacherController">
     <children>
         <HBox prefHeight="388.0" prefWidth="600.0">
             <children>
@@ -100,11 +100,6 @@
                                         <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
                                     </HBox.margin>
                                 </Button>
-                        <Button fx:id="buttonModify" mnemonicParsing="false" onAction="#modifyTeacher" text="Modyfikuj">
-                           <HBox.margin>
-                              <Insets left="50.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
                             </children>
                         </HBox>
                     </children>

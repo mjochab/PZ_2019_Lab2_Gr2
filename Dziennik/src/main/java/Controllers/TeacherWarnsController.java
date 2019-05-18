@@ -117,22 +117,20 @@ public class TeacherWarnsController {
         Date date = new Date();
 
 
-/*      na
-        Warns warns = new Warns();
-        WarnService warnService= new WarnService();
-
-        warns.setDateCreated(date);
-        warns.setContent(lbContent.getText());
-        warns.setStudent(cbStudent.getSelectionModel().getSelectedItem());
-        warns.setTeacher(teacher);
-        warnService.persist(warns);
-*/
         String name = lbContent.getText();
         Date dateCreated = date;
         StudentFx studentFx = cbStudent.getSelectionModel().getSelectedItem();
         Teacher teacherFx =  UserSession.getInstance().currentUser().getTeacher();
         this.warns = new Warns(dateCreated,name,studentFx,teacherFx);
         warnService.persist(warns);
+        clearFields();
+
+    }
+
+    public void clearFields(){
+        cbClass.getItems().clear();
+        cbStudent.getItems().clear();
+        lbContent.clear();
 
     }
 

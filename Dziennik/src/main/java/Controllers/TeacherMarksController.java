@@ -148,6 +148,16 @@ public class TeacherMarksController {
 
         this.grades = new Grades(dateCreated,reason,student,subject,grade);
         gradesServices.persist(grades);
+        clearFields();
+    }
+
+    public void clearFields(){
+        cbSubject.getItems().clear();
+        teacherChooseStudent.getItems().clear();
+        teacherChooseClass.getItems().clear();
+        teacherChooseReason.getItems().clear();
+
+
     }
 
     public ObservableList<StudentFx> getStudentFxObservableList() {
