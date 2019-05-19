@@ -88,7 +88,7 @@ public class StudentGradesController {
         alert.showAndWait().ifPresent(rs -> {
             if (rs == buttonTypeYes) {
                 try {
-                    String fileName = student.getFirstName()+" "+student.getLastName()+" - wykaz ocen ";
+                    String fileName = student.getFirstName()+" "+student.getLastName()+" - wykaz ocen.pdf ";
                     new PdfGenerator().createPdf(fileName, UserSession.getInstance().currentUser().getStudent().getStudentId());
                 } catch (IOException | DocumentException e) {
                     e.printStackTrace();
