@@ -16,6 +16,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import services.StudentServices;
+import services.TeacherServices;
 import sessions.UserSession;
 
 import java.io.IOException;
@@ -70,10 +72,12 @@ public class StudentViewController  {
         }
 
         if(parseUserType(user.getLinkedAcc()).equals("Student")){
-            Student student = (Student) userInitialized.get(0);
+            StudentServices studentService = new StudentServices();
+            Student student = studentService.findById(UserSession.getInstance().currentUser().getStudent().getStudentId());
             sessionInfo.setText(student.getFirstName()+ " " + student.getLastName());
         } else if(parseUserType(user.getLinkedAcc()).equals("Teacher")){
-            Teacher teacher = (Teacher) userInitialized.get(0);
+            TeacherServices teacherServices = new TeacherServices();
+            Teacher teacher = teacherServices.findById(UserSession.getInstance().currentUser().getTeacher().getTeacherId());
             sessionInfo.setText(teacher.getFirstName()+" "+teacher.getLastName());
         } else if (parseUserType(user.getLinkedAcc()).equals("Admin")){
             Admin admin = (Admin) userInitialized.get(0);
