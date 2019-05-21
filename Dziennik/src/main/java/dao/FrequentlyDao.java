@@ -48,6 +48,11 @@ public class FrequentlyDao extends SessionCreator implements Dao<Frequently>{
     @SuppressWarnings("unchecked")
     public long countAbsence(long studentId){
        Long result = (Long) getCurrentSession().createQuery( "SELECT SUM(absence) FROM Frequently where student_id ="+studentId).uniqueResult();
-       return result;
+       if (result != null) {
+           return result;
+       }else{
+           return 0;
+       }
+
     }
 }
