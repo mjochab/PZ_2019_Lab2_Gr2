@@ -5,6 +5,10 @@ import Modele.User;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -15,6 +19,7 @@ import modelFX.StudentFx;
 import services.StudentServices;
 import services.UserServices;
 
+import java.util.function.Predicate;
 
 
 public class AdminStudentController {
@@ -35,6 +40,8 @@ public class AdminStudentController {
     @FXML
     private TextField lbPassword;
 
+    @FXML
+    private TextField filterField;
 
 
     @FXML
@@ -59,11 +66,13 @@ public class AdminStudentController {
     @FXML
     private TableColumn<StudentFx, StudentFx> studentTableDelete;
 
+    private ObservableList<Student> masterData = FXCollections.observableArrayList();
+
     private StudentServices studentServices;
     private UserServices userServices;
     private Student student;
     private User user;
-
+    private Class clas;
 
 
     @FXML
@@ -116,6 +125,7 @@ public class AdminStudentController {
     });
 
 
+
     this.addButton.disableProperty().bind(this.lbStudentName.textProperty().isEmpty()
     .or(this.lbLastName.textProperty().isEmpty())
     .or(this.lbPesel.textProperty().isEmpty())
@@ -135,7 +145,43 @@ public class AdminStudentController {
         }
     });
 
+        FilteredList<StudentFx> filteredData = new FilteredList<>(studentTableView.getItems(), p -> true);
+
+        filterField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate((Predicate<? super Student>) student -> {
+
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (student.getFirstName().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                } else if (student.getLastName().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                } else if (student.getPesel().toLowerCase().contains(lowerCaseFilter)){
+                    return  true;
+                } else if (student.getClass().toString().contains(lowerCaseFilter)){
+                    return  true;
+                }
+                return false;
+            });
+        });
+
+        studentTableView.setItems(filteredData);
+
+
+        SortedList<StudentFx> sortedData = new SortedList<>(filteredData);
+        sortedData.comparatorProperty().bind(studentTableView.comparatorProperty());
+
+
+        studentTableView.setItems(sortedData);
     }
+
+
+
 
     private Button createButton(String path){
         Button button = new Button();
@@ -195,4 +241,6 @@ public class AdminStudentController {
     public StudentServices getStudentServices(){
         return studentServices;
     }
+
+
 }
