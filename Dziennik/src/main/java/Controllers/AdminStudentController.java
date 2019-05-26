@@ -2,11 +2,10 @@ package Controllers;
 
 import Modele.Student;
 import Modele.User;
+import hibernate.HibernateUtil;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
@@ -16,9 +15,14 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import modelFX.ClassesFx;
 import modelFX.StudentFx;
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import services.ClassesService;
 import services.StudentServices;
 import services.UserServices;
 
+import java.util.List;
 import java.util.function.Predicate;
 
 
@@ -47,8 +51,11 @@ public class AdminStudentController {
     @FXML
     private Button addButton;
 
+    @FXML
+    private Button fillData;
 
-
+    @FXML
+    private ComboBox<StudentFx> idComboBox;
     @FXML
     private ComboBox<ClassesFx> cbClass;
 
@@ -66,15 +73,13 @@ public class AdminStudentController {
     @FXML
     private TableColumn<StudentFx, StudentFx> studentTableDelete;
 
-    private ObservableList<Student> masterData = FXCollections.observableArrayList();
-
+    private ClassesService classesService;
     private StudentServices studentServices;
     private UserServices userServices;
     private Student student;
     private User user;
     private Class clas;
-
-
+    private List<String> ls;
     @FXML
     void initialize(){
 
@@ -82,9 +87,6 @@ public class AdminStudentController {
     studentServices = new StudentServices();
     userServices = new UserServices();
     studentServices.init();
-
-
-
 
 
     this.studentTableView.setItems(this.studentServices.getStudentFxObservableList());
@@ -136,6 +138,8 @@ public class AdminStudentController {
     );
 
     this.cbClass.setItems(this.studentServices.getClassesFxObservableList());
+
+
     this.lbPesel.textProperty().addListener(new ChangeListener<String>() {
         @Override
         public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
@@ -162,8 +166,6 @@ public class AdminStudentController {
                 } else if (student.getLastName().toLowerCase().contains(lowerCaseFilter)) {
                     return true;
                 } else if (student.getPesel().toLowerCase().contains(lowerCaseFilter)){
-                    return  true;
-                } else if (student.getClass().toString().contains(lowerCaseFilter)){
                     return  true;
                 }
                 return false;
@@ -199,6 +201,51 @@ public class AdminStudentController {
         return button1;
     }
 
+
+    @FXML
+    public void fillData(ActionEvent event){
+
+
+
+
+        StudentFx student = studentTableView.getSelectionModel().getSelectedItem();
+
+
+
+        String newname=lbStudentName.getText();
+        String newlastname=lbLastName.getText();
+        String newpesel=lbPesel.getText();
+        Long newclass=cbClass.getSelectionModel().getSelectedItem().getClassId();
+
+        String newlogin = lbLogin.getText();
+        String newpassword = lbPassword.getText();
+
+        try{
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.openSession();
+            session.beginTransaction();
+            SQLQuery query = session.createSQLQuery("update Student set first_name='"+newname+"', last_name='"+newlastname+"',pesel='"+newpesel+"',class_id='"+newclass+"' where student_id = '"+student.getStudentId()+"'");
+            // SQLQuery query_2 = session.createSQLQuery("update User set user_name='"+newlogin+"',passwrd='"+newpassword+"' where user_id ='"+student.getUser().getUserId()+"'");
+            query.executeUpdate();
+            // query_2.executeUpdate();
+            session.getTransaction().commit();
+            session.close();
+
+
+
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Błąd");
+        }
+        /*this.student = new Student(name,lname,pesel,clas,linkedAcc);
+        this.user = new User(login,password,linkedAcc);
+        user.setStudent(student);
+        student.setUser(user);
+        userServices.persist(user);
+        clearFields();
+        studentServices.init();*/
+
+    }
 
     @FXML
     void addStudent(ActionEvent event) {
@@ -243,4 +290,36 @@ public class AdminStudentController {
     }
 
 
+    public void chooseId(ActionEvent event) {
+        this.studentServices.setStudentFxObjectProperty(this.idComboBox.getSelectionModel().getSelectedItem());
+    }
+
+    public void copyStudent(ActionEvent event) {
+        StudentFx student = studentTableView.getSelectionModel().getSelectedItem();
+        String name = studentTableView.getSelectionModel().getSelectedItem().getFirstName();
+        String lname = studentTableView.getSelectionModel().getSelectedItem().getLastName();
+        String pesel = studentTableView.getSelectionModel().getSelectedItem().getPesel();
+        Class clas = studentTableView.getSelectionModel().getSelectedItem().getClass();
+
+       // String user_login = studentTableView.getSelectionModel().getSelectedItem().getStudentId();
+
+        cbClass.getSelectionModel().selectFirst();
+        //String password = idComboBox.getSelectionModel().getSelectedItem().getUser().getPasswrd();
+        //User login = idComboBox.getSelectionModel().getSelectedItem().getUser().getUsername();
+
+        //String clas_name = idComboBox.getSelectionModel().getSelectedItem().getClassesFxObjectProperty().getClassName();
+        // Long clas_id = idComboBox.getSelectionModel().getSelectedItem().getClasses().getClassId();
+        String linkedAcc = studentTableView.getSelectionModel().getSelectedItem().getLinkedAcc();
+
+        //String user_login = studentTableView.getSelectionModel().getSelectedItem().getUser().getUsername();
+        String user_id2 = userServices.getUserFxObjectProperty().getUsername();
+        lbStudentName.setText(name);
+        lbLastName.setText(lname);
+        lbPesel.setText(pesel);
+
+        //lbLogin.setText(user_login);
+        //lbLogin.setText("student"+student.getUser().getUserId());
+        this.cbClass.setItems(this.studentServices.getClassesFxObservableList());
+
+    }
 }
