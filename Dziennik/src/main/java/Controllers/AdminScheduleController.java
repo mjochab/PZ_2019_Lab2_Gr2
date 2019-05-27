@@ -55,6 +55,9 @@ public class AdminScheduleController {
     private ScheduleService scheduleService;
     private Schedule schedule;
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     void initialize(){
         scheduleService = new ScheduleService();

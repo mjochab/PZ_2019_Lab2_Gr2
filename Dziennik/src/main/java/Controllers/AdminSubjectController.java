@@ -32,6 +32,9 @@ public class AdminSubjectController {
     private SubjectFx subjectFx;
 
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     public void initialize(){
         this.subjectService = new SubjectService();
         this.subjectService.init();
@@ -47,6 +50,11 @@ public class AdminSubjectController {
     }
 
 
+    /**
+     * Metoda dodaje nowy przedmiot do bazy.
+     *
+     * @param actionEvent
+     */
     public void addSubject(ActionEvent actionEvent) {
         try{
             String name = lbSubjectName.getText();
@@ -62,6 +70,11 @@ public class AdminSubjectController {
     }
 
 
+    /**
+     * Metoda usuwa przedmiot z bazy.
+     *
+     * @param actionEvent
+     */
     public void deleteSubject(ActionEvent actionEvent) {
         try{
             this.subjectService.delete(cbSubject.getValue().getSubjectId());

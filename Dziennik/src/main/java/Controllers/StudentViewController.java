@@ -32,6 +32,9 @@ public class StudentViewController  {
     @FXML
     private Label sessionInfo;
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     private void initialize(){
         toggleButtonMenuStudentController.setStudentViewController(this);
@@ -97,6 +100,11 @@ public class StudentViewController  {
         borderPane.setCenter(parent);
     }
 
+    /**
+     * Metoda wylogowuje aktualnego użytkownika.
+     * @param actionEvent
+     * @throws IOException
+     */
     public void btnWyloguj(ActionEvent actionEvent) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/FXML/Login.fxml"));
         Scene scene = new Scene(parent);

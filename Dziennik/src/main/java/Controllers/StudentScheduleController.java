@@ -16,6 +16,10 @@ public class StudentScheduleController {
     @FXML
     private Button btnPrintSchedule;
 
+    /**
+     * Metoda generująca PDF'a dla planu zajęć.
+     * @param event
+     */
     @FXML
     void printSchedule(ActionEvent event) {
 

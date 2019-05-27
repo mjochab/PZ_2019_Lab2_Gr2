@@ -33,6 +33,9 @@ public class AdminViewController  {
     private List<?> userInitialized;
     private User user = UserSession.getInstance().currentUser();
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     private void initialize(){
         toggleButtonMenuAdminController.setAdminViewController(this);
@@ -92,6 +95,11 @@ public class AdminViewController  {
         borderPane.setCenter(parent);
     }
 
+    /**
+     * Metoda wylogowuje aktualnego użytkownika.
+     * @param actionEvent
+     * @throws IOException
+     */
     public void btnWyloguj(ActionEvent actionEvent) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/FXML/Login.fxml"));
         Scene scene = new Scene(parent);

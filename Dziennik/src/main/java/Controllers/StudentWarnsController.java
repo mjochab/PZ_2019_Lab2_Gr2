@@ -27,7 +27,9 @@ public class StudentWarnsController {
     private StudentWarnsService studentWarnsService;
 
 
-
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     void initialize() {
         studentWarnsService= new StudentWarnsService();

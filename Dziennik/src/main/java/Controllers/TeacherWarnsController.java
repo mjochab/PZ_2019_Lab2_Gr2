@@ -43,6 +43,9 @@ public class TeacherWarnsController {
     private ObservableList<StudentFx> studentFxObservableList = FXCollections.observableArrayList();
     private NauczycielViewController nauczycielViewController;
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     void initialize() {
 
@@ -128,6 +131,9 @@ public class TeacherWarnsController {
 
     }
 
+    /**
+     * Metoda czyszcząca pola.
+     */
     public void clearFields(){
         cbClass.getItems().clear();
         cbStudent.getItems().clear();

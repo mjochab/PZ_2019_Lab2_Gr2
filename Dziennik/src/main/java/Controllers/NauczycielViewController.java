@@ -33,6 +33,9 @@ public class NauczycielViewController  {
     private List<?> userInitialized;
     private User user = UserSession.getInstance().currentUser();
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     private void initialize(){
         toggleButtonMenuNauczycielController.setNauczycielViewController(this);

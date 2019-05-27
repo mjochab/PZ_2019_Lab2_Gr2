@@ -80,6 +80,10 @@ public class AdminStudentController {
     private User user;
     private Class clas;
     private List<String> ls;
+
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     void initialize(){
 

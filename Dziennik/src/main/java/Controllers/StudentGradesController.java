@@ -43,6 +43,9 @@ public class StudentGradesController {
 
     private GradeDao gradeDao;
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     void initialize() {
         gradeDao = new GradeDao();
@@ -67,6 +70,10 @@ public class StudentGradesController {
 
     }
 
+    /**
+     * Metoda generująca PDF'a z ocenami ucznia.
+     * @param event
+     */
     @FXML
     void printGrades(ActionEvent event) {
         StudentServices studentService = new StudentServices();

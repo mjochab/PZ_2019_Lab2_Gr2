@@ -54,6 +54,9 @@ public class AdminTeacherController {
     private Teacher teacher;
     private User user;
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     void initialize(){
         teacherServices = new TeacherServices();
@@ -69,6 +72,11 @@ public class AdminTeacherController {
         this.tableTeacherDelete.setCellFactory(param -> new TableCell<TeacherFx,TeacherFx>(){
             javafx.scene.control.Button button = createDeleteButton();
 
+            /**
+             *
+             * @param item
+             * @param empty
+             */
             @Override
             protected void updateItem(TeacherFx item, boolean empty){
                 super.updateItem(item,empty);
@@ -114,6 +122,11 @@ public class AdminTeacherController {
     }
 
 
+    /**
+     * Metoda dodaje nowego nauczyciela do bazy.
+     *
+     * @param actionEvent
+     */
     public void addTeacher(ActionEvent actionEvent) {
 
         String name = lbNameT.getText();
@@ -133,6 +146,9 @@ public class AdminTeacherController {
 
     }
 
+    /**
+     * Metoda czyści pola.
+     */
     public void clearFields(){
         lbNameT.clear();
         cbSubject.getItems().clear();

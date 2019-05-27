@@ -14,9 +14,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-
-
 import org.hibernate.Query;
 import org.hibernate.Session;
 import sessions.UserSession;
@@ -36,7 +33,9 @@ public class LoginController implements Initializable {
     private Button submitButton;
 
 
-
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

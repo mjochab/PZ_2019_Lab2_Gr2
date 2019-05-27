@@ -31,6 +31,9 @@ public class AdminClassController {
     private Classes classes;
     private ClassesFx clasFx;
 
+    /**
+     * Inicjacja klasy kontrolera .
+     */
     @FXML
     public void initialize(){
         this.classesService = new ClassesService();
@@ -46,6 +49,11 @@ public class AdminClassController {
         this.deleteClassButton.disableProperty().bind(this.classesService.classesFxObjectPropertyProperty().isNull());
     }
 
+    /**
+     * Metoda dodaje nową klase do bazy.
+     *
+     * @param actionEvent
+     */
     public void addClass(ActionEvent actionEvent) {
         try{
             String name = lbClassName.getText();
@@ -60,6 +68,11 @@ public class AdminClassController {
         }
     }
 
+    /**
+     * Metoda usuwa klase z bazy.
+     *
+     * @param actionEvent
+     */
     public void deleteClass(ActionEvent actionEvent) {
         try{
            this.classesService.delete(cbClass.getValue().getClassId());

@@ -61,6 +61,9 @@ public class TeacherFrequentlyController {
     private FrequentlyService frequentlyService;
     private Frequently frequently;
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     void initialize(){
         frequentlyService = new FrequentlyService();

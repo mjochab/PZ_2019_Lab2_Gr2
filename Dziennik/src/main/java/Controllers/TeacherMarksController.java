@@ -55,6 +55,9 @@ public class TeacherMarksController {
     private Grades grades;
     private GradesServices gradesServices;
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     public void initialize(){
         Teacher teacherFx =  UserSession.getInstance().currentUser().getTeacher();
         this.gradesServices = new GradesServices();
@@ -132,10 +135,10 @@ public class TeacherMarksController {
     }
 
 
-
-
-
-
+    /**
+     * Metoda dodająca oceny dla wybranego ucznia.
+     * @param actionEvent
+     */
     public void addGrade(ActionEvent actionEvent) {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
@@ -152,6 +155,9 @@ public class TeacherMarksController {
         initialize();
     }
 
+    /**
+     * Metoda czyszcząca pola.
+     */
     public void clearFields(){
         cbSubject.getItems().clear();
         teacherChooseStudent.getItems().clear();

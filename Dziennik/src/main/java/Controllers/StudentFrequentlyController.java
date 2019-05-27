@@ -24,6 +24,9 @@ public class StudentFrequentlyController {
 
     private StudentFrequentlyService studentFrequentlyService;
 
+    /**
+     * Inicjacja klasy kontrolera.
+     */
     @FXML
     void initialize() {
         studentFrequentlyService= new StudentFrequentlyService();
