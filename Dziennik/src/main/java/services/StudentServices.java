@@ -28,7 +28,9 @@ public class StudentServices {
     private ClassDao classDao;
     private TreeItem<String> listOfStudents = new TreeItem<>();
 
-
+    /**
+     * Konstruktor klasy StudentService i inicjalizacja StudentDao
+     */
     public StudentServices(){
         studentDao = new StudentDao();
     }
@@ -64,24 +66,31 @@ public class StudentServices {
         studentDao.persist(student);
         studentDao.closeCurrentSessionWithTransaction();
     }
-<<<<<<< .merge_file_a10392
 
 
-=======
+
     public TreeItem<String> getRoot() {
         return listOfStudents;
     }
     public void setRoot(TreeItem<String> root) {
         this.listOfStudents = root;
     }
->>>>>>> .merge_file_a04484
+
+
+    /**
+     * Metoda zapisuje studenta do bazy danych.
+     * @param entity
+     */
     public void persist(Student entity) {
         studentDao.openCurrentSessionWithTransaction();
         studentDao.persist(entity);
         studentDao.closeCurrentSessionWithTransaction();
     }
 
-
+    /**
+     * Metoda aktualizuje dane o studencie.
+     * @param entity
+     */
     public void update(Student entity) {
         studentDao.openCurrentSessionWithTransaction();
         studentDao.update(entity);
@@ -89,7 +98,10 @@ public class StudentServices {
     }
 
 
-
+    /**
+     * Metoda usuwa z bazy danych studenta o poodanym id.
+     * @param id
+     */
     public void delete(long id) {
         studentDao.openCurrentSessionWithTransaction();
         Student student = studentDao.findById(id);
@@ -130,6 +142,11 @@ public class StudentServices {
         return classes;
     }
 
+    /**
+     * Metoda znajduje studenta o podanym id.
+     * @param id
+     * @return
+     */
     public Student findById(long id){
         studentDao.openCurrentSession();
         Student student = studentDao.findById(id);

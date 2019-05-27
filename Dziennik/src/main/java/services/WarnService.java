@@ -42,7 +42,10 @@ public class WarnService {
         });
     }
 
-
+    /**
+     * Metoda zapisuje uwagę do bazy danych.
+     * @param entity
+     */
     public void persist(Warns entity) {
         warnsDao.openCurrentSessionWithTransaction();
         warnsDao.persist(entity);

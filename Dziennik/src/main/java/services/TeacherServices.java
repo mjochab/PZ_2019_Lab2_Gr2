@@ -26,6 +26,9 @@ public class TeacherServices {
     private TeacherDao teacherDao;
     private SubjectDao subjectDao;
 
+    /**
+     * Konstruktor klasy TeacherService i inicjalizacja TeacherDao
+     */
     public TeacherServices(){
         teacherDao = new TeacherDao();
     }
@@ -50,12 +53,20 @@ public class TeacherServices {
         });
     }
 
+    /**
+     * Metoda zapisuje Nauczyciela do bazy danych.
+     * @param entity
+     */
     public void persist(Teacher entity) {
         teacherDao.openCurrentSessionWithTransaction();
         teacherDao.persist(entity);
         teacherDao.closeCurrentSessionWithTransaction();
     }
 
+    /**
+     * Metoda usuwa z bazy danych nauczyciela o podanym id.
+     * @param id
+     */
     public void delete(long id) {
         teacherDao.openCurrentSessionWithTransaction();
         Teacher teacher = teacherDao.findById(id);
@@ -86,6 +97,11 @@ public class TeacherServices {
         return subjects;
     }
 
+    /**
+     * Metoda znajduje nauczyciela o podanym id.
+     * @param id
+     * @return
+     */
     public Teacher findById(long id){
         teacherDao.openCurrentSession();
         Teacher teacher = teacherDao.findById(id);

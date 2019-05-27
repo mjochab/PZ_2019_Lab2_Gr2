@@ -16,6 +16,10 @@ public class UserServices {
     private UserDao userDao = new UserDao();
     private StudentDao studentDao;
 
+    /**
+     * Metoda zapisuje użytkownika do bazy danych.
+     * @param entity
+     */
     public void persist(User entity) {
         userDao.openCurrentSessionWithTransaction();
         userDao.persist(entity);
@@ -30,7 +34,10 @@ public class UserServices {
         userDao.closeCurrentSessionWithTransaction();
     }
 
-
+    /**
+     * Metoda aktualizuje dane o użytkowniku w bazie danych.
+     * @param entity
+     */
     public void update(User entity) {
         userDao.openCurrentSessionWithTransaction();
         userDao.update(entity);
@@ -38,7 +45,10 @@ public class UserServices {
     }
 
 
-
+    /**
+     * Metoda usuwa z bazy danych użytkownika o podanym id.
+     * @param id
+     */
     public void delete(long id) {
         userDao.openCurrentSessionWithTransaction();
         User user = userDao.findById(id);

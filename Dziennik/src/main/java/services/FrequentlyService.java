@@ -35,6 +35,9 @@ public class FrequentlyService {
     private ObjectProperty<FrequentlyFx> frequentlyFxObjectProperty = new SimpleObjectProperty<>(new FrequentlyFx());
     private List<FrequentlyFx> frequentlyFxList = new ArrayList<>();
 
+    /**
+     * Konstruktor klasy FrequentlyService i inicjalizacja FrequentlyDao
+     */
     public FrequentlyService(){
         frequentlyDao = new FrequentlyDao();
     }
@@ -49,6 +52,10 @@ public class FrequentlyService {
         initCbClass();
     }
 
+    /**
+     * Metoda pobiera wszystkie obecności z bazy danych.
+     * @return List<Car>
+     */
     public List<Frequently> findAllFrequently(){
         frequentlyDao.openCurrentSession();
         List<Frequently> frequentlies = frequentlyDao.findAll();
@@ -87,14 +94,20 @@ public class FrequentlyService {
     }
 
 
-
+    /**
+     * Metoda zapisuje obecność do bazy danych.
+     * @param entity
+     */
     public void persist(Frequently entity) {
         frequentlyDao.openCurrentSessionWithTransaction();
         frequentlyDao.persist(entity);
         frequentlyDao.closeCurrentSessionWithTransaction();
     }
 
-
+    /**
+     * Metoda usuwa z bazy danych obecność o podanym id.
+     * @param id
+     */
     public void delete(long id) {
         frequentlyDao.openCurrentSessionWithTransaction();
         Frequently frequently = frequentlyDao.findById(id);
@@ -111,7 +124,11 @@ public class FrequentlyService {
     }
 
 
-
+    /**
+     * Metoda znajduje obecność o podanym id.
+     * @param id
+     * @return
+     */
     public Frequently findById(long id){
         frequentlyDao.openCurrentSession();
         Frequently frequently = frequentlyDao.findById(id);

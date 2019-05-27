@@ -19,6 +19,9 @@ public class SubjectService {
     private ObjectProperty<SubjectFx> subjectFxObjectProperty = new SimpleObjectProperty<>();
     private TreeItem<String> root = new TreeItem<>();
 
+    /**
+     * Konstruktor klasy SubjectService i inicjalizacja SubjectDao
+     */
     public SubjectService(){
         subjectDao = new SubjectDao();
     }
@@ -61,6 +64,11 @@ public class SubjectService {
         return subjects;
     }
 
+    /**
+     * Metoda znajduje przedmiot o podanym id.
+     * @param id
+     * @return
+     */
     public Subject findById(long id){
         subjectDao.openCurrentSession();
         Subject subject = subjectDao.findById(id);
@@ -69,13 +77,20 @@ public class SubjectService {
         return subject;
     }
 
-
+    /**
+     * Metoda zapisuje przedmiot do bazy danych.
+     * @param entity
+     */
     public void persist(Subject entity) {
         subjectDao.openCurrentSessionWithTransaction();
         subjectDao.persist(entity);
         subjectDao.closeCurrentSessionWithTransaction();
     }
 
+    /**
+     * Metoda usuwa z bazy danych przedmiot o podanym id.
+     * @param id
+     */
     public void delete(long id) {
         subjectDao.openCurrentSessionWithTransaction();
         Subject subject = subjectDao.findById(id);

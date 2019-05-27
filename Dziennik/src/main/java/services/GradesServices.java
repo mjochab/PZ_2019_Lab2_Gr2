@@ -36,7 +36,9 @@ public class GradesServices {
     private ObjectProperty<GradesFx> gradesFxObjectProperty = new SimpleObjectProperty<>();
     private ObservableList<GradesFx> gradesFxObservableList = FXCollections.observableArrayList();
 
-
+    /**
+     * Konstruktor klasy GradeService i inicjalizacja GradeDao
+     */
     public GradesServices() {
         gradeDao = new GradeDao();
     }
@@ -131,23 +133,31 @@ public class GradesServices {
     }
 
 
-
-
-
+    /**
+     * Metoda zapisuje ocene do bazy danych.
+     * @param entity
+     */
     public void persist(Grades entity) {
         gradeDao.openCurrentSessionWithTransaction();
         gradeDao.persist(entity);
         gradeDao.closeCurrentSessionWithTransaction();
     }
 
-
+    /**
+     * Metoda aktualizuje dane o ocenie w bazie danych.
+     * @param entity
+     */
     public void update(Grades entity) {
         gradeDao.openCurrentSessionWithTransaction();
         gradeDao.update(entity);
         gradeDao.closeCurrentSessionWithTransaction();
     }
 
-
+    /**
+     * Metoda znajduje ocene o podanym id.
+     * @param id
+     * @return
+     */
     public Grades findById(long id) {
         gradeDao.openCurrentSession();
         Grades grades = gradeDao.findById(id);
@@ -155,7 +165,10 @@ public class GradesServices {
         return grades;
     }
 
-
+    /**
+     * Metoda usuwa z bazy danych ocene o podanym id.
+     * @param id
+     */
     public void delete(long id) {
         gradeDao.openCurrentSessionWithTransaction();
         Grades grades = gradeDao.findById(id);
@@ -163,7 +176,9 @@ public class GradesServices {
         gradeDao.closeCurrentSessionWithTransaction();
     }
 
-
+    /**
+     * Metoda usuwa wszystkie oceny z bazy danych.
+     */
     public void deleteAll() {
         gradeDao.openCurrentSessionWithTransaction();
         gradeDao.deleteAll();

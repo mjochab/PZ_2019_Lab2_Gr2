@@ -34,7 +34,9 @@ public class ScheduleService {
     private SubjectDao subjectDao;
     private ClassDao classDao;
 
-
+    /**
+     * Konstruktor klasy ScheduleService i inicjalizacja ScheduleDao
+     */
     public ScheduleService(){
         scheduleDao = new ScheduleDao();
     }
@@ -71,13 +73,20 @@ public class ScheduleService {
         });
     }
 
+    /**
+     * Metoda zapisuje obecność do bazy danych.
+     * @param entity
+     */
     public void persist(Schedule entity) {
         scheduleDao.openCurrentSessionWithTransaction();
         scheduleDao.persist(entity);
         scheduleDao.closeCurrentSessionWithTransaction();
     }
 
-
+    /**
+     * Metoda aktualizuje dane o obecności w bazie danych.
+     * @param entity
+     */
     public void update(Schedule entity) {
         scheduleDao.openCurrentSessionWithTransaction();
         scheduleDao.update(entity);
@@ -85,7 +94,10 @@ public class ScheduleService {
     }
 
 
-
+    /**
+     * Metoda usuwa z bazy danych obecność o podanym id
+     * @param id
+     */
     public void delete(long id) {
         scheduleDao.openCurrentSessionWithTransaction();
         Schedule schedule = scheduleDao.findById(id);
@@ -124,6 +136,11 @@ public class ScheduleService {
         return subjects;
     }
 
+    /**
+     * Metoda znajduje obecnośc o podanym id.
+     * @param id
+     * @return schedule
+     */
     public Schedule findById(long id){
         scheduleDao.openCurrentSession();
         Schedule schedule = scheduleDao.findById(id);

@@ -19,6 +19,9 @@ public class ClassesService {
     private ObjectProperty<ClassesFx> classesFxObjectProperty = new SimpleObjectProperty<>();
     private TreeItem<String> root = new TreeItem<>();
 
+    /**
+     * Konstruktor klasy ClassesService i inicjalizacja ClassDao
+     */
     public ClassesService(){
         classDao = new ClassDao();
     }
@@ -56,7 +59,10 @@ public class ClassesService {
     }
 
 
-
+    /**
+     * Metoda pobiera wszystkie klasy z bazy danych.
+     * @return
+     */
     public List<Classes> findAllClasses() {
         classDao.openCurrentSession();
         List<Classes> classes = classDao.findAll();
@@ -65,21 +71,31 @@ public class ClassesService {
         return classes;
     }
 
-
+    /**
+     * Meroda zapisuje klase do bazy danych.
+     * @param entity
+     */
     public void persist(Classes entity) {
         classDao.openCurrentSessionWithTransaction();
         classDao.persist(entity);
         classDao.closeCurrentSessionWithTransaction();
     }
 
-
+    /**
+     * Metoda aktualizuje dane o klasie w bazie danych.
+     * @param entity
+     */
     public void update(Classes entity) {
         classDao.openCurrentSessionWithTransaction();
         classDao.update(entity);
         classDao.closeCurrentSessionWithTransaction();
     }
 
-
+    /**
+     * Metoda znajduje klase o podanym id.
+     * @param id
+     * @return
+     */
     public Classes findById(long id) {
         classDao.openCurrentSession();
         Classes classes = classDao.findById(id);
@@ -87,7 +103,10 @@ public class ClassesService {
         return classes;
     }
 
-
+    /**
+     * Metoda usuwa z bazy danych klase o podanym id.
+     * @param id
+     */
     public void delete(long id) {
         classDao.openCurrentSessionWithTransaction();
         Classes classes = classDao.findById(id);
@@ -96,7 +115,9 @@ public class ClassesService {
     }
 
 
-
+    /**
+     * Metoda usuwa wszystkie klasy z bazy danych.
+     */
     public void deleteAll() {
         classDao.openCurrentSessionWithTransaction();
         classDao.deleteAll();
