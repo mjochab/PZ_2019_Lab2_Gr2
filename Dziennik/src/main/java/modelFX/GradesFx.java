@@ -12,7 +12,7 @@ public class GradesFx extends Grades {
     private SimpleDoubleProperty grade = new SimpleDoubleProperty();
     private SimpleObjectProperty<Date> date = new SimpleObjectProperty<>();
     private SimpleStringProperty details = new SimpleStringProperty();
-    private ObjectProperty<Student> StudentObjectProperty = new SimpleObjectProperty<>();
+    private ObjectProperty<StudentFx> StudentObjectProperty = new SimpleObjectProperty<>();
     private ObjectProperty<SubjectFx> subjectFxObjectProperty = new SimpleObjectProperty<>();
 
     public GradesFx() {
@@ -75,11 +75,11 @@ public class GradesFx extends Grades {
         return StudentObjectProperty.get();
     }
 
-    public ObjectProperty<Student> studentObjectPropertyProperty() {
+    public ObjectProperty<StudentFx> studentObjectPropertyProperty() {
         return StudentObjectProperty;
     }
 
-    public void setStudentObjectProperty(Student studentObjectProperty) {
+    public void setStudentObjectProperty(StudentFx studentObjectProperty) {
         this.StudentObjectProperty.set(studentObjectProperty);
     }
 

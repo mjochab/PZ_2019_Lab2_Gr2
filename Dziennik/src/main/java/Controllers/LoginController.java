@@ -14,9 +14,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-
-
 import org.hibernate.Query;
 import org.hibernate.Session;
 import sessions.UserSession;
@@ -52,53 +49,6 @@ public class LoginController implements Initializable {
         primaryStage.show();
     }
 
-    /*
-    @FXML
-    public void LogIn(ActionEvent actionEvent) throws Exception {
-        Window owner = submitButton.getScene().getWindow();
-
-        String person = loginField.getText();
-        Parent parent;
-
-        if (loginField.getText().isEmpty()) {
-            AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Błąd", "Podaj login");
-            return;
-        }
-        if (passwordField.getText().isEmpty()) {
-            AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Błąd", "Podaj hasło");
-            return;
-        }
-
-      // AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, owner, "Logowanie udane",
-          //     "Witaj " + nameField.getText());
-
-
-        if(person.equals("Admin")) {
-            parent = FXMLLoader.load(getClass().getResource("/FXML/AdminView.fxml"));
-            //rootPane.getChildren().setAll(pane);
-        }
-        else if(person.equals("Nauczyciel")) {
-            parent = FXMLLoader.load(getClass().getResource("/FXML/NauczycielView.fxml"));
-            //rootPane.getChildren().setAll(pane);
-        }
-        else if(person.equals("Student")) {
-            parent = FXMLLoader.load(getClass().getResource("/FXML/StudentView.fxml"));
-            //rootPane.getChildren().setAll(pane);
-        }
-        else {
-            throw new Exception("Problem załadowania modułu");
-        }
-
-
-        Scene scene = new Scene(parent);
-        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.hide();
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.sizeToScene();
-        stage.show();
-    }
-    */
 
     private boolean authorizeUser(String username, String passwrd){
         String user = "User";

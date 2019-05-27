@@ -55,7 +55,9 @@ public class PdfGenerator {
         GradesServices gradesService = new GradesServices();
         List<Grades> gradesList =  gradesService.findAllStudentGrades(studentId);
 
-        for (int i = 0; i < 5 ;i++){
+        long number = subjectService.count();
+
+        for (int i = 0; i < number ;i++){
             for (int j = 0 ; j < 2; j++){
                 final int subjectIndex = i;
                 if (j == 0){

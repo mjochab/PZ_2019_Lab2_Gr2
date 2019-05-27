@@ -32,6 +32,14 @@ public class Grades implements Serializable {
         this.grade = grade;
     }
 
+    public Grades(Date dateCreated, String reason, StudentFx student, Subject subject, double grade) {
+        this.dateCreated = dateCreated;
+        this.details = reason;
+        this.student = student;
+        this.subject = subject;
+        this.grade = grade;
+    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

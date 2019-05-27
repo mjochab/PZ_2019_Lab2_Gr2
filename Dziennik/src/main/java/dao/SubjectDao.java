@@ -37,6 +37,13 @@ public class SubjectDao  extends SessionCreator implements Dao<Subject>{
         List<Subject> subjects = findAll();
         subjects.forEach(this::delete);
     }
-
+    public long countSubject() {
+        Long result = (Long) getCurrentSession().createQuery("SELECT count(*) FROM Subject").uniqueResult();
+        if (result != null) {
+            return result;
+        } else {
+            return 0;
+        }
+    }
 
 }

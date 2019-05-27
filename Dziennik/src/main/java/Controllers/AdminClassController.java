@@ -3,10 +3,7 @@ package Controllers;
 import Modele.Classes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TreeView;
+import javafx.scene.control.*;
 import modelFX.ClassesFx;
 import services.ClassesService;
 
@@ -64,7 +61,11 @@ public class AdminClassController {
         try{
            this.classesService.delete(cbClass.getValue().getClassId());
         }catch (Exception e){
-            System.out.println("nie usunieto");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Bład usuwania");
+            alert.setHeaderText(null);
+            alert.setContentText("Nie można usunąć klasy w której są uczniowie.");
+            alert.showAndWait();
         }
     }
 

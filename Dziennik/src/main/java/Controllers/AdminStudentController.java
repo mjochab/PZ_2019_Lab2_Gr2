@@ -296,30 +296,24 @@ public class AdminStudentController {
 
     public void copyStudent(ActionEvent event) {
         StudentFx student = studentTableView.getSelectionModel().getSelectedItem();
-        String name = studentTableView.getSelectionModel().getSelectedItem().getFirstName();
-        String lname = studentTableView.getSelectionModel().getSelectedItem().getLastName();
-        String pesel = studentTableView.getSelectionModel().getSelectedItem().getPesel();
-        Class clas = studentTableView.getSelectionModel().getSelectedItem().getClass();
+        String name = student.getFirstName();
+        String lname = student.getLastName();
+        String pesel = student.getPesel();
 
-       // String user_login = studentTableView.getSelectionModel().getSelectedItem().getStudentId();
+        //String login = student.getUser().getUsername();
+        //String password = student.getUser().getPasswrd();
 
-        cbClass.getSelectionModel().selectFirst();
-        //String password = idComboBox.getSelectionModel().getSelectedItem().getUser().getPasswrd();
-        //User login = idComboBox.getSelectionModel().getSelectedItem().getUser().getUsername();
+        System.out.println(clas);
 
-        //String clas_name = idComboBox.getSelectionModel().getSelectedItem().getClassesFxObjectProperty().getClassName();
-        // Long clas_id = idComboBox.getSelectionModel().getSelectedItem().getClasses().getClassId();
-        String linkedAcc = studentTableView.getSelectionModel().getSelectedItem().getLinkedAcc();
-
-        //String user_login = studentTableView.getSelectionModel().getSelectedItem().getUser().getUsername();
-        String user_id2 = userServices.getUserFxObjectProperty().getUsername();
         lbStudentName.setText(name);
         lbLastName.setText(lname);
         lbPesel.setText(pesel);
+       //cbClass.setValue(StudentConverter.convertToStudentFx(student));
+        //lbLogin.setText(login);
+        //lbPassword.setText(password);
 
-        //lbLogin.setText(user_login);
-        //lbLogin.setText("student"+student.getUser().getUserId());
-        this.cbClass.setItems(this.studentServices.getClassesFxObservableList());
+
+
 
     }
 }

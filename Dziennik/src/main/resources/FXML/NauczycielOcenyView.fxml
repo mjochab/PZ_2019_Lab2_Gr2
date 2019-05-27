@@ -4,13 +4,16 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TeacherMarksController">
    <children>
-      <HBox prefHeight="79.0" prefWidth="639.0">
+      <HBox prefHeight="57.0" prefWidth="639.0">
          <children>
             <Label text="Klasa">
                <HBox.margin>
@@ -30,17 +33,17 @@
                </HBox.margin></ComboBox>
          </children>
       </HBox>
-      <HBox prefHeight="89.0" prefWidth="639.0">
+      <HBox prefHeight="53.0" prefWidth="639.0">
          <children>
             <Label text="Przedmiot">
                <HBox.margin>
                   <Insets left="40.0" top="20.0" />
                </HBox.margin></Label>
-            <ComboBox fx:id="cbSubject" onAction="#comboBoxSubject" prefWidth="150.0">
+            <Label fx:id="lbSubject" prefWidth="150.0" text="Label">
                <HBox.margin>
-                  <Insets left="20.0" top="15.0" />
+                  <Insets left="10.0" top="20.0" />
                </HBox.margin>
-            </ComboBox>
+            </Label>
             <Label text="Typ">
                <HBox.margin>
                   <Insets left="90.0" top="20.0" />
@@ -51,28 +54,60 @@
                </HBox.margin></ComboBox>
          </children>
       </HBox>
-      <HBox prefHeight="85.0" prefWidth="639.0">
+      <HBox prefHeight="60.0" prefWidth="639.0">
          <children>
             <Label text="Ocena">
                <HBox.margin>
                   <Insets left="40.0" top="15.0" />
                </HBox.margin>
             </Label>
-            <Slider fx:id="gradeSlider" blockIncrement="1" majorTickUnit="1" max="6" min="1" minorTickCount="0" prefHeight="18.0" prefWidth="425.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1">
+            <Slider fx:id="gradeSlider" blockIncrement="1" majorTickUnit="1" max="6" min="1" minorTickCount="0" prefHeight="34.0" prefWidth="425.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1">
                <HBox.margin>
                   <Insets left="40.0" top="20.0" />
                </HBox.margin>
             </Slider>
          </children>
       </HBox>
-      <HBox prefHeight="74.0" prefWidth="639.0">
+      <HBox prefHeight="53.0" prefWidth="639.0">
          <children>
             <Button fx:id="buttonAddGrade" mnemonicParsing="false" onAction="#addGrade" text="Dodaj">
                <HBox.margin>
-                  <Insets left="300.0" top="20.0" />
+                  <Insets left="50.0" top="5.0" />
                </HBox.margin>
             </Button>
          </children>
       </HBox>
+      <Separator prefWidth="200.0" />
+      <HBox prefHeight="55.0" prefWidth="639.0">
+         <children>
+            <Label text="Klasa">
+               <HBox.margin>
+                  <Insets left="100.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <ComboBox fx:id="cbClass2" onAction="#comboBoxClass2" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Label text="Uczen">
+               <HBox.margin>
+                  <Insets left="20.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <ComboBox fx:id="cbStudent2" onAction="#comboBoxStudent2" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+      <TableView fx:id="tableViewGrades" prefHeight="225.0" prefWidth="639.0">
+        <columns>
+            <TableColumn fx:id="columnDate" prefWidth="227.0" text="Data" />
+            <TableColumn fx:id="columnType" prefWidth="242.0" text="Typ" />
+            <TableColumn fx:id="columnGrade" prefWidth="169.0" text="Ocena" />
+        </columns>
+      </TableView>
    </children>
 </VBox>

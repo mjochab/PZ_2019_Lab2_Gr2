@@ -10,7 +10,7 @@ public class GradesConventer {
         gradesFx.setGrade(grades.getGrade());
         gradesFx.setDate(grades.getDateCreated());
         gradesFx.setDetails(grades.getDetails());
-        gradesFx.setStudentObjectProperty(grades.getStudent());
+        gradesFx.setStudentObjectProperty(StudentConverter.convertToStudentFx(grades.getStudent()));
         gradesFx.setSubjectFxObjectProperty(SubjectConverter.convertToSubjectFx(grades.getSubject()));
 
         return gradesFx;

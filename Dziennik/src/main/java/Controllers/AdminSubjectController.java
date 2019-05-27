@@ -3,10 +3,7 @@ package Controllers;
 import Modele.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TreeView;
+import javafx.scene.control.*;
 import modelFX.SubjectFx;
 import services.SubjectService;
 
@@ -66,7 +63,11 @@ public class AdminSubjectController {
         try{
             this.subjectService.delete(cbSubject.getValue().getSubjectId());
         }catch (Exception e){
-            System.out.println("nie usunieto");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Błąd usuwania");
+            alert.setHeaderText(null);
+            alert.setContentText("Nie można usunąć przedmiotu do którego są przypisani nauczyciele.");
+            alert.showAndWait();
         }
     }
 

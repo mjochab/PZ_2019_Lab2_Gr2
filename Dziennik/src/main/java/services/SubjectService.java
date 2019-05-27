@@ -83,6 +83,16 @@ public class SubjectService {
         subjectDao.closeCurrentSessionWithTransaction();
     }
 
+    public Long count(){
+        subjectDao.openCurrentSessionWithTransaction();
+        Long number = subjectDao.countSubject();
+        subjectDao.closeCurrentSessionWithTransaction();
+
+        return number;
+
+
+    }
+
     public ObservableList<SubjectFx> getSubjectFxObservableList() {
         return subjectFxObservableList;
     }

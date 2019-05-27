@@ -5,16 +5,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
    <children>
-      <VBox layoutX="42.0" layoutY="141.0" prefHeight="104.0" prefWidth="416.0">
+      <VBox layoutX="42.0" layoutY="40.0" prefHeight="166.0" prefWidth="416.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="59.0" prefWidth="416.0">
+            <HBox alignment="CENTER" prefHeight="76.0" prefWidth="416.0">
                <children>
                   <Label prefHeight="41.0" prefWidth="91.0" text="Login: ">
                      <padding>
@@ -31,7 +30,7 @@
                   </TextField>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="59.0" prefWidth="416.0">
+            <HBox alignment="CENTER" prefHeight="76.0" prefWidth="416.0">
                <children>
                   <Label prefHeight="41.0" prefWidth="91.0" text="Hasło: ">
                      <padding>
@@ -50,7 +49,6 @@
             </HBox>
          </children>
       </VBox>
-      <ImageView fitHeight="125.0" fitWidth="188.0" layoutX="150.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="submitButton" layoutX="160.0" layoutY="245.0" mnemonicParsing="false" onAction="#LogIn" prefHeight="41.0" prefWidth="282.0" text="Zaloguj" />
    </children>
 </AnchorPane>

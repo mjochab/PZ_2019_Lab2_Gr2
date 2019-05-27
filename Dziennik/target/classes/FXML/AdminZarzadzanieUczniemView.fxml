@@ -73,8 +73,19 @@
                         </ComboBox>
                      </children>
                   </HBox>
-                  <Button fx:id="copyStudent" mnemonicParsing="false" onAction="#copyStudent" text="Wybierz ucznia" translateX="30.0" translateY="15.0" />
-                  <Button fx:id="changeButton" mnemonicParsing="false" onAction="#fillData" text="Zapisz nowe dane" translateX="150.0" translateY="-10.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="copyStudent" mnemonicParsing="false" onAction="#copyStudent" text="Wybierz ucznia">
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="changeButton" mnemonicParsing="false" onAction="#fillData" text="Zapisz nowe dane">
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="100.0" prefWidth="308.0">
@@ -136,7 +147,7 @@
             <TableColumn fx:id="studentTablePesel" prefWidth="130.0" text="Pesel" />
             <TableColumn fx:id="studentTableClass" prefWidth="93.0" text="Klasa" />
             <TableColumn fx:id="studentTableDelete" prefWidth="92.0" text="Usuń" />
-            
+
          </columns>
 
       </TableView>

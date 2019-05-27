@@ -45,6 +45,11 @@ public class WarnsDao  extends SessionCreator implements Dao<Warns>{
         return Warnss;
     }
 
+    public List<Warns> findAllWarnsOfTeacher(long teacherId){
+        List<Warns> warns = (List<Warns>) getCurrentSession().createQuery("from Warns where teacher_id = "+teacherId).list();
+        return warns;
+    }
+
 
 
 }

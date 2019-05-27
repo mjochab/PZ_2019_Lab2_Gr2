@@ -44,6 +44,11 @@ public class GradeDao  extends SessionCreator implements Dao<Grades>{
         return grades;
     }
 
+    public List<Grades> findAllGradesOfSubject(long subjectId){
+        List<Grades> grades = (List<Grades>) getCurrentSession().createQuery("from Grades where subject_id = "+subjectId).list();
+        return grades;
+    }
+
 
 
 

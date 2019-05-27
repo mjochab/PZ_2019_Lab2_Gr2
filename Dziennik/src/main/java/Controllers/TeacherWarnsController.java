@@ -11,9 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.Callback;
-import modelFX.ClassesFx;
-import modelFX.StudentFx;
-import modelFX.TeacherFx;
+import modelFX.*;
 import services.WarnService;
 import sessions.UserSession;
 
@@ -27,13 +25,31 @@ public class TeacherWarnsController {
     private ComboBox<ClassesFx>cbClass;
 
     @FXML
+    private ComboBox<ClassesFx>cbClass2;
+
+    @FXML
     private ComboBox<StudentFx>cbStudent;
 
     @FXML
-    private TextField lbContent;
+    private ComboBox<StudentFx>cbStudent2;
+
+    @FXML
+    private TextArea lbContent;
 
     @FXML
     private Button btnAdd;
+
+
+    @FXML
+    private TableView<WarnsFx> tableViewWarns;
+
+    @FXML
+    private TableColumn<WarnsFx, Date> columnDate;
+
+    @FXML
+    private TableColumn<WarnsFx, String> columnContent;
+
+
 
     private Warns warns;
     private Teacher teacher;
@@ -90,15 +106,75 @@ public class TeacherWarnsController {
 
                         } else {
                             setText(null);
-                                }
-                            }
+                        }
+                    }
 
-                     });
+                });
 
                 cbStudent.setDisable(false);
             }
 
         }));
+
+
+
+
+        this.warnService.studentFxObjectPropertyProperty().bind(this.cbStudent2.valueProperty());
+
+        this.cbClass2.setItems(this.warnService.getClassesFxObservableList());
+        cbClass2.valueProperty().addListener(((observable, oldValue, newValue) -> {
+            if(newValue == null){
+                cbStudent2.getItems().clear();
+                cbStudent2.setDisable(true);
+            } else{
+                List<Student> studentList = warnService.findAllStudentByClass(cbClass2.getValue().getClassId());
+                studentFxObservableList.clear();
+                studentList.forEach(c->{
+                    StudentFx studentFx = StudentConverter.convertToStudentFx(c);
+                    studentFxObservableList.add(studentFx);
+
+                });
+                this.cbStudent2.setItems(getStudentFxObservableList());
+                this.cbStudent2.setCellFactory(new Callback<ListView<StudentFx>, ListCell<StudentFx>>() {
+                    @Override
+                    public ListCell<StudentFx> call(ListView<StudentFx> param) {
+                        return new ListCell<StudentFx>(){
+                            protected void updateItem(StudentFx t, boolean bln){
+                                super.updateItem(t,bln);
+                                if(t != null){
+                                    setText(t.getFirstName()+" "+t.getLastName());
+
+                                } else {
+                                    setText(null);
+                                }
+                            }
+                        };
+                    }
+                });
+                this.cbStudent2.setButtonCell(new ListCell<StudentFx>() {
+                    @Override
+                    protected void updateItem(StudentFx t, boolean bln){
+                        super.updateItem(t,bln);
+                        if(t != null){
+                            setText(t.getFirstName()+" "+t.getLastName());
+
+                        } else {
+                            setText(null);
+                        }
+                    }
+
+                });
+
+                cbStudent2.setDisable(false);
+            }
+
+        }));
+
+
+
+        this.tableViewWarns.setItems(this.warnService.getWarnsFxObservableList());
+        this.columnDate.setCellValueFactory(cellData ->  cellData.getValue().date_createdProperty());
+        this.columnContent.setCellValueFactory(cellData -> cellData.getValue().contentProperty());
 
 
 
@@ -110,6 +186,14 @@ public class TeacherWarnsController {
 
     public void comboboxStudent(ActionEvent actionEvent) {
         this.warnService.setStudentFxObjectProperty(this.cbStudent.getSelectionModel().getSelectedItem());
+    }
+
+    public void comboBoxClass2(ActionEvent actionEvent) {
+        this.warnService.setClassesFxObjectProperty(this.cbClass.getSelectionModel().getSelectedItem());
+    }
+
+    public void comboBoxStudent2(ActionEvent actionEvent) {
+        this.warnService.filterWarnsList();
     }
 
     public void addWarn(ActionEvent actionEvent) {

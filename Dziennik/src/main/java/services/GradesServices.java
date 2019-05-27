@@ -1,6 +1,7 @@
 package services;
 
 import Converters.ClassConverter;
+import Converters.GradesConventer;
 import Converters.SubjectConverter;
 import Modele.Classes;
 import Modele.Grades;
@@ -18,8 +19,12 @@ import modelFX.ClassesFx;
 import modelFX.GradesFx;
 import modelFX.StudentFx;
 import modelFX.SubjectFx;
+import sessions.UserSession;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class GradesServices {
 
@@ -35,7 +40,7 @@ public class GradesServices {
     private ObjectProperty<StudentFx> studentFxObjectProperty = new SimpleObjectProperty<>();
     private ObjectProperty<GradesFx> gradesFxObjectProperty = new SimpleObjectProperty<>();
     private ObservableList<GradesFx> gradesFxObservableList = FXCollections.observableArrayList();
-
+    private List<GradesFx> gradesFxList = new ArrayList<>();
 
     public GradesServices() {
         gradeDao = new GradeDao();
@@ -45,6 +50,13 @@ public class GradesServices {
         gradeDao = new GradeDao();
         initCbClass();
         initSubjectList();
+
+
+        gradeDao = new GradeDao();
+        List<Grades> grades = findAllGradesOfSubject();
+        gradesFxList.clear();
+        grades.forEach(grades1 -> this.gradesFxList.add(GradesConventer.convertToGradesFx(grades1)));
+        this.gradesFxObservableList.setAll(gradesFxList);
 
     }
 
@@ -98,6 +110,22 @@ public class GradesServices {
         return gradesList;
     }
 
+    public void filterGradesList(){
+        if(getStudentFxObjectProperty() != null){
+            filterPredicate(predicateStudent());
+        }else{
+            this.gradesFxObservableList.setAll(this.gradesFxList);
+        }
+    }
+
+    private void filterPredicate(Predicate<GradesFx> predicate) {
+        List<GradesFx> newList = gradesFxList.stream().filter(predicate).collect(Collectors.toList());
+        this.gradesFxObservableList.setAll(newList);
+    }
+    private Predicate<GradesFx> predicateStudent() {
+        return gradesFx -> gradesFx.getStudentObjectProperty().getStudentId() == getStudentFxObjectProperty().getStudentId();
+    }
+
 
 
 
@@ -122,9 +150,9 @@ public class GradesServices {
         this.studentFxObjectProperty.set(studentFxObjectProperty);
     }
 
-    public List<Grades> findAllGrades() {
+    public List<Grades> findAllGradesOfSubject() {
         gradeDao.openCurrentSession();
-        List<Grades> grades = gradeDao.findAll();
+        List<Grades> grades = gradeDao.findAllGradesOfSubject(UserSession.getInstance().currentUser().getTeacher().getSubject().getSubjectId());
         gradeDao.closeCurrentSession();
 
         return grades;

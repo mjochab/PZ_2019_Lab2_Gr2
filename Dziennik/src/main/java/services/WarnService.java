@@ -1,6 +1,7 @@
 package services;
 
 import Converters.ClassConverter;
+import Converters.WarnsConverter;
 import Modele.Classes;
 import Modele.Student;
 import Modele.Warns;
@@ -13,8 +14,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import modelFX.ClassesFx;
 import modelFX.StudentFx;
+import modelFX.WarnsFx;
+import sessions.UserSession;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class WarnService {
     ClassDao classDao;
@@ -25,11 +31,22 @@ public class WarnService {
     private ObjectProperty<ClassesFx> classesFxObjectProperty = new SimpleObjectProperty<>();
     private ObservableList<StudentFx> studentFxObservableList = FXCollections.observableArrayList();
     private ObjectProperty<StudentFx> studentFxObjectProperty = new SimpleObjectProperty<>(new StudentFx());
+    private ObjectProperty<WarnsFx> warnsFxObjectProperty = new SimpleObjectProperty<>();
+    private ObservableList<WarnsFx> warnsFxObservableList = FXCollections.observableArrayList();
+    private List<WarnsFx> warnsFxList = new ArrayList<>();
 
     public void init(){
         warnsDao = new WarnsDao();
 
+        List<Warns> warns = findAllWarnsOfTeacher();
+        warnsFxList.clear();
+        warns.forEach(warns1 -> this.warnsFxList.add(WarnsConverter.convertToWarnsFx(warns1)));
+        this.warnsFxObservableList.setAll(warnsFxList);
+
         initCbClass();
+
+
+
     }
 
     private void initCbClass(){
@@ -64,6 +81,31 @@ public class WarnService {
 
         return students;
     }
+
+    public void filterWarnsList(){
+        if(getStudentFxObjectProperty() != null){
+            filterPredicate(predicateStudent());
+        }else{
+            this.warnsFxObservableList.setAll(this.warnsFxList);
+        }
+    }
+
+    private void filterPredicate(Predicate<WarnsFx> predicate) {
+        List<WarnsFx> newList = warnsFxObservableList.stream().filter(predicate).collect(Collectors.toList());
+        this.warnsFxObservableList.setAll(newList);
+    }
+    private Predicate<WarnsFx> predicateStudent() {
+        return warnsFx -> warnsFx.getStudentFxObjectProperty().getStudentId() == getStudentFxObjectProperty().getStudentId();
+    }
+
+    public List<Warns> findAllWarnsOfTeacher() {
+        warnsDao.openCurrentSession();
+        List<Warns> warns = warnsDao.findAllWarnsOfTeacher(UserSession.getInstance().currentUser().getTeacher().getTeacherId());
+        warnsDao.closeCurrentSession();
+
+        return warns;
+    }
+
 
     public ObservableList<ClassesFx> getClassesFxObservableList() {
         return classesFxObservableList;
@@ -103,5 +145,33 @@ public class WarnService {
 
     public void setStudentFxObjectProperty(StudentFx studentFxObjectProperty) {
         this.studentFxObjectProperty.set(studentFxObjectProperty);
+    }
+
+    public WarnsFx getWarnsFxObjectProperty() {
+        return warnsFxObjectProperty.get();
+    }
+
+    public ObjectProperty<WarnsFx> warnsFxObjectPropertyProperty() {
+        return warnsFxObjectProperty;
+    }
+
+    public void setWarnsFxObjectProperty(WarnsFx warnsFxObjectProperty) {
+        this.warnsFxObjectProperty.set(warnsFxObjectProperty);
+    }
+
+    public ObservableList<WarnsFx> getWarnsFxObservableList() {
+        return warnsFxObservableList;
+    }
+
+    public void setWarnsFxObservableList(ObservableList<WarnsFx> warnsFxObservableList) {
+        this.warnsFxObservableList = warnsFxObservableList;
+    }
+
+    public List<WarnsFx> getWarnsFxList() {
+        return warnsFxList;
+    }
+
+    public void setWarnsFxList(List<WarnsFx> warnsFxList) {
+        this.warnsFxList = warnsFxList;
     }
 }

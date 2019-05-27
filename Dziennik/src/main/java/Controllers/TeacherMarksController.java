@@ -1,21 +1,20 @@
 package Controllers;
 
 import Converters.StudentConverter;
+import Converters.SubjectConverter;
 import Modele.Grades;
 import Modele.Student;
+import Modele.Subject;
 import Modele.Teacher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Slider;
+import javafx.scene.control.*;
 import javafx.util.Callback;
 import modelFX.ClassesFx;
+import modelFX.GradesFx;
 import modelFX.StudentFx;
-import modelFX.SubjectFx;
 import services.ClassesService;
 import services.GradesServices;
 import services.StudentServices;
@@ -40,13 +39,36 @@ public class TeacherMarksController {
     private ComboBox<String> teacherChooseReason;
 
     @FXML
-    private ComboBox<SubjectFx> cbSubject;
+    private Label lbSubject;
+
+    @FXML
+    private ComboBox<ClassesFx> cbClass2;
+
+    @FXML
+    private ComboBox<StudentFx> cbStudent2;
+
+
+    @FXML
+    private TableView<GradesFx> tableViewGrades;
+
+    @FXML
+    private TableColumn<GradesFx, Date> columnDate;
+
+    @FXML
+    private TableColumn<GradesFx,Double> columnGrade;
+
+    @FXML
+    private TableColumn<GradesFx, String> columnType;
+
+
+
 
 
     @FXML
     private ComboBox<StudentFx> teacherChooseStudent;
 
     private ObservableList<StudentFx> studentFxObservableList = FXCollections.observableArrayList();
+
 
     private StudentServices studentServices;
     private ClassesService classesService;
@@ -65,8 +87,8 @@ public class TeacherMarksController {
                 "Zadanie"
         );
 
+        this.lbSubject.setText(String.valueOf(SubjectConverter.convertToSubjectFx(UserSession.getInstance().currentUser().getTeacher().getSubject())));
 
-        this.cbSubject.setItems(this.gradesServices.getSubjectFxObservableList());
         this.teacherChooseClass.setItems(this.gradesServices.getClassesFxObservableList());
         teacherChooseClass.valueProperty().addListener(((observable, oldValue, newValue) -> {
             if(newValue == null){
@@ -117,6 +139,63 @@ public class TeacherMarksController {
         }));
 
 
+        this.gradesServices.studentFxObjectPropertyProperty().bind(this.cbStudent2.valueProperty());
+
+        this.cbClass2.setItems(this.gradesServices.getClassesFxObservableList());
+        cbClass2.valueProperty().addListener(((observable, oldValue, newValue) -> {
+            if(newValue == null){
+                cbStudent2.getItems().clear();
+                cbStudent2.setDisable(true);
+            } else{
+                List<Student> studentList = gradesServices.findAllStudentByClass(cbClass2.getValue().getClassId());
+                studentFxObservableList.clear();
+                studentList.forEach(c->{
+                    StudentFx studentFx = StudentConverter.convertToStudentFx(c);
+                    studentFxObservableList.add(studentFx);
+
+                });
+                this.cbStudent2.setItems(getStudentFxObservableList());
+                this.cbStudent2.setCellFactory(new Callback<ListView<StudentFx>, ListCell<StudentFx>>() {
+                    @Override
+                    public ListCell<StudentFx> call(ListView<StudentFx> param) {
+                        return new ListCell<StudentFx>(){
+                            protected void updateItem(StudentFx t, boolean bln){
+                                super.updateItem(t,bln);
+                                if(t != null){
+                                    setText(t.getFirstName()+" "+t.getLastName());
+
+                                } else {
+                                    setText(null);
+                                }
+                            }
+                        };
+                    }
+                });
+                this.cbStudent2.setButtonCell(new ListCell<StudentFx>() {
+                    @Override
+                    protected void updateItem(StudentFx t, boolean bln){
+                        super.updateItem(t,bln);
+                        if(t != null){
+                            setText(t.getFirstName()+" "+t.getLastName());
+
+                        } else {
+                            setText(null);
+                        }
+                    }
+
+                });
+
+                cbStudent2.setDisable(false);
+            }
+
+        }));
+
+        this.tableViewGrades.setItems(this.gradesServices.getGradesFxObservableList());
+        this.columnDate.setCellValueFactory(cellData ->  cellData.getValue().dateProperty());
+        this.columnGrade.setCellValueFactory(cellData -> cellData.getValue().gradeProperty().asObject());
+        this.columnType.setCellValueFactory(cellData -> cellData.getValue().detailsProperty());
+
+
     }
 
     public void comboBoxClass(ActionEvent actionEvent) {
@@ -127,8 +206,12 @@ public class TeacherMarksController {
         this.gradesServices.setStudentFxObjectProperty(this.teacherChooseStudent.getSelectionModel().getSelectedItem());
     }
 
-    public void comboBoxSubject(ActionEvent actionEvent) {
-        this.gradesServices.setSubjectFxObjectProperty(this.cbSubject.getSelectionModel().getSelectedItem());
+    public void comboBoxClass2(ActionEvent actionEvent) {
+        this.gradesServices.setClassesFxObjectProperty(this.cbClass2.getSelectionModel().getSelectedItem());
+    }
+
+    public void comboBoxStudent2(ActionEvent actionEvent) {
+        this.gradesServices.filterGradesList();
     }
 
 
@@ -141,7 +224,7 @@ public class TeacherMarksController {
         Date date = new Date();
 
         String reason = teacherChooseReason.getValue();
-        SubjectFx subject = cbSubject.getSelectionModel().getSelectedItem();
+        Subject subject = UserSession.getInstance().currentUser().getTeacher().getSubject();
         StudentFx student = teacherChooseStudent.getSelectionModel().getSelectedItem();
         Date dateCreated = date;
         double grade = gradeSlider.getValue();
@@ -153,7 +236,7 @@ public class TeacherMarksController {
     }
 
     public void clearFields(){
-        cbSubject.getItems().clear();
+
         teacherChooseStudent.getItems().clear();
         teacherChooseClass.getItems().clear();
         teacherChooseReason.getItems().clear();
