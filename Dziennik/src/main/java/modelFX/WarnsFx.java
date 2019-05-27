@@ -52,7 +52,7 @@ public class WarnsFx {
         this.date_created.set(date_created);
     }
 
-    public long getStudent_id() {
+    public long getStudentId() {
         return student_id.get();
     }
 

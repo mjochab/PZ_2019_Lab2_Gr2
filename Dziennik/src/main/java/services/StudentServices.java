@@ -10,6 +10,7 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TreeItem;
 import modelFX.ClassesFx;
 import modelFX.StudentFx;
 
@@ -25,6 +26,7 @@ public class StudentServices {
     private List<StudentFx> studentFxList = new ArrayList<>();
     private StudentDao studentDao;
     private ClassDao classDao;
+    private TreeItem<String> listOfStudents = new TreeItem<>();
 
 
     public StudentServices(){
@@ -62,8 +64,17 @@ public class StudentServices {
         studentDao.persist(student);
         studentDao.closeCurrentSessionWithTransaction();
     }
+<<<<<<< .merge_file_a10392
 
 
+=======
+    public TreeItem<String> getRoot() {
+        return listOfStudents;
+    }
+    public void setRoot(TreeItem<String> root) {
+        this.listOfStudents = root;
+    }
+>>>>>>> .merge_file_a04484
     public void persist(Student entity) {
         studentDao.openCurrentSessionWithTransaction();
         studentDao.persist(entity);

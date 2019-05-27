@@ -8,7 +8,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
+<<<<<<< .merge_file_a09856
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TeacherMarksController">
+=======
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TeacherMarksController">
+>>>>>>> .merge_file_a14912
    <children>
       <HBox prefHeight="79.0" prefWidth="639.0">
          <children>
@@ -67,11 +71,37 @@
       </HBox>
       <HBox prefHeight="74.0" prefWidth="639.0">
          <children>
+<<<<<<< .merge_file_a09856
             <Button fx:id="buttonAddGrade" mnemonicParsing="false" onAction="#addGrade" text="Dodaj">
                <HBox.margin>
                   <Insets left="300.0" top="20.0" />
                </HBox.margin>
             </Button>
+=======
+            <Pane prefHeight="600.0" prefWidth="804.0">
+               <children>
+                  <TextField layoutX="73.0" layoutY="55.0" prefHeight="31.0" prefWidth="35.0" />
+                  
+                  <Label layoutX="14.0" layoutY="60.0" text="Ocena" />
+                  <Label layoutX="12.0" layoutY="102.0" text="Powód" />
+                  <Button layoutX="13.0" layoutY="210.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" text="Dodaj " />
+                  <Button layoutX="81.0" layoutY="276.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="175.0" text="Wydrukuj oceny klasy" />
+                  <Button layoutX="81.0" layoutY="316.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="175.0" text="Wydrukuj oceny ucznia" />
+                  <TableView layoutX="267.0" layoutY="14.0" prefHeight="373.0" prefWidth="319.0">
+                     <columns>
+                        <TableColumn prefWidth="319.0" text="Ucznień" />
+                     </columns>
+                  </TableView>
+                  <ComboBox fx:id="teacherChooseClass" layoutX="58.0" layoutY="14.0" onAction="#getStudents" prefHeight="31.0" prefWidth="199.0" />
+                  <Label layoutX="14.0" layoutY="19.0" text="Klasa" />
+                  <ComboBox fx:id="teacherChooseReason" layoutX="73.0" layoutY="98.0" prefWidth="150.0" />
+                  <Label layoutX="4.0" layoutY="144.0" text="Przedmiot" />
+                  <ComboBox fx:id="teacherChooseSubject" layoutX="73.0" layoutY="140.0" prefWidth="150.0" />
+                  <ComboBox fx:id="teacherChooseStudent" layoutX="73.0" layoutY="176.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Label layoutX="11.0" layoutY="180.0" text="Uczeń" />
+               </children>
+            </Pane>
+>>>>>>> .merge_file_a14912
          </children>
       </HBox>
    </children>

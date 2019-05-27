@@ -24,6 +24,7 @@ public class Grades implements Serializable {
     public Grades() {
     }
 
+<<<<<<< .merge_file_a08432
     public Grades(Date dateCreated, String reason, StudentFx student, SubjectFx subject,Double grade) {
         this.dateCreated = dateCreated;
         this.details = reason;
@@ -32,6 +33,8 @@ public class Grades implements Serializable {
         this.grade = grade;
     }
 
+=======
+>>>>>>> .merge_file_a05904
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
