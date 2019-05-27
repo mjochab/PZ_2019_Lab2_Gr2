@@ -75,7 +75,13 @@ public class SubjectService {
         subjectDao.persist(entity);
         subjectDao.closeCurrentSessionWithTransaction();
     }
-
+    public  Subject findByName(String name)
+    {
+        subjectDao.openCurrentSessionWithTransaction();
+        Subject subject = subjectDao.findByName(name);
+        subjectDao.closeCurrentSessionWithTransaction();
+        return subject;
+    }
     public void delete(long id) {
         subjectDao.openCurrentSessionWithTransaction();
         Subject subject = subjectDao.findById(id);

@@ -62,6 +62,7 @@ public class AdminSubjectController {
     public void deleteSubject(ActionEvent actionEvent) {
         try{
             this.subjectService.delete(cbSubject.getValue().getSubjectId());
+            initialize();
         }catch (Exception e){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Błąd usuwania");

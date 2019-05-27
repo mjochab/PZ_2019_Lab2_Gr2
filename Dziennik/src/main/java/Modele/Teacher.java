@@ -23,6 +23,15 @@ public  class Teacher implements Serializable {
         this.linkedAcc = linkedAcc;
     }
 
+    public Teacher(long id,String name, String lname, Subject subject, String linkedAcc) {
+        this.teacherId =id;
+        this.firstNameT = name;
+        this.lastNameT = lname;
+        this.subject = subject;
+        this.linkedAcc = linkedAcc;
+    }
+
+
     public Teacher() {
 
     }

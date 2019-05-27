@@ -46,4 +46,17 @@ public class SubjectDao  extends SessionCreator implements Dao<Subject>{
         }
     }
 
+    public Subject findByName(String name) {
+        Subject subject = (Subject) getCurrentSession()
+                .createQuery("from Subject WHERE subject_name = :name")
+                .setParameter("name", name)
+                .uniqueResult();
+
+        if (subject != null) {
+            return subject;
+        }
+
+        return null;
+    }
+
 }

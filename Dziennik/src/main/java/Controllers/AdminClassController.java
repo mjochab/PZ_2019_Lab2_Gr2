@@ -60,6 +60,7 @@ public class AdminClassController {
     public void deleteClass(ActionEvent actionEvent) {
         try{
            this.classesService.delete(cbClass.getValue().getClassId());
+           initialize();
         }catch (Exception e){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Bład usuwania");
